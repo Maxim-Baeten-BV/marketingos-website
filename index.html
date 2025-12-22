@@ -5,6 +5,11 @@
     <link rel="icon" type="image/png" href="/favicon_wit.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      html { visibility: hidden; opacity: 0; }
+    </style>
+
     <!-- Primary Meta Tags -->
     <title>marketingOS - The Operating System for Modern Marketers</title>
     <meta name="title" content="marketingOS - The Operating System for Modern Marketers" />
@@ -97,9 +102,134 @@
               </a>
             </div>
 
-            <!-- Placeholder Visual -->
-            <div class="bg-gray-700 rounded-lg aspect-video flex items-center justify-center">
-              <p class="text-gray-400 text-lg">Visual/GIF placeholder</p>
+            <!-- Product Mockup -->
+            <div class="relative w-full max-w-lg mx-auto md:mx-0">
+              <!-- Main Card - Square aspect ratio -->
+              <div class="hero-floating bg-white rounded-2xl shadow-2xl overflow-hidden aspect-square flex flex-col">
+
+                <!-- Critical Alert -->
+                <div class="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-500 px-3 md:px-5 py-3 md:py-3.5">
+                  <div class="flex items-start gap-2">
+                    <div class="relative flex-shrink-0">
+                      <div class="absolute inset-0 w-5 h-5 md:w-6 md:h-6 bg-red-400 rounded-full pulse-ring"></div>
+                      <div class="relative w-5 h-5 md:w-6 md:h-6 rounded-full bg-red-500 flex items-center justify-center">
+                        <svg class="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="flex-1 space-y-1">
+                      <div class="skeleton-line h-3 md:h-3.5 w-28 md:w-36 bg-red-200"></div>
+                      <div class="skeleton-line h-2 md:h-2.5 w-full bg-red-200"></div>
+                    </div>
+
+                    <div class="text-xl md:text-2xl font-bold text-red-600">139%</div>
+                  </div>
+                </div>
+
+                <!-- AI Recommendation -->
+                <div class="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 px-3 md:px-5 py-3 md:py-3.5 border-b border-gray-200">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center shadow-md">
+                      <svg class="w-3 h-3 md:w-4 md:h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                      </svg>
+                    </div>
+                    <div class="skeleton-line h-3 md:h-3.5 w-32 md:w-40 bg-purple-200"></div>
+                  </div>
+
+                  <div class="bg-white rounded-xl p-2.5 md:p-3 shadow-sm space-y-1.5">
+                    <div class="skeleton-line h-2 md:h-2.5 w-full"></div>
+                    <div class="skeleton-line h-2 md:h-2.5 w-5/6"></div>
+                  </div>
+                </div>
+
+                <!-- Budget Slider -->
+                <div class="px-3 md:px-5 py-3 md:py-3.5 bg-gray-50 flex-1 flex items-center">
+                  <div class="bg-white rounded-xl p-3 shadow-sm w-full">
+                    <div class="flex items-center justify-between mb-2">
+                      <div class="skeleton-line h-3 md:h-3.5 w-20 md:w-24"></div>
+                      <div class="text-base md:text-lg font-bold text-gray-900">€75K</div>
+                    </div>
+
+                    <div class="relative mb-2">
+                      <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-blue-400 via-purple-500 to-red-500 rounded-full" style="width: 99%"></div>
+                      </div>
+
+                      <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2" style="left: 99%">
+                        <div class="w-3 h-3 md:w-3.5 md:h-3.5 bg-white border-2 border-red-500 rounded-full shadow-lg"></div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-xs">
+                      <div class="flex items-center gap-1">
+                        <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full"></div>
+                        <div class="skeleton-line h-2 w-10 md:w-12"></div>
+                      </div>
+                      <div class="flex items-center gap-1">
+                        <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full"></div>
+                        <div class="skeleton-line h-2 w-12 md:w-14"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Compact Chart -->
+                <div class="px-3 md:px-5 py-3 md:py-3.5 bg-white border-t border-gray-100">
+                  <div class="skeleton-line h-3 md:h-3.5 w-20 md:w-24 mb-2"></div>
+
+                  <div class="relative h-16 md:h-20 flex items-end gap-0.5 md:gap-1">
+                    <div class="flex-1 bg-gradient-to-t from-blue-300 to-blue-400 rounded-t" style="height: 35%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t" style="height: 45%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-blue-400 to-blue-500 rounded-t" style="height: 42%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-blue-500 to-blue-600 rounded-t" style="height: 55%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-purple-400 to-purple-500 rounded-t" style="height: 62%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-purple-500 to-purple-600 rounded-t" style="height: 68%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-purple-600 to-purple-700 rounded-t" style="height: 75%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-red-500 to-red-600 rounded-t" style="height: 85%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-red-600 to-red-700 rounded-t relative" style="height: 92%">
+                      <div class="absolute -top-5 left-1/2 -translate-x-1/2">
+                        <div class="bg-red-600 text-white text-xs px-1 md:px-1.5 py-0.5 rounded shadow-lg whitespace-nowrap">
+                          +39%
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-1 bg-gradient-to-t from-red-600 to-red-700 rounded-t" style="height: 95%"></div>
+
+                    <!-- Dashed projection -->
+                    <div class="flex-1 bg-gradient-to-t from-gray-300 to-gray-400 rounded-t opacity-40 border-2 border-dashed border-gray-500" style="height: 98%"></div>
+                    <div class="flex-1 bg-gradient-to-t from-gray-300 to-gray-400 rounded-t opacity-40 border-2 border-dashed border-gray-500" style="height: 96%"></div>
+
+                    <!-- Target line -->
+                    <div class="absolute inset-x-0 border-t-2 border-dashed border-green-500" style="top: 25%"></div>
+                  </div>
+
+                  <div class="flex items-center justify-between mt-1.5 text-xs">
+                    <div class="skeleton-line h-2 w-8 md:w-10"></div>
+                    <div class="skeleton-line h-2 w-8 md:w-10"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating Elements -->
+              <div class="absolute -top-3 md:-top-4 -right-3 md:-right-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full px-3 md:px-4 py-1.5 md:py-2 shadow-xl">
+                <div class="skeleton-line h-2 md:h-3 w-16 md:w-20 bg-green-200"></div>
+              </div>
+
+              <div class="absolute -bottom-3 md:-bottom-4 -left-3 md:-left-4 bg-white rounded-xl shadow-xl px-3 md:px-4 py-1.5 md:py-2 border border-gray-200">
+                <div class="flex items-center gap-2">
+                  <div class="flex -space-x-1">
+                    <div class="w-4 h-4 md:w-5 md:h-5 bg-blue-500 rounded-full border-2 border-white text-white text-xs flex items-center justify-center font-bold">G</div>
+                    <div class="w-4 h-4 md:w-5 md:h-5 bg-red-500 rounded-full border-2 border-white text-white text-xs flex items-center justify-center font-bold">M</div>
+                  </div>
+                  <div class="w-1 h-1 md:w-1.5 md:h-1.5 bg-green-500 rounded-full hero-pulse"></div>
+                  <div class="skeleton-line h-2 md:h-3 w-12 md:w-16"></div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -147,22 +277,44 @@
           </h2>
           <div class="grid md:grid-cols-3 gap-8">
             <article class="text-center">
-              <div class="bg-soft-gray rounded-lg p-8 mb-4">
-                <p class="text-6xl mb-2" aria-hidden="true">🧩</p>
+              <div class="bg-soft-gray rounded-lg p-8 mb-4 flex items-center justify-center">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-dark" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                  <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                  <line x1="10.5" y1="6.5" x2="13.5" y2="6.5"/>
+                  <line x1="6.5" y1="10.5" x2="6.5" y2="13.5"/>
+                  <line x1="17.5" y1="10.5" x2="17.5" y2="13.5"/>
+                  <line x1="10.5" y1="17.5" x2="13.5" y2="17.5"/>
+                </svg>
               </div>
               <h3 class="font-semibold text-xl mb-3 text-brand-dark">Modular by design</h3>
               <p class="text-deep-gray">Each app solves one clear operational problem. No bloat. No forced bundles.</p>
             </article>
             <article class="text-center">
-              <div class="bg-soft-gray rounded-lg p-8 mb-4">
-                <p class="text-6xl mb-2" aria-hidden="true">⚡</p>
+              <div class="bg-soft-gray rounded-lg p-8 mb-4 flex items-center justify-center">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-dark" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <rect x="7" y="7" width="4" height="4" rx="1" fill="currentColor"/>
+                  <rect x="7" y="13" width="4" height="4" rx="1"/>
+                  <rect x="13" y="7" width="4" height="4" rx="1"/>
+                  <rect x="13" y="13" width="4" height="4" rx="1" fill="currentColor"/>
+                </svg>
               </div>
               <h3 class="font-semibold text-xl mb-3 text-brand-dark">Use what you need</h3>
               <p class="text-deep-gray">Activate only the apps that matter to your workflow. Nothing more.</p>
             </article>
             <article class="text-center">
-              <div class="bg-soft-gray rounded-lg p-8 mb-4">
-                <p class="text-6xl mb-2" aria-hidden="true">🎯</p>
+              <div class="bg-soft-gray rounded-lg p-8 mb-4 flex items-center justify-center">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-dark" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <line x1="7" y1="8" x2="17" y2="8"/>
+                  <line x1="7" y1="12" x2="17" y2="12"/>
+                  <line x1="7" y1="16" x2="13" y2="16"/>
+                  <circle cx="19" cy="19" r="2" fill="currentColor"/>
+                  <circle cx="19" cy="19" r="3.5" fill="none" opacity="0.3"/>
+                </svg>
               </div>
               <h3 class="font-semibold text-xl mb-3 text-brand-dark">Built for daily use</h3>
               <p class="text-deep-gray">Quick checks. Early signals. Clear actions. Not endless data exploration.</p>
@@ -175,9 +327,161 @@
       <section class="py-20 px-6 bg-brand-dark text-white">
         <div class="max-w-6xl mx-auto">
           <div class="grid md:grid-cols-2 gap-12 items-center">
-            <!-- Placeholder Visual -->
-            <div class="bg-gray-700 rounded-lg aspect-square flex items-center justify-center">
-              <p class="text-gray-400 text-lg">Visual placeholder</p>
+            <!-- Performance Marketing Mockup -->
+            <div class="relative w-full max-w-lg mx-auto md:mx-0">
+              <div class="hero-floating bg-white rounded-2xl shadow-2xl overflow-hidden aspect-square flex flex-col">
+
+                <!-- Platform Tabs -->
+                <div class="bg-gradient-to-r from-gray-50 to-white border-b border-gray-200 px-3 md:px-5 py-2 md:py-2.5">
+                  <div class="flex gap-2">
+                    <div class="px-3 py-1.5 bg-blue-500 text-white text-xs font-medium rounded-md">
+                      <div class="skeleton-line h-2.5 w-16 bg-blue-300"></div>
+                    </div>
+                    <div class="px-3 py-1.5 bg-gray-100 text-xs rounded-md">
+                      <div class="skeleton-line h-2.5 w-14"></div>
+                    </div>
+                    <div class="px-3 py-1.5 bg-gray-100 text-xs rounded-md">
+                      <div class="skeleton-line h-2.5 w-12"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Campaign Cards -->
+                <div class="px-3 md:px-5 py-3 md:py-3.5 bg-gray-50 flex-1 overflow-hidden">
+                  <div class="space-y-2.5">
+                    <!-- Performing Campaign -->
+                    <div class="bg-white rounded-xl p-3 shadow-sm border-l-4 border-green-500">
+                      <div class="flex items-start justify-between mb-2">
+                        <div class="flex-1">
+                          <div class="skeleton-line h-3 w-32 mb-1.5"></div>
+                          <div class="skeleton-line h-2 w-24"></div>
+                        </div>
+                        <div class="flex items-center gap-1 text-green-600">
+                          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/>
+                          </svg>
+                          <span class="text-xs font-bold">+24%</span>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-2 text-xs">
+                        <div>
+                          <div class="skeleton-line h-2 w-8 mb-1"></div>
+                          <div class="skeleton-line h-3 w-12"></div>
+                        </div>
+                        <div>
+                          <div class="skeleton-line h-2 w-10 mb-1"></div>
+                          <div class="skeleton-line h-3 w-10"></div>
+                        </div>
+                        <div>
+                          <div class="skeleton-line h-2 w-8 mb-1"></div>
+                          <div class="skeleton-line h-3 w-14"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Warning Campaign -->
+                    <div class="bg-white rounded-xl p-3 shadow-sm border-l-4 border-yellow-500">
+                      <div class="flex items-start justify-between mb-2">
+                        <div class="flex-1">
+                          <div class="skeleton-line h-3 w-28 mb-1.5"></div>
+                          <div class="skeleton-line h-2 w-20"></div>
+                        </div>
+                        <div class="flex items-center gap-1">
+                          <div class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-2 text-xs">
+                        <div>
+                          <div class="skeleton-line h-2 w-8 mb-1"></div>
+                          <div class="skeleton-line h-3 w-12"></div>
+                        </div>
+                        <div>
+                          <div class="skeleton-line h-2 w-10 mb-1"></div>
+                          <div class="skeleton-line h-3 w-10"></div>
+                        </div>
+                        <div>
+                          <div class="skeleton-line h-2 w-8 mb-1"></div>
+                          <div class="skeleton-line h-3 w-14"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Underperforming Campaign -->
+                    <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-3 shadow-sm border-l-4 border-red-500">
+                      <div class="flex items-start justify-between mb-2">
+                        <div class="flex-1">
+                          <div class="skeleton-line h-3 w-36 mb-1.5 bg-red-200"></div>
+                          <div class="skeleton-line h-2 w-24 bg-red-200"></div>
+                        </div>
+                        <div class="flex items-center gap-1 text-red-600">
+                          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z" clip-rule="evenodd"/>
+                          </svg>
+                          <span class="text-xs font-bold">-18%</span>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-2 text-xs">
+                        <div>
+                          <div class="skeleton-line h-2 w-8 mb-1 bg-red-200"></div>
+                          <div class="skeleton-line h-3 w-12 bg-red-200"></div>
+                        </div>
+                        <div>
+                          <div class="skeleton-line h-2 w-10 mb-1 bg-red-200"></div>
+                          <div class="skeleton-line h-3 w-10 bg-red-200"></div>
+                        </div>
+                        <div>
+                          <div class="skeleton-line h-2 w-8 mb-1 bg-red-200"></div>
+                          <div class="skeleton-line h-3 w-14 bg-red-200"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quick Actions Checklist -->
+                <div class="px-3 md:px-5 py-3 md:py-3.5 bg-white border-t border-gray-200">
+                  <div class="flex items-center gap-2 mb-2">
+                    <div class="skeleton-line h-3 w-24"></div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-4 h-4 rounded border-2 border-green-500 bg-green-500 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                      </div>
+                      <div class="skeleton-line h-2 w-full"></div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="w-4 h-4 rounded border-2 border-gray-300 flex-shrink-0"></div>
+                      <div class="skeleton-line h-2 w-full"></div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="w-4 h-4 rounded border-2 border-gray-300 flex-shrink-0"></div>
+                      <div class="skeleton-line h-2 w-4/5"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating Elements -->
+              <div class="absolute -top-3 md:-top-4 -right-3 md:-right-4 bg-white rounded-xl shadow-xl px-3 md:px-4 py-2 md:py-2.5 border border-gray-200">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 bg-green-500 rounded-full hero-pulse"></div>
+                  <div class="skeleton-line h-2.5 w-20"></div>
+                </div>
+              </div>
+
+              <div class="absolute -bottom-3 md:-bottom-4 -left-3 md:-left-4 bg-white rounded-xl shadow-xl px-3 md:px-4 py-1.5 md:py-2 border border-gray-200">
+                <div class="flex items-center gap-2">
+                  <div class="flex -space-x-1.5">
+                    <div class="w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full border-2 border-white text-white text-xs flex items-center justify-center font-bold shadow-sm">G</div>
+                    <div class="w-5 h-5 md:w-6 md:h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-2 border-white text-white text-xs flex items-center justify-center font-bold shadow-sm">M</div>
+                    <div class="w-5 h-5 md:w-6 md:h-6 bg-blue-700 rounded-full border-2 border-white text-white text-xs flex items-center justify-center font-bold shadow-sm">L</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Text Content -->
