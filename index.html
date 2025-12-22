@@ -32,7 +32,38 @@
     <meta property="twitter:description" content="Get focus and control back. Stop managing budgets in spreadsheets. Small apps that solve real marketing problems." />
     <meta property="twitter:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org JSON-LD - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.flywithmarketingos.com/#organization",
+      "name": "marketingOS",
+      "url": "https://www.flywithmarketingos.com",
+      "logo": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png",
+      "description": "marketingOS helps marketers regain focus by automating admin work and restoring control with small apps that solve real problems.",
+      "founder": {
+        "@type": "Person",
+        "name": "Maxim Baeten",
+        "jobTitle": "Founder & Performance Marketer"
+      }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "marketingOS",
+      "url": "https://www.flywithmarketingos.com",
+      "publisher": {
+        "@id": "https://www.flywithmarketingos.com/#organization"
+      }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - SoftwareApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,27 +75,34 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "billingDuration": "P1M"
+        }
       },
       "description": "The operating system for modern marketers. Small modular apps that automate admin work and help performance marketers stay on track.",
       "url": "https://www.flywithmarketingos.com",
       "screenshot": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png",
       "featureList": [
-        "Budget Checker",
-        "Google Ads Performance Manager",
-        "Meta Ads Performance Manager",
-        "LinkedIn Ads Performance Manager",
-        "UTM Tag Organizer",
-        "Pixel & Conversion Organizer",
-        "Google Search Console Specialist",
-        "Algorithm Monitor",
-        "Analytics Reporter",
-        "Competitor Changelog",
-        "Performance Reporter"
+        "Budget Checker - Track spend and spot budget risks early",
+        "Google Ads Performance Manager - Monitor Google Ads and see if campaigns are on track",
+        "Meta Ads Performance Manager - Understand Meta campaign performance",
+        "LinkedIn Ads Performance Manager - Track LinkedIn Ads performance",
+        "UTM Tag Organizer - Keep UTM tags clean and consistent",
+        "Pixel & Conversion Organizer - Ensure tracking is set up correctly",
+        "Google Search Console Specialist - Monitor SEO performance",
+        "Algorithm Monitor - Stay informed when platforms change algorithms",
+        "Analytics Reporter - Get clear, actionable reports",
+        "Competitor Changelog - Track changes on competitors' websites",
+        "Performance Reporter - Create performance reports in minutes"
       ],
       "audience": {
         "@type": "Audience",
         "audienceType": "Performance Marketers, Growth Marketers, Digital Marketing Specialists"
+      },
+      "provider": {
+        "@id": "https://www.flywithmarketingos.com/#organization"
       }
     }
     </script>
@@ -95,7 +133,7 @@
                 <span class="text-5xl md:text-6xl block">marketingOS</span>
               </h1>
               <p class="text-lg md:text-xl mb-8">
-                Get focus and control back. Stop managing budgets in spreadsheets.
+                Marketers spend too much time on admin. Automate tedious jobs and fall in love with your job once again.
               </p>
               <a href="https://app.flywithmarketingos.com" class="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg">
                 Try for free
@@ -243,7 +281,7 @@
           </h2>
           <div class="space-y-6 text-lg text-deep-gray leading-relaxed">
             <p>
-              Performance marketers spend too much time on manual, repetitive work. Copy-pasting data between tools. Building complex reports to extract simple insights. Maintaining spreadsheets that break when platforms change.
+              Marketers spend too much time on manual, repetitive work. Copy-pasting data between tools. Building complex reports to extract simple insights. Maintaining spreadsheets that break when platforms change.
             </p>
             <p>
               The result? Constant context switching. Reactive work instead of proactive control. And less time for what actually matters: strategy, optimization, and impact.
@@ -263,7 +301,7 @@
               marketingOS reduces admin and restores focus. It works as a control and signal layer on top of your existing tools.
             </p>
             <p>
-              Instead of another analytics dashboard, marketingOS gives you early signals when something needs attention. Check once per day. Act early. Stay on track.
+              Instead of another analytics dashboard, marketingOS gives you early signals when something needs attention. Check once per day. Act early. Stay on track. And reach your growth goals.
             </p>
           </div>
         </div>
@@ -486,6 +524,7 @@
 
             <!-- Text Content -->
             <div>
+              <p class="text-sm md:text-base font-medium text-gray-400 mb-3 uppercase tracking-wide">marketingOS is in constant evolution</p>
               <h2 class="text-3xl md:text-4xl font-bold mb-8">
                 Starting with performance marketing
               </h2>
@@ -565,7 +604,7 @@
           </h2>
           <div class="space-y-6 text-lg text-deep-gray leading-relaxed mb-10">
             <p>
-              marketingOS starts with performance marketing and expands gradually into other marketing disciplines. Each phase follows the same philosophy: small, modular apps that solve one problem well.
+              marketingOS starts with performance marketing and expands gradually into other marketing disciplines. Each phase follows the same philosophy: small, modular apps that solve one problem well. And just like with performance marketing, the apps within the other disciplines will be developed based on the input of seasoned subject experts.
             </p>
           </div>
           <div class="grid md:grid-cols-3 gap-6">
@@ -589,19 +628,20 @@
       <section class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
           <div class="grid md:grid-cols-2 gap-12 items-center">
-            <!-- Placeholder Visual -->
-            <div class="bg-soft-gray rounded-lg aspect-square flex items-center justify-center">
-              <p class="text-gray-400 text-lg">Visual placeholder</p>
+            <!-- Founder Image -->
+            <div class="rounded-lg overflow-hidden aspect-square max-w-sm mx-auto md:mx-0">
+              <img src="/founder picture.png" alt="Founder working on marketingOS" class="w-full h-full object-cover" />
             </div>
 
             <!-- Text Content -->
             <div>
+              <p class="text-sm md:text-base font-medium text-gray-500 mb-3 uppercase tracking-wide">Meet the founder</p>
               <h2 class="text-3xl md:text-4xl font-bold mb-8 text-brand-dark">
                 Built from real work
               </h2>
               <div class="space-y-6 text-lg text-deep-gray leading-relaxed">
                 <p>
-                  marketingOS is built by a performance marketer with over a decade of hands-on experience. It's used daily on real campaigns and real budgets.
+                  marketingOS is built by Maxim Baeten, a performance marketer with over a decade of hands-on experience. He's using marketingOS daily on his client work with real campaigns, real budgets and real targets to hit.
                 </p>
                 <p>
                   This ongoing proximity to the work ensures marketingOS stays focused, relevant, and grounded in what actually matters. Product decisions come from real friction, not hypothetical use cases.
@@ -621,7 +661,7 @@
           <div class="grid md:grid-cols-3 gap-8">
             <article>
               <h3 class="font-semibold text-xl mb-3 text-brand-dark">Opinionated by design</h3>
-              <p class="text-deep-gray">We have a clear point of view on how marketing work should be done. Built for daily checks, not endless exploration.</p>
+              <p class="text-deep-gray">We have a clear point of view on how marketing work should be done. Built for daily checks, not endless exploration. That's how you will reach your targets by the end of the month.</p>
             </article>
             <article>
               <h3 class="font-semibold text-xl mb-3 text-brand-dark">Signal, not noise</h3>
@@ -646,7 +686,7 @@
               Pay per app, not for features you don't use. Pricing scales fairly as more apps are activated. The more value you get, the lower the cost per app.
             </p>
             <p>
-              Accessible for individuals and teams. No lock-in. No complex tiers. Just simple, transparent pricing.
+              Accessible for individuals and teams. No lock-in. No complex tiers. Just simple, transparent pricing that won't cost you more than a few coffees every month.
             </p>
           </div>
         </div>
