@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Analytics setup (keep entire folder local - regenerated per project from marketingOS-PA)
+analytics-setup/
