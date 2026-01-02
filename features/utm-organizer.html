@@ -167,20 +167,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-2">
-          <img src="/Logo-FlyWithMarketingOS.png" alt="marketingOS" class="h-8" />
+    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-6 px-6" style="background-color: #FFFCF5;">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-12 w-auto" />
         </a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-8">
           <!-- Product Dropdown -->
           <div class="relative group">
-            <button class="flex items-center gap-1 text-brand-dark hover:text-brand-blue transition-colors font-medium">
+            <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200 flex items-center gap-1">
               Product
               <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
-            </button>
+            </a>
             <!-- Dropdown Menu -->
             <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div class="bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px]">
@@ -220,33 +220,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
-      <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-soft-gray to-white">
+      <!-- Breadcrumb -->
+      <div class="bg-soft-gray py-3 px-6">
         <div class="max-w-6xl mx-auto">
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <!-- Hero Content -->
-            <div>
-              <!-- Breadcrumb -->
-              <nav class="flex items-center gap-2 text-sm text-deep-gray mb-6" aria-label="Breadcrumb">
-                <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
-                <span>/</span>
-                <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
-                <span>/</span>
-                <span class="text-brand-dark font-medium">UTM Organizer</span>
-              </nav>
+          <nav class="flex items-center text-sm text-deep-gray" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="text-brand-dark font-medium">UTM Organizer</span>
+          </nav>
+        </div>
+      </div>
 
-              <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
-                UTM Tracking Tool That Keeps Your Campaign Data Clean
+      <!-- Hero Section -->
+      <header class="bg-brand-dark text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div>
+              <span class="inline-block bg-brand-blue/20 text-brand-blue px-3 py-1 rounded-full text-sm font-medium mb-4">UTM Tracking Tool</span>
+              <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Keep Your Campaign Data Clean &amp; Consistent
               </h1>
-              <p class="text-xl text-deep-gray mb-8 leading-relaxed">
-                Build, organize, and track UTM parameters in one central place. UTM Organizer helps you maintain consistent naming conventions, catch duplicates before they fragment your data, and see which campaign URLs actually drive results.
+              <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Build, organize, and track UTM parameters in one central place. UTM Organizer helps you maintain consistent naming conventions, catch duplicates before they fragment your data, and see which <strong class="text-white">campaign URLs</strong> actually drive results.
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
-                <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg">
-                  Join Waitlist
+                <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+                  Join the Waitlist
                 </button>
-                <a href="/performance-marketing-software" class="border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg text-center">
+                <a href="/performance-marketing-software" class="border border-white/30 hover:border-white text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 text-center">
                   View All Features
                 </a>
               </div>
@@ -739,19 +749,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark text-white py-12 px-6 border-t border-white/10">
+    <footer class="bg-brand-dark text-white py-12 px-6 border-t border-gray-700">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div class="flex items-center gap-2">
-            <img src="/Logo-FlyWithMarketingOS.png" alt="marketingOS" class="h-8" />
+          <div class="flex items-center gap-3">
+            <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo" width="200" height="50" class="h-10 w-auto brightness-0 invert" />
           </div>
-          <nav class="flex gap-6 text-sm text-gray-400">
+          <nav class="flex gap-6 text-gray-400">
             <a href="/" class="hover:text-white transition-colors">Home</a>
             <a href="/performance-marketing-software" class="hover:text-white transition-colors">Product</a>
             <a href="/features/budget-checker" class="hover:text-white transition-colors">Budget Checker</a>
             <a href="/features/utm-organizer" class="hover:text-white transition-colors">UTM Organizer</a>
           </nav>
-          <p class="text-sm text-gray-400">&copy; 2025 marketingOS</p>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; 2025 marketingOS. Built for performance marketers, by a performance marketer.</p>
         </div>
       </div>
     </footer>
