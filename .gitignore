@@ -25,3 +25,6 @@ dist-ssr
 
 # Analytics setup (keep entire folder local - regenerated per project from marketingOS-PA)
 analytics-setup/
+
+# Keyword Research Output (sensitive data, keep local)
+keyword-research-output/
