@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon_wit.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT2NFZ7L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      html { visibility: hidden; opacity: 0; }
+    </style>
+
+    <!-- Primary Meta Tags -->
+    <title>Ad Spend Tracker: Track Budgets Across All Channels | Budget Checker</title>
+    <meta name="title" content="Ad Spend Tracker: Track Budgets Across All Channels | Budget Checker" />
+    <meta name="description" content="Track ad spend across Google Ads, Meta, and LinkedIn in one view. Budget Checker gives you real-time pacing alerts and helps you catch overspend before it happens. Built for daily use." />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.flywithmarketingos.com/features/budget-checker" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flywithmarketingos.com/features/budget-checker" />
+    <meta property="og:title" content="Ad Spend Tracker: Track Budgets Across All Channels | Budget Checker" />
+    <meta property="og:description" content="Track ad spend across Google Ads, Meta, and LinkedIn in one view. Catch overspend before it happens with real-time budget pacing alerts." />
+    <meta property="og:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.flywithmarketingos.com/features/budget-checker" />
+    <meta property="twitter:title" content="Ad Spend Tracker: Track Budgets Across All Channels | Budget Checker" />
+    <meta property="twitter:description" content="Track ad spend across Google Ads, Meta, and LinkedIn in one view. Catch overspend before it happens with real-time budget pacing alerts." />
+    <meta property="twitter:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Schema.org JSON-LD - SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Budget Checker",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Ad Spend Tracker",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "description": "Ad spend tracker that monitors budgets across Google Ads, Meta Ads, and LinkedIn Ads. Get real-time budget pacing alerts and catch overspend before it happens.",
+      "url": "https://www.flywithmarketingos.com/features/budget-checker",
+      "screenshot": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png",
+      "featureList": [
+        "Multi-channel ad spend tracking",
+        "Real-time budget pacing alerts",
+        "Daily budget monitoring",
+        "Overspend prevention",
+        "Google Ads budget tracking",
+        "Meta Ads budget tracking",
+        "LinkedIn Ads budget tracking"
+      ],
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "marketingOS",
+        "url": "https://www.flywithmarketingos.com"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "marketingOS",
+        "url": "https://www.flywithmarketingos.com"
+      }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.flywithmarketingos.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product",
+          "item": "https://www.flywithmarketingos.com/performance-marketing-software"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Budget Checker",
+          "item": "https://www.flywithmarketingos.com/features/budget-checker"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an ad spend tracker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An ad spend tracker is a tool that monitors your advertising budget across multiple platforms like Google Ads, Meta Ads, and LinkedIn Ads. It shows you how much you've spent versus your budget, calculates pacing, and alerts you when spending patterns indicate potential overspend or underspend."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I need an ad spend tracker instead of checking each platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Checking each ad platform individually is time-consuming and error-prone. Platforms don't show your overall budget picture or how spend across channels affects your total marketing budget. An ad spend tracker like Budget Checker gives you a unified view, saves time on daily checks, and catches budget issues before they become problems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Budget Checker calculate budget pacing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Budget Checker calculates pacing by comparing your actual spend to where you should be based on the day of the month. For example, if you're 15 days into a 30-day month, you should have spent roughly 50% of your budget. If you've spent 70%, Budget Checker flags this as 'pacing high' so you can adjust before overspending."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which ad platforms does Budget Checker support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Budget Checker currently supports Google Ads, Meta Ads (Facebook and Instagram), and LinkedIn Ads. These are the most commonly used platforms for performance marketing. Additional platform support is planned based on user feedback."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often does Budget Checker update spend data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Budget Checker syncs with your ad platforms daily, pulling the latest spend data each morning. This ensures you have accurate, up-to-date information for your daily budget check without the lag of manual reporting."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT2NFZ7L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-6 px-6" style="background-color: #FFFCF5;">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-12 w-auto" />
+        </a>
+        <div class="flex items-center gap-8">
+          <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200">Product</a>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
+            Get on the waitlist
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Breadcrumb -->
+      <div class="bg-soft-gray border-b border-gray-200 py-3 px-6">
+        <div class="max-w-6xl mx-auto">
+          <nav class="text-sm text-gray-600" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2">
+              <li><a href="/" class="hover:text-brand-blue transition-colors">Home</a></li>
+              <li class="text-gray-400">/</li>
+              <li><a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a></li>
+              <li class="text-gray-400">/</li>
+              <li class="text-brand-dark font-medium">Budget Checker</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <header class="relative bg-brand-dark text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div>
+              <p class="text-brand-blue font-medium mb-4">Budget Checker</p>
+              <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Ad spend tracker for performance marketers
+              </h1>
+              <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                Track your marketing budget across Google Ads, Meta, and LinkedIn in one view. Get daily pacing alerts and catch overspend before it becomes a problem.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="openWaitlistModal()" class="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg cursor-pointer">
+                  Get on the waitlist
+                </button>
+                <a href="#how-it-works" class="inline-block border border-gray-500 hover:border-white text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg text-center">
+                  See how it works
+                </a>
+              </div>
+            </div>
+
+            <!-- Product Mockup - Budget Overview -->
+            <div class="relative w-full max-w-lg mx-auto md:mx-0">
+              <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-gray-50 to-white border-b border-gray-200 px-5 py-4">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                      </div>
+                      <span class="font-semibold text-brand-dark">Budget Overview</span>
+                    </div>
+                    <span class="text-sm text-gray-500">January 2026</span>
+                  </div>
+                </div>
+
+                <!-- Budget Cards -->
+                <div class="p-5 space-y-3">
+                  <!-- Google Ads - On Track -->
+                  <div class="bg-gray-50 rounded-xl p-4 border-l-4 border-green-500">
+                    <div class="flex items-center justify-between mb-2">
+                      <div class="flex items-center gap-2">
+                        <span class="text-2xl font-bold text-brand-blue">G</span>
+                        <span class="font-medium text-brand-dark">Google Ads</span>
+                      </div>
+                      <span class="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">On track</span>
+                    </div>
+                    <div class="flex items-end justify-between">
+                      <div>
+                        <p class="text-xs text-gray-500">Spent</p>
+                        <p class="text-lg font-semibold text-brand-dark">$4,230</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs text-gray-500">Budget</p>
+                        <p class="text-lg font-semibold text-brand-dark">$8,000</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs text-gray-500">Pacing</p>
+                        <p class="text-lg font-semibold text-green-600">52%</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div class="h-full bg-green-500 rounded-full" style="width: 52%"></div>
+                    </div>
+                  </div>
+
+                  <!-- Meta Ads - Warning -->
+                  <div class="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-500">
+                    <div class="flex items-center justify-between mb-2">
+                      <div class="flex items-center gap-2">
+                        <span class="text-2xl font-bold text-blue-600">M</span>
+                        <span class="font-medium text-brand-dark">Meta Ads</span>
+                      </div>
+                      <span class="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full">Pacing high</span>
+                    </div>
+                    <div class="flex items-end justify-between">
+                      <div>
+                        <p class="text-xs text-gray-500">Spent</p>
+                        <p class="text-lg font-semibold text-brand-dark">$3,890</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs text-gray-500">Budget</p>
+                        <p class="text-lg font-semibold text-brand-dark">$5,000</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs text-gray-500">Pacing</p>
+                        <p class="text-lg font-semibold text-yellow-600">78%</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div class="h-full bg-yellow-500 rounded-full" style="width: 78%"></div>
+                    </div>
+                  </div>
+
+                  <!-- LinkedIn Ads - Critical -->
+                  <div class="bg-red-50 rounded-xl p-4 border-l-4 border-red-500">
+                    <div class="flex items-center justify-between mb-2">
+                      <div class="flex items-center gap-2">
+                        <span class="text-2xl font-bold text-blue-700">in</span>
+                        <span class="font-medium text-brand-dark">LinkedIn Ads</span>
+                      </div>
+                      <span class="text-xs font-medium text-red-700 bg-red-100 px-2 py-1 rounded-full">Over budget</span>
+                    </div>
+                    <div class="flex items-end justify-between">
+                      <div>
+                        <p class="text-xs text-gray-500">Spent</p>
+                        <p class="text-lg font-semibold text-brand-dark">$2,780</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs text-gray-500">Budget</p>
+                        <p class="text-lg font-semibold text-brand-dark">$2,000</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs text-gray-500">Pacing</p>
+                        <p class="text-lg font-semibold text-red-600">139%</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div class="h-full bg-red-500 rounded-full" style="width: 100%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Alert Badge -->
+              <div class="absolute -top-3 -right-3 bg-white rounded-xl shadow-xl px-4 py-2 border border-gray-200">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                  <span class="text-sm font-medium text-brand-dark">1 alert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Problem Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-brand-dark text-center">
+            The hidden cost of manual ad spend tracking
+          </h2>
+          <div class="space-y-6 text-lg text-deep-gray leading-relaxed">
+            <p>
+              Every month, performance marketers face the same challenge: keeping track of ad spend across multiple platforms. Google Ads, Meta Ads, LinkedIn Ads. Each with its own dashboard, its own reporting lag, its own way of calculating budgets.
+            </p>
+            <p>
+              The result? You either spend hours each week updating spreadsheets, or you get surprised at month-end when a campaign has overspent by 40%. Neither option is good for your results or your sanity.
+            </p>
+            <p>
+              Platform-native budget tools don't solve this. They only show you one channel at a time. They don't account for your total marketing budget or how spend in one platform affects your ability to spend in another.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-brand-dark text-center">
+            One view of all your ad spend
+          </h2>
+          <div class="space-y-6 text-lg text-deep-gray leading-relaxed">
+            <p>
+              Budget Checker gives you a single view of your ad spend across all platforms. Set your monthly budgets once, connect your ad accounts, and get a clear picture of where you stand every day.
+            </p>
+            <p>
+              No more logging into three platforms to piece together your spend. No more spreadsheet formulas that break when someone adds a new campaign. Just open Budget Checker, glance at your pacing, and know exactly where you stand.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark text-center">
+            How the ad spend tracker works
+          </h2>
+          <p class="text-lg text-deep-gray text-center mb-12 max-w-2xl mx-auto">
+            Budget Checker is designed for daily operational checks, not endless data exploration.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <article class="bg-soft-gray rounded-xl p-8">
+              <div class="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mb-6">
+                <span class="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-4 text-brand-dark">Connect your ad platforms</h3>
+              <p class="text-deep-gray">
+                Link your Google Ads, Meta Ads, and LinkedIn Ads accounts in minutes. Budget Checker pulls spend data automatically, so you always have the latest numbers.
+              </p>
+            </article>
+
+            <article class="bg-soft-gray rounded-xl p-8">
+              <div class="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mb-6">
+                <span class="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-4 text-brand-dark">Set your monthly budgets</h3>
+              <p class="text-deep-gray">
+                Define your budget for each platform. Budget Checker calculates where you should be based on the day of the month and compares it to actual spend.
+              </p>
+            </article>
+
+            <article class="bg-soft-gray rounded-xl p-8">
+              <div class="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mb-6">
+                <span class="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-4 text-brand-dark">Check daily, act early</h3>
+              <p class="text-deep-gray">
+                Open Budget Checker each morning for a quick budget check. Green means on track. Yellow means pacing high. Red means action needed. Simple.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 px-6 bg-brand-dark text-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+            Ad spend tracking features
+          </h2>
+          <p class="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+            Everything you need to track your marketing budget. Nothing you don't.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <article class="bg-white/10 rounded-xl p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-2">Multi-channel budget view</h3>
+                  <p class="text-gray-300">See spend across Google Ads, Meta Ads, and LinkedIn Ads in one dashboard. No more switching between platforms to piece together your total spend.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-white/10 rounded-xl p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-2">Budget pacing alerts</h3>
+                  <p class="text-gray-300">Get early warnings when spend is pacing high or low. Catch potential overspend at day 10, not day 30 when it's too late to course correct.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-white/10 rounded-xl p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-2">Daily sync</h3>
+                  <p class="text-gray-300">Spend data syncs automatically each day. Start your morning with accurate, up-to-date numbers without manual exports or copy-pasting.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-white/10 rounded-xl p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-2">Simple status indicators</h3>
+                  <p class="text-gray-300">Green, yellow, red. At a glance, you know which budgets need attention. No complex dashboards or data exploration required.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Not Spreadsheets Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-brand-dark text-center">
+            Why not just use a spreadsheet?
+          </h2>
+          <div class="space-y-6 text-lg text-deep-gray leading-relaxed">
+            <p>
+              Spreadsheets work. Millions of marketers track their ad budgets in Google Sheets or Excel. But there's a cost to that approach that's easy to overlook.
+            </p>
+            <p>
+              Every week, you spend time logging into each platform, exporting data, and updating your spreadsheet. That's time you're not spending on strategy or optimization. And when you forget to update for a few days, you lose visibility exactly when you need it most.
+            </p>
+            <p>
+              Budget Checker automates the tedious part. It pulls spend data automatically, calculates pacing for you, and shows you exactly where you stand. You still make the decisions. You just make them with better information and less busywork.
+            </p>
+          </div>
+
+          <div class="mt-12 grid md:grid-cols-2 gap-8">
+            <div class="bg-red-50 rounded-xl p-6 border border-red-100">
+              <h3 class="font-semibold text-lg mb-4 text-red-800">Spreadsheet tracking</h3>
+              <ul class="space-y-3 text-red-700">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span>Manual data entry from each platform</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span>Formulas break when campaigns change</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span>No alerts when pacing goes wrong</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span>Data is only as fresh as your last update</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-xl p-6 border border-green-100">
+              <h3 class="font-semibold text-lg mb-4 text-green-800">Budget Checker</h3>
+              <ul class="space-y-3 text-green-700">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Automatic daily sync from ad platforms</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Pacing calculated automatically</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Visual alerts when action is needed</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Always up-to-date, always accurate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Use Cases Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark text-center">
+            Who uses Budget Checker
+          </h2>
+          <p class="text-lg text-deep-gray text-center mb-12 max-w-2xl mx-auto">
+            Built for hands-on performance marketers who manage campaigns daily.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <article class="bg-white rounded-xl p-8 shadow-sm">
+              <h3 class="font-semibold text-xl mb-4 text-brand-dark">In-house marketers</h3>
+              <p class="text-deep-gray mb-4">
+                Managing budgets for your company's ad accounts? Budget Checker helps you stay on top of spend without the weekly spreadsheet ritual.
+              </p>
+              <p class="text-sm text-gray-500">
+                "I used to spend Friday afternoons updating our budget tracker. Now I just check Budget Checker each morning."
+              </p>
+            </article>
+
+            <article class="bg-white rounded-xl p-8 shadow-sm">
+              <h3 class="font-semibold text-xl mb-4 text-brand-dark">Agency professionals</h3>
+              <p class="text-deep-gray mb-4">
+                Tracking budgets for multiple clients? Budget Checker gives you visibility across accounts so you can catch issues before clients do.
+              </p>
+              <p class="text-sm text-gray-500">
+                "Nothing worse than a client asking why we overspent. Budget Checker helps us stay ahead of those conversations."
+              </p>
+            </article>
+
+            <article class="bg-white rounded-xl p-8 shadow-sm">
+              <h3 class="font-semibold text-xl mb-4 text-brand-dark">Freelancers</h3>
+              <p class="text-deep-gray mb-4">
+                Running campaigns for several clients? Budget Checker helps you manage budgets efficiently without building custom tracking for each client.
+              </p>
+              <p class="text-sm text-gray-500">
+                "Simple and focused. Exactly what I need to keep client budgets on track."
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-brand-dark text-center">
+            Frequently asked questions
+          </h2>
+
+          <div class="space-y-6">
+            <article class="bg-soft-gray rounded-xl p-6">
+              <h3 class="font-semibold text-lg mb-3 text-brand-dark">What is an ad spend tracker?</h3>
+              <p class="text-deep-gray">
+                An ad spend tracker is a tool that monitors your advertising budget across multiple platforms like Google Ads, Meta Ads, and LinkedIn Ads. It shows you how much you've spent versus your budget, calculates pacing, and alerts you when spending patterns indicate potential overspend or underspend.
+              </p>
+            </article>
+
+            <article class="bg-soft-gray rounded-xl p-6">
+              <h3 class="font-semibold text-lg mb-3 text-brand-dark">Why do I need an ad spend tracker instead of checking each platform?</h3>
+              <p class="text-deep-gray">
+                Checking each ad platform individually is time-consuming and error-prone. Platforms don't show your overall budget picture or how spend across channels affects your total marketing budget. An ad spend tracker like Budget Checker gives you a unified view, saves time on daily checks, and catches budget issues before they become problems.
+              </p>
+            </article>
+
+            <article class="bg-soft-gray rounded-xl p-6">
+              <h3 class="font-semibold text-lg mb-3 text-brand-dark">How does Budget Checker calculate budget pacing?</h3>
+              <p class="text-deep-gray">
+                Budget Checker calculates pacing by comparing your actual spend to where you should be based on the day of the month. For example, if you're 15 days into a 30-day month, you should have spent roughly 50% of your budget. If you've spent 70%, Budget Checker flags this as "pacing high" so you can adjust before overspending.
+              </p>
+            </article>
+
+            <article class="bg-soft-gray rounded-xl p-6">
+              <h3 class="font-semibold text-lg mb-3 text-brand-dark">Which ad platforms does Budget Checker support?</h3>
+              <p class="text-deep-gray">
+                Budget Checker currently supports Google Ads, Meta Ads (Facebook and Instagram), and LinkedIn Ads. These are the most commonly used platforms for performance marketing. Additional platform support is planned based on user feedback.
+              </p>
+            </article>
+
+            <article class="bg-soft-gray rounded-xl p-6">
+              <h3 class="font-semibold text-lg mb-3 text-brand-dark">How often does Budget Checker update spend data?</h3>
+              <p class="text-deep-gray">
+                Budget Checker syncs with your ad platforms daily, pulling the latest spend data each morning. This ensures you have accurate, up-to-date information for your daily budget check without the lag of manual reporting.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-24 px-6 bg-brand-dark text-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Stop guessing where your budget stands
+          </h2>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the waitlist and be the first to try Budget Checker when it launches. One daily check. Complete budget visibility.
+          </p>
+          <button onclick="openWaitlistModal()" class="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg cursor-pointer">
+            Get on the waitlist
+          </button>
+          <p class="text-sm text-gray-400 mt-4">No spam. Just launch updates and early access.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal" class="fixed inset-0 z-[100] hidden">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeWaitlistModal()"></div>
+
+      <!-- Modal Content -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 relative">
+          <!-- Close Button -->
+          <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Form Content -->
+          <div id="waitlist-form-container">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-dark mb-2">Get on the waitlist</h3>
+              <p class="text-deep-gray">Be the first to know when marketingOS launches. We'll send you early access.</p>
+            </div>
+
+            <form id="waitlist-form" onsubmit="submitWaitlistForm(event)">
+              <div class="mb-4">
+                <label for="waitlist-email" class="block text-sm font-medium text-deep-gray mb-2">Email address</label>
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  name="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="waitlist-submit-btn"
+                class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+              >
+                Join the waitlist
+              </button>
+
+              <p class="text-xs text-gray-500 text-center mt-4">
+                We respect your privacy. No spam, ever.
+              </p>
+            </form>
+          </div>
+
+          <!-- Success Message (hidden by default) -->
+          <div id="waitlist-success" class="hidden text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">You're on the list!</h3>
+            <p class="text-deep-gray mb-6">Thanks for signing up. We'll be in touch soon with early access.</p>
+            <button
+              onclick="closeWaitlistModal()"
+              class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Got it
+            </button>
+          </div>
+
+          <!-- Error Message (hidden by default) -->
+          <div id="waitlist-error" class="hidden text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Oops, something went wrong</h3>
+            <p class="text-deep-gray mb-6" id="waitlist-error-message">Please try again later.</p>
+            <button
+              onclick="resetWaitlistForm()"
+              class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">
+      <div class="max-w-5xl mx-auto text-center">
+        <a href="/" class="font-semibold text-brand-dark text-lg mb-2 inline-block hover:text-brand-blue transition-colors">marketingOS</a>
+        <p class="text-deep-gray text-sm mb-4">The operating system for modern marketers</p>
+        <p class="text-deep-gray text-sm">&copy; <span id="current-year"></span> marketingOS. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
