@@ -19,8 +19,19 @@ const NOTIFICATION_EMAIL = 'hallo@maximbaeten.be';
 
 function doPost(e) {
   try {
-    const data = JSON.parse(e.postData.contents);
-    const email = data.email;
+    // Handle both FormData and JSON
+    let email, source;
+
+    if (e.parameter && e.parameter.email) {
+      // FormData submission
+      email = e.parameter.email;
+      source = e.parameter.source || 'website';
+    } else if (e.postData && e.postData.contents) {
+      // JSON submission
+      const data = JSON.parse(e.postData.contents);
+      email = data.email;
+      source = data.source || 'website';
+    }
 
     if (!email || !isValidEmail(email)) {
       return createResponse({ error: 'Invalid email address' }, 400);
@@ -45,7 +56,6 @@ function doPost(e) {
 
     // Add entry
     const timestamp = new Date().toLocaleString('en-BE', { timeZone: 'Europe/Brussels' });
-    const source = data.source || 'website';
     sheet.appendRow([email, timestamp, source]);
 
     const position = sheet.getLastRow() - 1;

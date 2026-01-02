@@ -52,14 +52,15 @@ window.submitWaitlistForm = async function(event) {
   submitBtn.textContent = 'Joining...'
 
   try {
-    // Call Google Apps Script
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    // Call Google Apps Script using form data (works better with CORS)
+    const formData = new FormData()
+    formData.append('email', email)
+    formData.append('source', window.location.pathname)
+
+    await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors', // Required for Google Apps Script
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email, source: window.location.pathname })
+      mode: 'no-cors',
+      body: formData
     })
 
     // With no-cors mode, we can't read the response, so we assume success
