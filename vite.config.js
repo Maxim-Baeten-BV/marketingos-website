@@ -10,6 +10,7 @@ export default defineConfig({
         'features-budget-checker': resolve(__dirname, 'features/budget-checker.html'),
         'features-meta-ads-manager': resolve(__dirname, 'features/meta-ads-manager.html'),
         'features-google-ads-manager': resolve(__dirname, 'features/google-ads-manager.html'),
+        'features-analytics-reporter': resolve(__dirname, 'features/analytics-reporter.html'),
       },
     },
   },

@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon_wit.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT2NFZ7L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      html { visibility: hidden; opacity: 0; }
+    </style>
+
+    <!-- Primary Meta Tags -->
+    <title>Marketing Dashboard: Track Campaign Performance in One View | marketingOS</title>
+    <meta name="title" content="Marketing Dashboard: Track Campaign Performance in One View | marketingOS" />
+    <meta name="description" content="Marketing dashboard software that brings your campaign data together. Track performance across Google Ads, Meta, and LinkedIn in one clear view. Built for daily decision-making, not endless data exploration." />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.flywithmarketingos.com/features/analytics-reporter" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flywithmarketingos.com/features/analytics-reporter" />
+    <meta property="og:title" content="Marketing Dashboard: Track Campaign Performance in One View | marketingOS" />
+    <meta property="og:description" content="Marketing dashboard software that brings your campaign data together. Track performance across channels, spot trends, and make faster decisions." />
+    <meta property="og:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.flywithmarketingos.com/features/analytics-reporter" />
+    <meta property="twitter:title" content="Marketing Dashboard: Track Campaign Performance in One View | marketingOS" />
+    <meta property="twitter:description" content="Marketing dashboard software that brings your campaign data together. Track performance across channels, spot trends, and make faster decisions." />
+    <meta property="twitter:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Schema.org JSON-LD - SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Analytics Reporter",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Marketing Dashboard Software",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "description": "Marketing dashboard software that unifies campaign data from Google Ads, Meta Ads, and LinkedIn Ads. Get clear performance insights without switching between platforms.",
+      "url": "https://www.flywithmarketingos.com/features/analytics-reporter",
+      "screenshot": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png",
+      "featureList": [
+        "Cross-channel performance tracking",
+        "Unified marketing dashboard",
+        "Daily performance snapshots",
+        "Trend detection and alerts",
+        "Custom date range comparisons",
+        "Key metric highlighting",
+        "Export-ready insights"
+      ],
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "marketingOS",
+        "url": "https://www.flywithmarketingos.com"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "marketingOS",
+        "url": "https://www.flywithmarketingos.com"
+      }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.flywithmarketingos.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product",
+          "item": "https://www.flywithmarketingos.com/performance-marketing-software"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Analytics Reporter",
+          "item": "https://www.flywithmarketingos.com/features/analytics-reporter"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a marketing dashboard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A marketing dashboard is software that brings together data from multiple advertising and analytics platforms into one unified view. Instead of logging into Google Ads, Meta Ads, LinkedIn Ads, and Google Analytics separately, a marketing dashboard shows your key metrics in a single place, making it easier to understand overall performance and spot trends."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Analytics Reporter different from Google Analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Analytics focuses on website behavior—page views, sessions, user paths. Analytics Reporter focuses on campaign performance across ad platforms. It answers 'how are my campaigns performing?' rather than 'what are users doing on my site?' Both are valuable, but serve different purposes in your marketing stack."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platforms does the marketing dashboard connect to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Analytics Reporter connects to Google Ads, Meta Ads (Facebook and Instagram), and LinkedIn Ads. This covers the most common paid advertising channels for performance marketers. Additional platform integrations are planned based on user feedback."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize which metrics appear on my dashboard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While Analytics Reporter comes with sensible defaults (spend, conversions, cost per conversion, ROAS), you can customize which metrics appear and how they're prioritized. The goal is showing you what matters for your specific campaigns, not overwhelming you with every possible data point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often does the marketing dashboard update?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Analytics Reporter syncs with your ad platforms daily, pulling the latest performance data each morning. This gives you fresh data for your daily performance review without the delays of manual data exports or the complexity of real-time streaming."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT2NFZ7L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-6 px-6" style="background-color: #FFFCF5;">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-12 w-auto" />
+        </a>
+        <div class="flex items-center gap-8">
+          <!-- Product Dropdown -->
+          <div class="relative group">
+            <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200 flex items-center gap-1">
+              Product
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px]">
+                <a href="/performance-marketing-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Overview</span>
+                  <span class="block text-sm text-gray-500">All features & apps</span>
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/budget-checker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Budget Checker</span>
+                  <span class="block text-sm text-gray-500">Ad spend tracker</span>
+                </a>
+                <a href="/features/meta-ads-manager" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Meta Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Facebook & Instagram ads</span>
+                </a>
+                <a href="/features/google-ads-manager" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Google Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Search & Performance Max</span>
+                </a>
+                <a href="/features/analytics-reporter" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Analytics Reporter</span>
+                  <span class="block text-sm text-gray-500">Marketing dashboard</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
+            Get on the waitlist
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Breadcrumb -->
+      <div class="bg-soft-gray py-3 px-6">
+        <div class="max-w-6xl mx-auto">
+          <nav class="flex items-center text-sm text-deep-gray" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="text-brand-dark font-medium">Analytics Reporter</span>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <header class="bg-brand-dark text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div>
+              <span class="inline-block bg-brand-blue/20 text-brand-blue px-3 py-1 rounded-full text-sm font-medium mb-4">Marketing Dashboard</span>
+              <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                All Your Campaign Data.<br>One Clear View.
+              </h1>
+              <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Stop switching between platforms to understand performance. Analytics Reporter brings your Google Ads, Meta, and LinkedIn data together in a <strong class="text-white">marketing dashboard</strong> built for daily decision-making.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+                  Join the Waitlist
+                </button>
+                <a href="/performance-marketing-software" class="border border-white/30 hover:border-white text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 text-center">
+                  View All Features
+                </a>
+              </div>
+            </div>
+            <!-- Product Mockup -->
+            <div class="relative">
+              <div class="bg-white rounded-lg shadow-2xl p-6">
+                <!-- Dashboard Header -->
+                <div class="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 class="font-semibold text-brand-dark">Performance Overview</h3>
+                    <p class="text-sm text-gray-500">Last 30 days vs previous period</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-soft-gray rounded text-xs text-brand-dark">All Channels</span>
+                  </div>
+                </div>
+                <!-- KPI Cards Row -->
+                <div class="grid grid-cols-4 gap-3 mb-6">
+                  <div class="bg-soft-gray rounded-lg p-3">
+                    <p class="text-xs text-gray-500 mb-1">Total Spend</p>
+                    <p class="text-lg font-bold text-brand-dark">€24,580</p>
+                    <span class="text-xs text-green-600">+12% vs prev</span>
+                  </div>
+                  <div class="bg-soft-gray rounded-lg p-3">
+                    <p class="text-xs text-gray-500 mb-1">Conversions</p>
+                    <p class="text-lg font-bold text-brand-dark">1,247</p>
+                    <span class="text-xs text-green-600">+23% vs prev</span>
+                  </div>
+                  <div class="bg-soft-gray rounded-lg p-3">
+                    <p class="text-xs text-gray-500 mb-1">Cost/Conv</p>
+                    <p class="text-lg font-bold text-brand-dark">€19.71</p>
+                    <span class="text-xs text-green-600">-8% vs prev</span>
+                  </div>
+                  <div class="bg-soft-gray rounded-lg p-3">
+                    <p class="text-xs text-gray-500 mb-1">ROAS</p>
+                    <p class="text-lg font-bold text-brand-dark">4.2x</p>
+                    <span class="text-xs text-green-600">+0.6 vs prev</span>
+                  </div>
+                </div>
+                <!-- Channel Breakdown -->
+                <div class="border-t border-gray-200 pt-4">
+                  <p class="text-xs text-gray-500 mb-3 font-medium">By Channel</p>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                        <span class="text-sm text-brand-dark">Google Ads</span>
+                      </div>
+                      <div class="flex items-center gap-4 text-sm">
+                        <span class="text-gray-600">€12,340</span>
+                        <span class="text-green-600 font-medium">4.8x ROAS</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-indigo-500"></div>
+                        <span class="text-sm text-brand-dark">Meta Ads</span>
+                      </div>
+                      <div class="flex items-center gap-4 text-sm">
+                        <span class="text-gray-600">€8,920</span>
+                        <span class="text-green-600 font-medium">3.9x ROAS</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-sky-500"></div>
+                        <span class="text-sm text-brand-dark">LinkedIn Ads</span>
+                      </div>
+                      <div class="flex items-center gap-4 text-sm">
+                        <span class="text-gray-600">€3,320</span>
+                        <span class="text-yellow-600 font-medium">2.8x ROAS</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Problem Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-8 text-center">
+            The Problem with Platform-Native Reporting
+          </h2>
+          <div class="prose prose-lg max-w-none text-deep-gray">
+            <p class="text-xl leading-relaxed mb-6">
+              Every morning starts the same way: log into Google Ads, check performance. Switch to Meta Ads, check performance. Open LinkedIn, check performance. Maybe pull some data into a spreadsheet. Compare numbers manually. Try to get a sense of what's actually working.
+            </p>
+            <p class="leading-relaxed mb-6">
+              Each advertising platform has its own <strong>marketing analytics dashboard</strong>, its own metrics definitions, its own date formats. Google Ads shows you one story, Meta tells another, and neither gives you the complete picture. You're left piecing together fragmented data from multiple sources just to answer simple questions.
+            </p>
+            <p class="leading-relaxed mb-6">
+              "How did we perform this week?" shouldn't require opening five browser tabs and a spreadsheet. "Which channel is driving the best results?" shouldn't take 30 minutes to figure out. Yet that's the reality for most performance marketers managing campaigns across platforms.
+            </p>
+            <p class="leading-relaxed">
+              The data exists. It's just scattered across systems that were never designed to work together. What you need is a unified <strong>marketing dashboard software</strong> that brings it all together—without the complexity of enterprise BI tools or the limitations of basic reporting.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              One Dashboard. All Your Channels.
+            </h2>
+            <p class="text-xl text-deep-gray max-w-3xl mx-auto">
+              Analytics Reporter is a <strong>campaign analytics tool</strong> that connects to your ad platforms and shows you what matters—without the noise.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-8 shadow-sm">
+              <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Unified View</h3>
+              <p class="text-deep-gray">
+                Google Ads, Meta Ads, and LinkedIn Ads data in one place. No more switching between platforms to understand overall performance.
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-sm">
+              <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Trend Detection</h3>
+              <p class="text-deep-gray">
+                Automatic comparison against previous periods. See what's improving, what's declining, and where you should focus your attention.
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-8 shadow-sm">
+              <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Daily Snapshots</h3>
+              <p class="text-deep-gray">
+                Fresh data every morning. Start your day knowing exactly where you stand across all channels, without manual data pulls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              How the Marketing Dashboard Works
+            </h2>
+            <p class="text-xl text-deep-gray max-w-3xl mx-auto">
+              Connect your ad accounts once. Get unified reporting from day one.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Connect Your Accounts</h3>
+              <p class="text-deep-gray">
+                Link your Google Ads, Meta Ads, and LinkedIn Ads accounts with secure OAuth. No credentials stored, just standard API connections.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Set Your Metrics</h3>
+              <p class="text-deep-gray">
+                Choose which KPIs matter most for your campaigns. Start with defaults or customize based on your goals and reporting needs.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Review Daily</h3>
+              <p class="text-deep-gray">
+                Each morning, your dashboard shows fresh data with period comparisons. See performance at a glance and drill down where needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Detail Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              Marketing Dashboard Features
+            </h2>
+            <p class="text-xl text-deep-gray max-w-3xl mx-auto">
+              Built for performance marketers who need clarity, not complexity.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Cross-Channel Overview</h3>
+              <p class="text-deep-gray mb-4">
+                See total spend, conversions, and efficiency metrics across all connected platforms. Understand your overall marketing performance without opening multiple tabs.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Aggregated spend across all channels</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Total conversions with cost per conversion</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Blended ROAS calculation</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Channel Comparison</h3>
+              <p class="text-deep-gray mb-4">
+                Break down performance by platform to see which channels are driving the best results. Identify where to scale and where to optimize.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Side-by-side channel metrics</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Efficiency ranking by platform</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Budget allocation insights</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Period Comparisons</h3>
+              <p class="text-deep-gray mb-4">
+                Automatic comparison against previous periods shows you what's changing. Spot trends before they become problems—or opportunities.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Week-over-week changes</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Month-over-month trends</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Custom date range comparisons</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Customizable Metrics</h3>
+              <p class="text-deep-gray mb-4">
+                Focus on what matters for your campaigns. Choose which KPIs appear on your dashboard and how they're prioritized.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Select primary KPIs</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Hide metrics you don't need</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Reorder to match your workflow</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Daily Sync</h3>
+              <p class="text-deep-gray mb-4">
+                Fresh data waiting for you every morning. Analytics Reporter syncs with your ad platforms automatically so you never start the day with stale numbers.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Automatic morning data refresh</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>No manual exports needed</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Historical data retention</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Simple Interface</h3>
+              <p class="text-deep-gray mb-4">
+                No training required. Analytics Reporter shows you the data you need without the complexity of enterprise BI tools.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Clean, scannable layout</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Mobile-friendly design</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>No complex configurations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Table -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              Why Use a Unified Marketing Dashboard?
+            </h2>
+            <p class="text-xl text-deep-gray max-w-3xl mx-auto">
+              Compare the traditional approach vs. Analytics Reporter
+            </p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-soft-gray">
+                  <th class="text-left p-4 font-semibold text-brand-dark border-b-2 border-gray-200">Aspect</th>
+                  <th class="text-left p-4 font-semibold text-brand-dark border-b-2 border-gray-200">Platform-Native Reporting</th>
+                  <th class="text-left p-4 font-semibold text-brand-dark border-b-2 border-gray-200 bg-brand-blue/10">Analytics Reporter</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-4 border-b border-gray-200 font-medium text-brand-dark">Daily check time</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray">20-30 minutes across platforms</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray bg-brand-blue/5">2-5 minutes in one view</td>
+                </tr>
+                <tr>
+                  <td class="p-4 border-b border-gray-200 font-medium text-brand-dark">Cross-channel view</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray">Manual spreadsheet compilation</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray bg-brand-blue/5">Automatic unified dashboard</td>
+                </tr>
+                <tr>
+                  <td class="p-4 border-b border-gray-200 font-medium text-brand-dark">Period comparisons</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray">Calculate manually per platform</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray bg-brand-blue/5">Automatic trend detection</td>
+                </tr>
+                <tr>
+                  <td class="p-4 border-b border-gray-200 font-medium text-brand-dark">Metric consistency</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray">Different definitions per platform</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray bg-brand-blue/5">Standardized across channels</td>
+                </tr>
+                <tr>
+                  <td class="p-4 border-b border-gray-200 font-medium text-brand-dark">Data freshness</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray">Depends on manual refresh</td>
+                  <td class="p-4 border-b border-gray-200 text-deep-gray bg-brand-blue/5">Daily automatic sync</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-medium text-brand-dark">Learning curve</td>
+                  <td class="p-4 text-deep-gray">Different UI per platform</td>
+                  <td class="p-4 text-deep-gray bg-brand-blue/5">One simple interface</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Use Cases Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              Who Uses a Marketing Analytics Dashboard?
+            </h2>
+            <p class="text-xl text-deep-gray max-w-3xl mx-auto">
+              Analytics Reporter fits different workflows and team sizes.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-8">
+              <div class="w-12 h-12 bg-brand-dark rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">In-House Marketing Teams</h3>
+              <p class="text-deep-gray mb-4">
+                You manage paid campaigns for your company across multiple channels. You need a quick daily check without platform-hopping, plus an easy way to report to leadership.
+              </p>
+              <p class="text-sm text-brand-blue font-medium">
+                "I can give my CMO a clear picture without spending half my morning pulling data."
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <div class="w-12 h-12 bg-brand-dark rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Marketing Agencies</h3>
+              <p class="text-deep-gray mb-4">
+                You manage campaigns for multiple clients across platforms. You need to quickly assess performance across accounts and identify which clients need attention.
+              </p>
+              <p class="text-sm text-brand-blue font-medium">
+                "I can spot issues across all my accounts before my morning coffee gets cold."
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-8">
+              <div class="w-12 h-12 bg-brand-dark rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-3">Freelance Marketers</h3>
+              <p class="text-deep-gray mb-4">
+                You work with multiple clients and need to stay on top of all their campaigns. You don't have time for complex BI setups—you need something that just works.
+              </p>
+              <p class="text-sm text-brand-blue font-medium">
+                "Simple, effective, and saves me hours every week on reporting."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-6">
+            <details class="group bg-soft-gray rounded-lg">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <h3 class="font-semibold text-brand-dark pr-4">What is a marketing dashboard?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-deep-gray">
+                <p>A marketing dashboard is software that brings together data from multiple advertising and analytics platforms into one unified view. Instead of logging into Google Ads, Meta Ads, LinkedIn Ads, and Google Analytics separately, a marketing dashboard shows your key metrics in a single place, making it easier to understand overall performance and spot trends.</p>
+              </div>
+            </details>
+            <details class="group bg-soft-gray rounded-lg">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <h3 class="font-semibold text-brand-dark pr-4">How is Analytics Reporter different from Google Analytics?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-deep-gray">
+                <p>Google Analytics focuses on website behavior—page views, sessions, user paths. Analytics Reporter focuses on campaign performance across ad platforms. It answers "how are my campaigns performing?" rather than "what are users doing on my site?" Both are valuable, but serve different purposes in your marketing stack.</p>
+              </div>
+            </details>
+            <details class="group bg-soft-gray rounded-lg">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <h3 class="font-semibold text-brand-dark pr-4">Which platforms does the marketing dashboard connect to?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-deep-gray">
+                <p>Analytics Reporter connects to Google Ads, Meta Ads (Facebook and Instagram), and LinkedIn Ads. This covers the most common paid advertising channels for performance marketers. Additional platform integrations are planned based on user feedback.</p>
+              </div>
+            </details>
+            <details class="group bg-soft-gray rounded-lg">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <h3 class="font-semibold text-brand-dark pr-4">Can I customize which metrics appear on my dashboard?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-deep-gray">
+                <p>Yes. While Analytics Reporter comes with sensible defaults (spend, conversions, cost per conversion, ROAS), you can customize which metrics appear and how they're prioritized. The goal is showing you what matters for your specific campaigns, not overwhelming you with every possible data point.</p>
+              </div>
+            </details>
+            <details class="group bg-soft-gray rounded-lg">
+              <summary class="flex items-center justify-between p-6 cursor-pointer">
+                <h3 class="font-semibold text-brand-dark pr-4">How often does the marketing dashboard update?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-deep-gray">
+                <p>Analytics Reporter syncs with your ad platforms daily, pulling the latest performance data each morning. This gives you fresh data for your daily performance review without the delays of manual data exports or the complexity of real-time streaming.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 px-6 bg-brand-dark">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready for a Clearer View of Performance?
+          </h2>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the waitlist for Analytics Reporter and be the first to get your marketing dashboard when we launch.
+          </p>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 cursor-pointer text-lg">
+            Join the Waitlist
+          </button>
+          <p class="text-gray-400 mt-4 text-sm">
+            No credit card required. Get notified when early access opens.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 px-6 border-t border-gray-700">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex items-center gap-3">
+            <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo" width="200" height="50" class="h-10 w-auto brightness-0 invert" />
+          </div>
+          <nav class="flex gap-6 text-gray-400">
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <a href="/performance-marketing-software" class="hover:text-white transition-colors">Product</a>
+            <a href="/features/budget-checker" class="hover:text-white transition-colors">Budget Checker</a>
+            <a href="/features/analytics-reporter" class="hover:text-white transition-colors">Analytics Reporter</a>
+          </nav>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; 2025 marketingOS. Built for performance marketers, by a performance marketer.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlistModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+      <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+        <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h3 class="text-2xl font-bold text-brand-dark mb-2">Join the Waitlist</h3>
+        <p class="text-deep-gray mb-6">Be the first to know when Analytics Reporter launches.</p>
+        <form id="waitlistForm" class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-brand-dark mb-1">Email address</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-colors" placeholder="you@company.com" />
+          </div>
+          <button type="submit" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
+            Join Waitlist
+          </button>
+        </form>
+        <p class="text-xs text-gray-500 mt-4 text-center">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
