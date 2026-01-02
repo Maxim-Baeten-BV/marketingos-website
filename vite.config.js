@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         'performance-marketing-software': resolve(__dirname, 'performance-marketing-software.html'),
         'features-budget-checker': resolve(__dirname, 'features/budget-checker.html'),
+        'features-meta-ads-manager': resolve(__dirname, 'features/meta-ads-manager.html'),
       },
     },
   },
