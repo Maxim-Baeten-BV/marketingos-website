@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon_wit.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT2NFZ7L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      html { visibility: hidden; opacity: 0; }
+    </style>
+
+    <!-- Primary Meta Tags -->
+    <title>UTM Tracking Tool: Organize Campaign URLs & Track Attribution | marketingOS</title>
+    <meta name="title" content="UTM Tracking Tool: Organize Campaign URLs & Track Attribution | marketingOS" />
+    <meta name="description" content="Build, organize, and track UTM parameters across all your campaigns. UTM Organizer helps you maintain consistent naming conventions, catch duplicates, and see which UTMs actually drive conversions." />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.flywithmarketingos.com/features/utm-organizer" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flywithmarketingos.com/features/utm-organizer" />
+    <meta property="og:title" content="UTM Tracking Tool: Organize Campaign URLs & Track Attribution | marketingOS" />
+    <meta property="og:description" content="Build, organize, and track UTM parameters across all your campaigns. Maintain consistent naming and see which UTMs drive conversions." />
+    <meta property="og:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.flywithmarketingos.com/features/utm-organizer" />
+    <meta property="twitter:title" content="UTM Tracking Tool: Organize Campaign URLs & Track Attribution | marketingOS" />
+    <meta property="twitter:description" content="Build, organize, and track UTM parameters across all your campaigns. Maintain consistent naming and see which UTMs drive conversions." />
+    <meta property="twitter:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Schema.org JSON-LD - SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UTM Organizer",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "UTM Tracking Tool",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "description": "UTM tracking tool that helps marketers build, organize, and track campaign URLs. Maintain consistent UTM naming conventions, detect duplicates, and see which UTM parameters drive conversions.",
+      "url": "https://www.flywithmarketingos.com/features/utm-organizer",
+      "screenshot": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png",
+      "featureList": [
+        "UTM builder with templates",
+        "Naming convention enforcement",
+        "Duplicate UTM detection",
+        "Campaign URL library",
+        "UTM performance tracking",
+        "Team collaboration",
+        "Bulk URL generation"
+      ],
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "marketingOS",
+        "url": "https://www.flywithmarketingos.com"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "marketingOS",
+        "url": "https://www.flywithmarketingos.com"
+      }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.flywithmarketingos.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product",
+          "item": "https://www.flywithmarketingos.com/performance-marketing-software"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UTM Organizer",
+          "item": "https://www.flywithmarketingos.com/features/utm-organizer"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a UTM tracking tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A UTM tracking tool helps marketers create, organize, and monitor UTM parameters added to campaign URLs. UTM parameters (source, medium, campaign, term, content) tell analytics platforms where your traffic comes from. A good UTM tracking tool enforces consistent naming conventions, prevents duplicates, and helps you understand which campaigns drive results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I need a UTM builder instead of creating UTMs manually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manual UTM creation leads to inconsistencies like 'facebook' vs 'Facebook' vs 'fb' as source values. These variations fragment your data in Google Analytics, making it harder to see true campaign performance. A UTM builder enforces templates and naming conventions so your attribution data stays clean and actionable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does UTM Organizer detect duplicate campaign URLs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "UTM Organizer maintains a library of all your generated URLs and checks new builds against existing ones. If you're creating a URL with parameters similar or identical to an existing one, you'll get an alert. This prevents campaign data fragmentation and helps maintain a single source of truth for your UTM strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use UTM Organizer with Google Analytics 4?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. UTM parameters work the same way in GA4 as they did in Universal Analytics. UTM Organizer builds URLs with standard utm_source, utm_medium, utm_campaign, utm_term, and utm_content parameters that GA4 automatically recognizes and reports on in your traffic acquisition reports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between UTM Organizer and Google's Campaign URL Builder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google's Campaign URL Builder creates one URL at a time with no memory of what you've built before. UTM Organizer stores all your URLs in a central library, enforces naming conventions across your team, detects duplicates, and lets you generate URLs in bulk. It's designed for teams who need consistency at scale, not one-off URL creation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="antialiased bg-white text-brand-dark">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT2NFZ7L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/Logo-FlyWithMarketingOS.png" alt="marketingOS" class="h-8" />
+        </a>
+        <div class="flex items-center gap-6">
+          <!-- Product Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-brand-dark hover:text-brand-blue transition-colors font-medium">
+              Product
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px]">
+                <a href="/performance-marketing-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Overview</span>
+                  <span class="block text-sm text-gray-500">All features & apps</span>
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/budget-checker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Budget Checker</span>
+                  <span class="block text-sm text-gray-500">Ad spend tracker</span>
+                </a>
+                <a href="/features/meta-ads-manager" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Meta Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Facebook & Instagram ads</span>
+                </a>
+                <a href="/features/google-ads-manager" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Google Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Search & Performance Max</span>
+                </a>
+                <a href="/features/analytics-reporter" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Analytics Reporter</span>
+                  <span class="block text-sm text-gray-500">Marketing dashboard</span>
+                </a>
+                <a href="/features/utm-organizer" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">UTM Organizer</span>
+                  <span class="block text-sm text-gray-500">Campaign URL builder</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
+            Get on the waitlist
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-soft-gray to-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Hero Content -->
+            <div>
+              <!-- Breadcrumb -->
+              <nav class="flex items-center gap-2 text-sm text-deep-gray mb-6" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
+                <span>/</span>
+                <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+                <span>/</span>
+                <span class="text-brand-dark font-medium">UTM Organizer</span>
+              </nav>
+
+              <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
+                UTM Tracking Tool That Keeps Your Campaign Data Clean
+              </h1>
+              <p class="text-xl text-deep-gray mb-8 leading-relaxed">
+                Build, organize, and track UTM parameters in one central place. UTM Organizer helps you maintain consistent naming conventions, catch duplicates before they fragment your data, and see which campaign URLs actually drive results.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg">
+                  Join Waitlist
+                </button>
+                <a href="/performance-marketing-software" class="border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg text-center">
+                  View All Features
+                </a>
+              </div>
+            </div>
+            <!-- Product Mockup -->
+            <div class="relative">
+              <div class="bg-white rounded-lg shadow-2xl p-6">
+                <!-- UTM Builder Interface -->
+                <div class="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 class="font-semibold text-brand-dark">UTM Builder</h3>
+                    <p class="text-sm text-gray-500">Build campaign URLs with consistent naming</p>
+                  </div>
+                  <span class="px-3 py-1 bg-green-100 text-green-700 rounded text-xs font-medium">Template Applied</span>
+                </div>
+
+                <!-- URL Preview -->
+                <div class="bg-soft-gray rounded-lg p-4 mb-6">
+                  <p class="text-xs text-gray-500 mb-2">Generated URL</p>
+                  <p class="text-sm text-brand-dark font-mono break-all">
+                    https://example.com/landing?<span class="text-brand-blue">utm_source</span>=google&<span class="text-brand-blue">utm_medium</span>=cpc&<span class="text-brand-blue">utm_campaign</span>=spring_sale_2025
+                  </p>
+                </div>
+
+                <!-- UTM Fields -->
+                <div class="space-y-4">
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="text-xs text-gray-500 block mb-1">Source</label>
+                      <div class="bg-soft-gray rounded px-3 py-2 text-sm text-brand-dark">google</div>
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-500 block mb-1">Medium</label>
+                      <div class="bg-soft-gray rounded px-3 py-2 text-sm text-brand-dark">cpc</div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="text-xs text-gray-500 block mb-1">Campaign</label>
+                    <div class="bg-soft-gray rounded px-3 py-2 text-sm text-brand-dark">spring_sale_2025</div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="text-xs text-gray-500 block mb-1">Term (optional)</label>
+                      <div class="bg-soft-gray rounded px-3 py-2 text-sm text-gray-400">—</div>
+                    </div>
+                    <div>
+                      <label class="text-xs text-gray-500 block mb-1">Content (optional)</label>
+                      <div class="bg-soft-gray rounded px-3 py-2 text-sm text-gray-400">—</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex gap-3 mt-6">
+                  <button class="flex-1 bg-brand-blue text-white py-2 rounded text-sm font-medium">Copy URL</button>
+                  <button class="flex-1 bg-soft-gray text-brand-dark py-2 rounded text-sm font-medium">Save to Library</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-8 text-center">
+            UTM Chaos Fragments Your Attribution Data
+          </h2>
+          <div class="prose prose-lg max-w-none text-deep-gray">
+            <p class="text-xl leading-relaxed mb-6">
+              You know the problem. Your Google Analytics shows traffic from "facebook", "Facebook", "fb", "FB", and "meta" — all referring to the same platform. Your campaign names are inconsistent. Someone used underscores, someone used hyphens, someone didn't use separators at all.
+            </p>
+            <p class="text-xl leading-relaxed mb-6">
+              This happens because teams create UTM parameters in spreadsheets, URL builders, or directly in ad platforms — with no central system enforcing consistency. The result? Fragmented data that makes it impossible to accurately measure campaign performance.
+            </p>
+            <p class="text-xl leading-relaxed">
+              You can't answer basic questions like "how much traffic did our Q1 campaigns drive?" when the same campaign appears under three different UTM variations. Clean attribution data requires consistent UTM tagging from the start.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-8 text-center">
+            One UTM Builder for Consistent Campaign Tracking
+          </h2>
+          <div class="prose prose-lg max-w-none text-deep-gray">
+            <p class="text-xl leading-relaxed mb-6">
+              UTM Organizer gives you a central place to build, store, and manage all your campaign URLs. Set up naming conventions once, and the tool enforces them automatically. No more "facebook" vs "Facebook" debates.
+            </p>
+            <p class="text-xl leading-relaxed mb-6">
+              Every URL you generate gets saved to a searchable library. When you create a new URL, the system checks for duplicates and similar campaigns. You'll know immediately if someone already built a URL for that campaign — or if your naming is about to create fragmentation.
+            </p>
+            <p class="text-xl leading-relaxed">
+              The result: attribution data you can actually trust. When you look at campaign performance in Google Analytics, you're seeing the complete picture — not a fragmented mess split across naming variations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12 text-center">
+            How the UTM Tracking Tool Works
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Set Up Templates</h3>
+              <p class="text-deep-gray">
+                Define your naming conventions for sources, mediums, and campaigns. Create templates that enforce lowercase, specific separators, and required fields.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Build URLs</h3>
+              <p class="text-deep-gray">
+                Use the UTM builder to create campaign URLs. The tool auto-applies your templates, suggests existing values, and warns about duplicates.
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Track Performance</h3>
+              <p class="text-deep-gray">
+                See which UTM-tagged URLs drive traffic and conversions. Your clean, consistent tagging means accurate attribution in your analytics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 px-6 bg-brand-dark text-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+            UTM Builder & Tracking Features
+          </h2>
+          <p class="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Everything you need to keep your campaign URLs organized and your attribution data clean.
+          </p>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white/10 rounded-xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Template-Based Builder</h3>
+              <p class="text-gray-300 mb-4">
+                Create UTM templates that enforce your naming conventions. Lock source and medium values to approved options. Auto-format campaign names with consistent separators and casing.
+              </p>
+              <ul class="text-gray-300 space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Pre-defined source/medium combinations
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Automatic lowercase conversion
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Required field validation
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white/10 rounded-xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Duplicate Detection</h3>
+              <p class="text-gray-300 mb-4">
+                Get warned when you're about to create a URL that already exists or uses similar parameters. Prevent the data fragmentation that happens when the same campaign gets tagged multiple ways.
+              </p>
+              <ul class="text-gray-300 space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Exact duplicate alerts
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Similar parameter warnings
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Suggested existing URLs
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white/10 rounded-xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Central URL Library</h3>
+              <p class="text-gray-300 mb-4">
+                Every URL you create is saved and searchable. Find existing campaign URLs instantly. Know what's been built and by whom. One source of truth for your entire team.
+              </p>
+              <ul class="text-gray-300 space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Search by campaign, source, or URL
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Filter by date or creator
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Export URL lists
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white/10 rounded-xl p-8">
+              <h3 class="text-xl font-semibold mb-4">Bulk URL Generation</h3>
+              <p class="text-gray-300 mb-4">
+                Need to create URLs for 50 ad variations? Upload a spreadsheet or use the bulk builder to generate multiple URLs at once — all with consistent naming applied automatically.
+              </p>
+              <ul class="text-gray-300 space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  CSV import/export
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Batch duplicate checking
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Template application to all rows
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12 text-center">
+            UTM Organizer vs. Manual UTM Creation
+          </h2>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="border-b-2 border-brand-dark">
+                  <th class="text-left py-4 px-4 font-semibold text-brand-dark">Aspect</th>
+                  <th class="text-left py-4 px-4 font-semibold text-red-600">Manual / Spreadsheets</th>
+                  <th class="text-left py-4 px-4 font-semibold text-green-600">UTM Organizer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-200">
+                  <td class="py-4 px-4 font-medium text-brand-dark">Naming consistency</td>
+                  <td class="py-4 px-4 text-deep-gray">Relies on manual discipline</td>
+                  <td class="py-4 px-4 text-deep-gray">Enforced by templates</td>
+                </tr>
+                <tr class="border-b border-gray-200 bg-soft-gray">
+                  <td class="py-4 px-4 font-medium text-brand-dark">Duplicate prevention</td>
+                  <td class="py-4 px-4 text-deep-gray">Hope you remember or search</td>
+                  <td class="py-4 px-4 text-deep-gray">Automatic detection & alerts</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-4 px-4 font-medium text-brand-dark">URL storage</td>
+                  <td class="py-4 px-4 text-deep-gray">Scattered across files</td>
+                  <td class="py-4 px-4 text-deep-gray">Central searchable library</td>
+                </tr>
+                <tr class="border-b border-gray-200 bg-soft-gray">
+                  <td class="py-4 px-4 font-medium text-brand-dark">Team collaboration</td>
+                  <td class="py-4 px-4 text-deep-gray">Share spreadsheets, hope for updates</td>
+                  <td class="py-4 px-4 text-deep-gray">Everyone uses same system</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-4 px-4 font-medium text-brand-dark">Bulk creation</td>
+                  <td class="py-4 px-4 text-deep-gray">Copy-paste prone to errors</td>
+                  <td class="py-4 px-4 text-deep-gray">Import, validate, export</td>
+                </tr>
+                <tr class="border-b border-gray-200 bg-soft-gray">
+                  <td class="py-4 px-4 font-medium text-brand-dark">Attribution data quality</td>
+                  <td class="py-4 px-4 text-deep-gray">Fragmented by inconsistencies</td>
+                  <td class="py-4 px-4 text-deep-gray">Clean and accurate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Use Cases Section -->
+      <section class="py-20 px-6 bg-soft-gray">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12 text-center">
+            Who Uses UTM Tracking Software
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Performance Marketing Teams</h3>
+              <p class="text-deep-gray mb-4">
+                Teams running campaigns across multiple channels need consistent UTM tagging to accurately compare performance. UTM Organizer ensures everyone follows the same naming conventions.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Cross-channel attribution accuracy
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Team-wide naming standards
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Campaign URL audit trail
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Marketing Agencies</h3>
+              <p class="text-deep-gray mb-4">
+                Agencies managing UTMs for multiple clients need separate naming conventions per account. UTM Organizer lets you set up client-specific templates while maintaining agency-wide standards.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Client-specific URL libraries
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Template inheritance
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Bulk URL handoff to clients
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-lg p-8">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Growth & Ops Teams</h3>
+              <p class="text-deep-gray mb-4">
+                Teams responsible for marketing infrastructure need to set up UTM standards that scale. UTM Organizer provides governance without slowing down campaign launches.
+              </p>
+              <ul class="text-deep-gray space-y-2">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  UTM governance at scale
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Self-service for marketers
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  Clean data for BI tools
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12 text-center">
+            UTM Tracking Tool FAQs
+          </h2>
+          <div class="space-y-6">
+            <details class="border border-gray-200 rounded-lg p-6 group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="font-semibold text-lg text-brand-dark pr-4">What is a UTM tracking tool?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-deep-gray">
+                A UTM tracking tool helps marketers create, organize, and monitor UTM parameters added to campaign URLs. UTM parameters (source, medium, campaign, term, content) tell analytics platforms where your traffic comes from. A good UTM tracking tool enforces consistent naming conventions, prevents duplicates, and helps you understand which campaigns drive results.
+              </p>
+            </details>
+
+            <details class="border border-gray-200 rounded-lg p-6 group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="font-semibold text-lg text-brand-dark pr-4">Why do I need a UTM builder instead of creating UTMs manually?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-deep-gray">
+                Manual UTM creation leads to inconsistencies like "facebook" vs "Facebook" vs "fb" as source values. These variations fragment your data in Google Analytics, making it harder to see true campaign performance. A UTM builder enforces templates and naming conventions so your attribution data stays clean and actionable.
+              </p>
+            </details>
+
+            <details class="border border-gray-200 rounded-lg p-6 group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="font-semibold text-lg text-brand-dark pr-4">How does UTM Organizer detect duplicate campaign URLs?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-deep-gray">
+                UTM Organizer maintains a library of all your generated URLs and checks new builds against existing ones. If you're creating a URL with parameters similar or identical to an existing one, you'll get an alert. This prevents campaign data fragmentation and helps maintain a single source of truth for your UTM strategy.
+              </p>
+            </details>
+
+            <details class="border border-gray-200 rounded-lg p-6 group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="font-semibold text-lg text-brand-dark pr-4">Can I use UTM Organizer with Google Analytics 4?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-deep-gray">
+                Yes. UTM parameters work the same way in GA4 as they did in Universal Analytics. UTM Organizer builds URLs with standard utm_source, utm_medium, utm_campaign, utm_term, and utm_content parameters that GA4 automatically recognizes and reports on in your traffic acquisition reports.
+              </p>
+            </details>
+
+            <details class="border border-gray-200 rounded-lg p-6 group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="font-semibold text-lg text-brand-dark pr-4">What's the difference between UTM Organizer and Google's Campaign URL Builder?</h3>
+                <svg class="w-5 h-5 text-brand-blue transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-deep-gray">
+                Google's Campaign URL Builder creates one URL at a time with no memory of what you've built before. UTM Organizer stores all your URLs in a central library, enforces naming conventions across your team, detects duplicates, and lets you generate URLs in bulk. It's designed for teams who need consistency at scale, not one-off URL creation.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 px-6 bg-brand-dark text-white">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Stop Fragmenting Your Attribution Data
+          </h2>
+          <p class="text-xl text-gray-300 mb-8">
+            Join the waitlist for UTM Organizer and get a UTM tracking tool that keeps your campaign URLs consistent from day one.
+          </p>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg">
+            Join Waitlist
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 px-6 border-t border-white/10">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex items-center gap-2">
+            <img src="/Logo-FlyWithMarketingOS.png" alt="marketingOS" class="h-8" />
+          </div>
+          <nav class="flex gap-6 text-sm text-gray-400">
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <a href="/performance-marketing-software" class="hover:text-white transition-colors">Product</a>
+            <a href="/features/budget-checker" class="hover:text-white transition-colors">Budget Checker</a>
+            <a href="/features/utm-organizer" class="hover:text-white transition-colors">UTM Organizer</a>
+          </nav>
+          <p class="text-sm text-gray-400">&copy; 2025 marketingOS</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlistModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm">
+      <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl relative">
+        <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h3 class="text-2xl font-bold text-brand-dark mb-2">Join the Waitlist</h3>
+        <p class="text-deep-gray mb-6">Be among the first to access UTM Organizer and take control of your campaign attribution.</p>
+        <form id="waitlistForm" class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-brand-dark mb-1">Work Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
+              placeholder="you@company.com" />
+          </div>
+          <button type="submit" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
+            Join Waitlist
+          </button>
+        </form>
+        <p class="text-xs text-gray-500 mt-4 text-center">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
