@@ -1,0 +1,1757 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon_wit.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT2NFZ7L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Prevent FOUC -->
+    <style>
+      html { visibility: hidden; opacity: 0; }
+    </style>
+
+    <!-- Primary Meta Tags -->
+    <title>Product Roadmap - marketingOS</title>
+    <meta name="title" content="Product Roadmap - marketingOS" />
+    <meta name="description" content="See what we're building at marketingOS. Our transparent product roadmap shows what's coming now, next, and later to help performance marketers automate admin work." />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.flywithmarketingos.com/roadmap/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flywithmarketingos.com/roadmap/" />
+    <meta property="og:title" content="Product Roadmap - marketingOS" />
+    <meta property="og:description" content="See what we're building at marketingOS. Our transparent product roadmap shows what's coming now, next, and later." />
+    <meta property="og:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.flywithmarketingos.com/roadmap/" />
+    <meta property="twitter:title" content="Product Roadmap - marketingOS" />
+    <meta property="twitter:description" content="See what we're building at marketingOS. Our transparent product roadmap shows what's coming now, next, and later." />
+    <meta property="twitter:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-dark': '#1C2E3D',
+              'brand-blue': '#3E7BBE',
+              'deep-gray': '#4A5568',
+              'soft-gray': '#F7F8FA',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Roadmap Data (inlined to avoid race conditions with external script loading) -->
+    <script>
+/**
+ * marketingOS Product Roadmap Data
+ *
+ * Vision: Every performance marketer operates at 10x efficiency, with AI handling 80%
+ * of administrative work, allowing them to focus purely on strategy and creativity.
+ *
+ * Strategy: Become the single source of truth for performance marketing operations by
+ * deeply integrating with all major ad platforms and providing automation that eliminates
+ * manual reporting.
+ *
+ * Last Updated: January 2026
+ */
+
+const ROADMAP_DATA = {
+  // Meta information
+  meta: {
+    version: "1.0",
+    lastUpdated: "2026-01-03",
+    planningHorizon: 24, // months
+    currentQuarter: "Q1 2026"
+  },
+
+  // Vision and Strategy
+  vision: {
+    statement: "Every performance marketer operates at 10x efficiency, with AI handling 80% of administrative work, allowing them to focus purely on strategy and creativity.",
+    tagline: "Automate the admin. Reclaim your focus.",
+    northStar: "Hours saved per marketer per week"
+  },
+
+  // Strategic themes for roadmap organization
+  themes: [
+    {
+      id: "performance-marketing",
+      name: "Performance Marketing",
+      description: "Core apps for paid advertising across Google, Meta, and LinkedIn",
+      icon: "📈",
+      color: "#3E7BBE"
+    },
+    {
+      id: "tracking",
+      name: "Tracking & Analytics",
+      description: "Tools for conversion tracking, UTM management, and analytics reporting",
+      icon: "🎯",
+      color: "#22C55E"
+    },
+    {
+      id: "monitoring",
+      name: "Monitoring & Alerts",
+      description: "Stay ahead of algorithm changes and competitor movements",
+      icon: "🔔",
+      color: "#8B5CF6"
+    },
+    {
+      id: "reporting",
+      name: "Reporting",
+      description: "Professional reports for stakeholders and clients",
+      icon: "📊",
+      color: "#EF4444"
+    },
+    {
+      id: "social-media",
+      name: "Social Media Marketing",
+      description: "Organic social content planning, scheduling, and performance tracking",
+      icon: "📱",
+      color: "#F59E0B"
+    }
+  ],
+
+  // Roadmap items organized by time horizon
+  items: [
+    // ==========================================
+    // NOW - Q1 2026 (High confidence, committed)
+    // ==========================================
+
+    // Budget Checker
+    {
+      id: "budget-checker",
+      title: "Budget Checker",
+      description: "Real-time budget monitoring across Google Ads and Meta Ads with daily pacing alerts. Know exactly where you stand mid-month.",
+      status: "in-progress",
+      horizon: "now",
+      quarter: "Q1 2026",
+      theme: "performance-marketing",
+      confidence: "high",
+      problemStatement: "Marketers often discover budget issues too late—at the end of the month when overspend has already happened or opportunities have been missed.",
+      targetOutcome: "Reduce time spent on budget tracking from 4 hours/week to 30 minutes",
+      successMetrics: [
+        { metric: "Budget check time reduction", target: "85%", current: null },
+        { metric: "Overspend incidents prevented", target: "90%", current: null }
+      ],
+      features: [
+        "Multi-account budget aggregation",
+        "Daily spend pacing vs. target",
+        "Overspend risk alerts",
+        "Month-end projection"
+      ],
+      votes: 142,
+      effort: "M",
+      impact: "XL"
+    },
+
+    // Google Ads Performance Manager
+    {
+      id: "google-ads-performance-manager",
+      title: "Google Ads Performance Manager",
+      description: "Monitor Google Ads performance with clear, actionable insights. See campaign health at a glance and identify issues before they impact results.",
+      status: "in-progress",
+      horizon: "now",
+      quarter: "Q1 2026",
+      theme: "performance-marketing",
+      confidence: "high",
+      problemStatement: "Performance marketers spend hours navigating Google Ads UI to compile basic performance insights that should be instantly available.",
+      targetOutcome: "Reduce time to identify performance issues from hours to minutes",
+      successMetrics: [
+        { metric: "Issue detection time", target: "<5 min", current: null },
+        { metric: "Daily review time", target: "<10 min", current: null }
+      ],
+      features: [
+        "Campaign health scores",
+        "Key metric trends",
+        "Anomaly highlighting",
+        "Performance vs. goals"
+      ],
+      votes: 234,
+      effort: "L",
+      impact: "XL"
+    },
+
+    // Algorithm Monitor
+    {
+      id: "algorithm-monitor",
+      title: "Algorithm Monitor",
+      description: "Stay informed when Google, Meta, or other platforms change their algorithms. Understand what updates could impact your campaigns.",
+      status: "planned",
+      horizon: "now",
+      quarter: "Q1 2026",
+      theme: "monitoring",
+      confidence: "high",
+      problemStatement: "Algorithm changes often catch marketers off guard, leading to sudden performance drops they struggle to explain.",
+      targetOutcome: "Never be surprised by a platform update again",
+      successMetrics: [
+        { metric: "Update awareness time", target: "<24 hours", current: null },
+        { metric: "Impact assessment accuracy", target: "85%+", current: null }
+      ],
+      features: [
+        "Platform update tracking",
+        "Impact assessment",
+        "Historical change log",
+        "Community insights"
+      ],
+      votes: 134,
+      effort: "M",
+      impact: "M"
+    },
+
+    // Google Search Console Specialist
+    {
+      id: "gsc-specialist",
+      title: "Google Search Console Specialist",
+      description: "Monitor SEO performance alongside paid channels. Spot optimization opportunities and track organic visibility improvements.",
+      status: "planned",
+      horizon: "now",
+      quarter: "Q1 2026",
+      theme: "tracking",
+      confidence: "high",
+      problemStatement: "Performance marketers need visibility into organic performance but GSC data is siloed and hard to action.",
+      targetOutcome: "Unified view of paid and organic search performance",
+      successMetrics: [
+        { metric: "Organic visibility tracking", target: "Daily", current: null }
+      ],
+      features: [
+        "Keyword ranking tracking",
+        "Organic traffic trends",
+        "Technical SEO alerts",
+        "SERP position changes"
+      ],
+      votes: 89,
+      effort: "M",
+      impact: "M"
+    },
+
+    // Pixel & Conversion Organizer
+    {
+      id: "pixel-organizer",
+      title: "Pixel & Conversion Organizer",
+      description: "Ensure tracking is set up correctly across all platforms. Detect broken pixels, missing conversion events, and data gaps automatically.",
+      status: "planned",
+      horizon: "now",
+      quarter: "Q1 2026",
+      theme: "tracking",
+      confidence: "high",
+      problemStatement: "Broken tracking often goes unnoticed for days or weeks, leading to data gaps and poor optimization decisions.",
+      targetOutcome: "Zero tracking gaps or broken pixels going undetected",
+      successMetrics: [
+        { metric: "Tracking issue detection time", target: "<1 hour", current: null },
+        { metric: "Data accuracy improvement", target: "99%+", current: null }
+      ],
+      features: [
+        "Pixel health monitoring",
+        "Conversion event validation",
+        "Cross-platform tracking audit",
+        "Alert on tracking failures"
+      ],
+      votes: 156,
+      effort: "L",
+      impact: "L"
+    },
+
+    // ==========================================
+    // NEXT - Q2 2026 (Medium confidence, planned)
+    // Finalise the performance marketing apps stack
+    // ==========================================
+
+    // Meta Ads Performance Manager
+    {
+      id: "meta-ads-performance-manager",
+      title: "Meta Ads Performance Manager",
+      description: "Understand Meta (Facebook & Instagram) campaign performance with simplified reporting. Cut through the noise to see what matters.",
+      status: "planned",
+      horizon: "next",
+      quarter: "Q2 2026",
+      theme: "performance-marketing",
+      confidence: "medium",
+      problemStatement: "Meta's complex attribution and constantly changing interface make it hard to get consistent, reliable performance insights.",
+      targetOutcome: "Standardized Meta performance view that updates automatically",
+      successMetrics: [
+        { metric: "Report generation time", target: "Instant", current: null },
+        { metric: "Attribution confusion reduction", target: "80%", current: null }
+      ],
+      features: [
+        "Simplified performance dashboard",
+        "Cross-campaign comparison",
+        "Audience performance insights",
+        "Creative performance trends"
+      ],
+      votes: 189,
+      effort: "L",
+      impact: "XL"
+    },
+
+    // LinkedIn Ads Performance Manager
+    {
+      id: "linkedin-ads-performance-manager",
+      title: "LinkedIn Ads Performance Manager",
+      description: "Track LinkedIn Ads performance and optimize campaigns for professional audiences. Understand what content and targeting drives results.",
+      status: "planned",
+      horizon: "next",
+      quarter: "Q2 2026",
+      theme: "performance-marketing",
+      confidence: "medium",
+      problemStatement: "LinkedIn Ads reporting is fragmented and expensive. Marketers need a clearer view of B2B campaign performance.",
+      targetOutcome: "Unified LinkedIn performance insights alongside other paid channels",
+      successMetrics: [
+        { metric: "Cross-platform reporting time", target: "<15 min", current: null }
+      ],
+      features: [
+        "Campaign performance dashboard",
+        "Audience insights",
+        "Lead quality tracking",
+        "Cost per lead optimization"
+      ],
+      votes: 67,
+      effort: "L",
+      impact: "L"
+    },
+
+    // UTM Tag Organizer
+    {
+      id: "utm-tag-organizer",
+      title: "UTM Tag Organizer",
+      description: "Keep your UTM tags clean and consistent. Track all UTMs in use, spot duplicates or misspellings, and know which tags actually drive traffic.",
+      status: "planned",
+      horizon: "next",
+      quarter: "Q2 2026",
+      theme: "tracking",
+      confidence: "medium",
+      problemStatement: "Inconsistent UTM tagging creates messy analytics data, making it hard to attribute performance accurately.",
+      targetOutcome: "Zero UTM inconsistencies across all campaigns",
+      successMetrics: [
+        { metric: "UTM error rate", target: "0%", current: null },
+        { metric: "Tagging time reduction", target: "70%", current: null }
+      ],
+      features: [
+        "UTM library & templates",
+        "Duplicate detection",
+        "Spelling error alerts",
+        "Usage tracking"
+      ],
+      votes: 98,
+      effort: "S",
+      impact: "M"
+    },
+
+    // Analytics Reporter
+    {
+      id: "analytics-reporter",
+      title: "Analytics Reporter",
+      description: "Unified analytics reporting with custom dashboard builder. Create personalized views that show exactly what you need to see.",
+      status: "planned",
+      horizon: "next",
+      quarter: "Q2 2026",
+      theme: "reporting",
+      confidence: "medium",
+      problemStatement: "One-size-fits-all dashboards don't work. Every marketer needs different views for their specific KPIs.",
+      targetOutcome: "Fully customizable dashboards built in minutes, not hours",
+      successMetrics: [
+        { metric: "Dashboard creation time", target: "<10 min", current: null },
+        { metric: "Custom view usage", target: "80%+ of users", current: null }
+      ],
+      features: [
+        "Drag-and-drop dashboard builder",
+        "Custom widget library",
+        "Data source mixing",
+        "Shareable views"
+      ],
+      votes: 178,
+      effort: "L",
+      impact: "L"
+    },
+
+    // Competitor Changelog
+    {
+      id: "competitor-changelog",
+      title: "Competitor Changelog",
+      description: "Automatically track changes on competitors' websites. Know when they add pages, update messaging, or change their strategy.",
+      status: "planned",
+      horizon: "next",
+      quarter: "Q2 2026",
+      theme: "monitoring",
+      confidence: "medium",
+      problemStatement: "Keeping track of competitor movements manually is time-consuming and inconsistent.",
+      targetOutcome: "Automated competitor intelligence without manual monitoring",
+      successMetrics: [
+        { metric: "Competitor changes detected", target: "100%", current: null }
+      ],
+      features: [
+        "Website change detection",
+        "Page addition/removal alerts",
+        "Content change tracking",
+        "Impact quantification"
+      ],
+      votes: 112,
+      effort: "L",
+      impact: "M"
+    },
+
+    // Performance Reporter
+    {
+      id: "performance-reporter",
+      title: "Performance Reporter",
+      description: "Create clear, consistent performance reports in minutes. Show stakeholders how campaigns drive growth without manual work.",
+      status: "planned",
+      horizon: "next",
+      quarter: "Q2 2026",
+      theme: "reporting",
+      confidence: "medium",
+      problemStatement: "Creating weekly and monthly reports takes hours of manual work, pulling data from multiple sources.",
+      targetOutcome: "Automated reports that generate themselves and look professional",
+      successMetrics: [
+        { metric: "Report creation time", target: "<5 min", current: null },
+        { metric: "Stakeholder satisfaction", target: "90%+", current: null }
+      ],
+      features: [
+        "Customizable report templates",
+        "Automated data population",
+        "Executive summary generation",
+        "Scheduled report delivery"
+      ],
+      votes: 287,
+      effort: "L",
+      impact: "XL"
+    },
+
+    // ==========================================
+    // LATER - Q3 & Q4 2026 (Lower confidence, exploring)
+    // Moving into Social Media Marketing
+    // ==========================================
+
+    // Social Media Marketing Roadmap
+    {
+      id: "social-media-roadmap",
+      title: "Social Media Marketing Roadmap",
+      description: "Full roadmap reveal for Social Media Marketing apps. Expanding marketingOS beyond performance marketing into organic social.",
+      status: "exploring",
+      horizon: "later",
+      quarter: "Q3 2026",
+      theme: "social-media",
+      confidence: "medium",
+      problemStatement: "Social media managers lack the same level of tooling and automation that performance marketers have.",
+      targetOutcome: "Complete visibility into what's coming for social media marketers",
+      successMetrics: [
+        { metric: "Community feedback collected", target: "500+ responses", current: null }
+      ],
+      features: [
+        "Full feature roadmap publication",
+        "Community voting on priorities",
+        "Beta tester signup",
+        "Early access program"
+      ],
+      votes: 203,
+      effort: "S",
+      impact: "M"
+    },
+
+    // First 3 Social Media Apps
+    {
+      id: "social-media-apps-wave-1",
+      title: "Social Media Apps - Wave 1",
+      description: "Launch of the first 3 social media marketing apps. Starting the journey to help social media managers work more efficiently.",
+      status: "exploring",
+      horizon: "later",
+      quarter: "Q3 2026",
+      theme: "social-media",
+      confidence: "medium",
+      problemStatement: "Social media managers spend too much time on repetitive tasks instead of creating engaging content.",
+      targetOutcome: "Social media managers save 5+ hours per week on admin tasks",
+      successMetrics: [
+        { metric: "Time saved per week", target: "5+ hours", current: null },
+        { metric: "User adoption", target: "1000+ users", current: null }
+      ],
+      features: [
+        "Content calendar",
+        "Post scheduling",
+        "Engagement tracking",
+        "Performance analytics"
+      ],
+      votes: 156,
+      effort: "XL",
+      impact: "XL"
+    },
+
+    // Finalise Social Media Apps
+    {
+      id: "social-media-apps-complete",
+      title: "Complete Social Media Apps Suite",
+      description: "Finalise the social media manager apps with full feature set. Complete toolkit for organic social management.",
+      status: "exploring",
+      horizon: "later",
+      quarter: "Q4 2026",
+      theme: "social-media",
+      confidence: "low",
+      problemStatement: "Social media managers need a complete toolkit, not just individual point solutions.",
+      targetOutcome: "Full social media management suite integrated with performance marketing tools",
+      successMetrics: [
+        { metric: "Feature completeness", target: "100%", current: null },
+        { metric: "Cross-tool integration", target: "Full", current: null }
+      ],
+      features: [
+        "Complete app suite",
+        "Cross-platform publishing",
+        "Advanced analytics",
+        "Team collaboration"
+      ],
+      votes: 134,
+      effort: "XL",
+      impact: "XL"
+    },
+
+    // 2027-2028 Roadmap
+    {
+      id: "future-roadmap-reveal",
+      title: "2027-2028 Roadmap Reveal",
+      description: "Full roadmap and feature set publication for everything coming in 2027 and 2028. Complete visibility into the future of marketingOS.",
+      status: "exploring",
+      horizon: "later",
+      quarter: "Q4 2026",
+      theme: "social-media",
+      confidence: "low",
+      problemStatement: "Users want to know the long-term vision before committing to a platform.",
+      targetOutcome: "Clear 2-year roadmap that builds confidence in the platform's future",
+      successMetrics: [
+        { metric: "Roadmap clarity score", target: "90%+", current: null }
+      ],
+      features: [
+        "2027 quarterly plans",
+        "2028 strategic themes",
+        "New marketing roles coverage",
+        "Integration roadmap"
+      ],
+      votes: 89,
+      effort: "S",
+      impact: "M"
+    }
+  ],
+
+  // Recently shipped items (changelog)
+  shipped: [
+    {
+      id: "waitlist-launch",
+      title: "Public Waitlist Launch",
+      description: "marketingOS waitlist opened to the public with initial feature previews.",
+      shippedDate: "2025-12-15",
+      theme: "performance-marketing",
+      impact: "First 100 marketers joined the waitlist"
+    },
+    {
+      id: "brand-website",
+      title: "Brand Website & Positioning",
+      description: "Complete website redesign with clear product messaging and feature pages.",
+      shippedDate: "2025-11-20",
+      theme: "performance-marketing",
+      impact: "Established clear market positioning"
+    }
+  ],
+
+  // Future phases (strategic roadmap beyond current scope)
+  futurePhases: [
+    {
+      id: "social-media-marketing",
+      name: "Social Media Marketing",
+      description: "Analyze and improve your social media strategy across all major platforms.",
+      estimatedStart: "2026",
+      status: "vision"
+    },
+    {
+      id: "email-marketing",
+      name: "Email Marketing",
+      description: "Learn what email campaigns perform better and replicate success.",
+      estimatedStart: "2027",
+      status: "vision"
+    },
+    {
+      id: "marketing-automation-crm",
+      name: "Marketing Automation, Data & CRM",
+      description: "Get insight into your CRM operation and understand how you can work your database better.",
+      estimatedStart: "2027",
+      status: "vision"
+    },
+    {
+      id: "marketing-intelligence",
+      name: "Marketing Intelligence",
+      description: "Track your KPIs, spot trends, and get insights that actually move the needle.",
+      estimatedStart: "2027",
+      status: "vision"
+    },
+    {
+      id: "ab-testing",
+      name: "A/B Testing",
+      description: "Identify key areas on your website and quickly gain new ideas to improve conversions.",
+      estimatedStart: "2027",
+      status: "vision"
+    },
+    {
+      id: "messaging-positioning",
+      name: "Messaging & Positioning",
+      description: "Craft sharper messaging and positioning that resonates with your audience.",
+      estimatedStart: "2028",
+      status: "vision"
+    }
+  ]
+};
+    </script>
+
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+      /* Show content after load */
+      html.loaded { visibility: visible; opacity: 1; }
+
+      /* Horizon tabs */
+      .horizon-tab {
+        transition: all 0.2s ease;
+      }
+      .horizon-tab.active {
+        background-color: #1C2E3D;
+        color: white;
+      }
+      .horizon-tab:not(.active):hover {
+        background-color: #F7F8FA;
+      }
+
+      /* Theme filter pills */
+      .theme-pill {
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+      .theme-pill.active {
+        box-shadow: 0 0 0 2px #1C2E3D;
+      }
+      .theme-pill:hover:not(.active) {
+        transform: translateY(-1px);
+      }
+
+      /* Roadmap cards */
+      .roadmap-card {
+        transition: all 0.2s ease;
+      }
+      .roadmap-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Status badges */
+      .status-badge {
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+      }
+      .status-in-progress {
+        background-color: #DBEAFE;
+        color: #1D4ED8;
+      }
+      .status-planned {
+        background-color: #F3F4F6;
+        color: #4B5563;
+      }
+      .status-exploring {
+        background-color: #FEF3C7;
+        color: #D97706;
+      }
+      .status-shipped {
+        background-color: #D1FAE5;
+        color: #059669;
+      }
+
+      /* Confidence indicators */
+      .confidence-high { color: #059669; }
+      .confidence-medium { color: #D97706; }
+      .confidence-low { color: #9CA3AF; }
+
+      /* Effort/Impact sizing */
+      .size-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.65rem;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        background-color: #F3F4F6;
+        color: #4B5563;
+      }
+
+      /* Vote counter */
+      .vote-count {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.75rem;
+        color: #6B7280;
+      }
+
+      /* Smooth scroll for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Card expand animation */
+      .card-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .card-content.expanded {
+        max-height: 500px;
+      }
+
+      /* Future phases */
+      .future-phase-card {
+        background: linear-gradient(135deg, #F7F8FA 0%, #EEF2F7 100%);
+        border: 1px dashed #CBD5E1;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT2NFZ7L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-4 md:py-6 px-4 md:px-6" style="background-color: #FFFCF5;">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-10 md:h-12 w-auto" />
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
+          <!-- Product Dropdown -->
+          <div class="relative group">
+            <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200 flex items-center gap-1">
+              Product
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px]">
+                <a href="/performance-marketing-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Overview</span>
+                  <span class="block text-sm text-gray-500">All features & apps</span>
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/ad-spend-tracker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Budget Checker</span>
+                  <span class="block text-sm text-gray-500">Ad spend tracker</span>
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Meta Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Facebook & Instagram ads</span>
+                </a>
+                <a href="/features/google-ads-management-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Google Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Search & Performance Max</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/roadmap" class="text-brand-blue font-medium transition-colors duration-200">
+            Roadmap
+          </a>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
+            Get on the waitlist
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden" style="top: 0;">
+        <!-- Mobile Menu Panel -->
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300" style="background-color: #FFFFFF;">
+          <!-- Close Button -->
+          <div class="flex justify-between items-center p-4 border-b border-gray-200">
+            <span class="font-semibold text-brand-dark">Menu</span>
+            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+              <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Menu Links -->
+          <div class="p-4 space-y-2">
+            <!-- Product Section -->
+            <div class="border-b border-gray-200 pb-4">
+              <a href="/performance-marketing-software" class="block py-3 text-brand-dark font-semibold text-lg">
+                Product Overview
+              </a>
+              <div class="pl-4 space-y-1">
+                <a href="/features/ad-spend-tracker" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Budget Checker
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Meta Ads Manager
+                </a>
+                <a href="/features/google-ads-management-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Google Ads Manager
+                </a>
+              </div>
+            </div>
+
+            <!-- Roadmap -->
+            <a href="/roadmap" class="block py-3 text-brand-blue font-semibold text-lg border-b border-gray-200">
+              Roadmap
+            </a>
+
+            <!-- CTA Button -->
+            <div class="pt-4">
+              <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+                Get on the waitlist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuPanel = mobileMenu.querySelector('div');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        mobileMenuPanel.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        mobileMenuPanel.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+    </script>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <header class="bg-brand-dark text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="max-w-3xl">
+            <p class="text-brand-blue font-medium mb-2">Product Roadmap</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              What we're building
+            </h1>
+            <p class="text-xl text-gray-300 mb-6" id="vision-statement">
+              <!-- Populated by JS -->
+            </p>
+            <p class="text-sm text-gray-400">
+              Last updated: <span id="last-updated"></span> · Planning horizon: <span id="planning-horizon"></span> months
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Roadmap Controls -->
+      <section class="bg-soft-gray border-b border-gray-200 sticky top-[73px] z-40">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+          <!-- Horizon Tabs -->
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex gap-2" id="horizon-tabs">
+              <button class="horizon-tab active px-4 py-2 rounded-lg font-medium text-sm" data-horizon="now">
+                Now <span class="text-xs opacity-70 ml-1">Q1 2026</span>
+              </button>
+              <button class="horizon-tab px-4 py-2 rounded-lg font-medium text-sm text-brand-dark" data-horizon="next">
+                Next <span class="text-xs opacity-70 ml-1">Q2-Q3</span>
+              </button>
+              <button class="horizon-tab px-4 py-2 rounded-lg font-medium text-sm text-brand-dark" data-horizon="later">
+                Later <span class="text-xs opacity-70 ml-1">Q4+</span>
+              </button>
+              <button class="horizon-tab px-4 py-2 rounded-lg font-medium text-sm text-brand-dark" data-horizon="all">
+                All
+              </button>
+            </div>
+
+            <!-- Theme Filters -->
+            <div class="flex items-center gap-2 flex-wrap" id="theme-filters">
+              <span class="text-sm text-gray-500 mr-2">Filter:</span>
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Items -->
+      <section class="py-12 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <!-- Horizon descriptions -->
+          <div id="horizon-descriptions" class="mb-6">
+            <div class="horizon-desc" data-horizon="now">
+              <h2 class="text-2xl font-bold text-brand-dark mb-2">Building Now</h2>
+              <p class="text-gray-600">High confidence. Currently in development. Expected in Q1 2026.</p>
+            </div>
+            <div class="horizon-desc hidden" data-horizon="next">
+              <h2 class="text-2xl font-bold text-brand-dark mb-2">Coming Next</h2>
+              <p class="text-gray-600">Medium confidence. Planned for Q2-Q3 2026. Scope may evolve.</p>
+            </div>
+            <div class="horizon-desc hidden" data-horizon="later">
+              <h2 class="text-2xl font-bold text-brand-dark mb-2">Exploring Later</h2>
+              <p class="text-gray-600">Lower confidence. Under consideration for Q4 2026 and beyond.</p>
+            </div>
+            <div class="horizon-desc hidden" data-horizon="all">
+              <h2 class="text-2xl font-bold text-brand-dark mb-2">Full Roadmap</h2>
+              <p class="text-gray-600">Everything we're planning across all time horizons.</p>
+            </div>
+          </div>
+
+          <!-- Legend -->
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
+            <div class="flex flex-wrap items-center gap-6 text-sm">
+              <div class="font-medium text-gray-700">Legend:</div>
+
+              <!-- Confidence -->
+              <div class="flex items-center gap-2">
+                <span class="text-gray-500">Confidence:</span>
+                <span class="flex items-center gap-1"><span class="text-green-600">●●●</span> <span class="text-gray-600">High</span></span>
+                <span class="flex items-center gap-1"><span class="text-yellow-600">●●○</span> <span class="text-gray-600">Medium</span></span>
+                <span class="flex items-center gap-1"><span class="text-gray-400">●○○</span> <span class="text-gray-600">Low</span></span>
+              </div>
+
+              <!-- Effort/Impact -->
+              <div class="flex items-center gap-2">
+                <span class="text-gray-500">Effort / Impact:</span>
+                <span class="size-badge">S</span>
+                <span class="size-badge">M</span>
+                <span class="size-badge">L</span>
+                <span class="size-badge">XL</span>
+                <span class="text-gray-600">(Small to Extra Large)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roadmap Cards Grid -->
+          <div id="roadmap-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Empty state -->
+          <div id="empty-state" class="hidden text-center py-12">
+            <div class="text-6xl mb-4">🔍</div>
+            <h3 class="text-xl font-semibold text-brand-dark mb-2">No items match your filters</h3>
+            <p class="text-gray-600">Try adjusting your theme filter or time horizon.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recently Shipped Section -->
+      <section class="py-12 px-6 bg-soft-gray border-t border-gray-200">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl font-bold text-brand-dark mb-2">Recently Shipped</h2>
+          <p class="text-gray-600 mb-8">What we've already launched.</p>
+
+          <div id="shipped-items" class="grid md:grid-cols-2 gap-4">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Future Vision Section -->
+      <section class="py-12 px-6 bg-white border-t border-gray-200">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl font-bold text-brand-dark mb-2">Future Vision</h2>
+          <p class="text-gray-600 mb-8">Where we're heading beyond the current roadmap.</p>
+
+          <div id="future-phases" class="grid md:grid-cols-3 gap-6">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-16 px-6 bg-brand-dark text-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Help shape our roadmap
+          </h2>
+          <p class="text-xl text-gray-300 mb-8">
+            Join the waitlist to get early access and influence what we build next.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button onclick="openWaitlistModal()" class="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg cursor-pointer">
+              Get on the waitlist
+            </button>
+            <button onclick="openFeedbackModal()" class="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg cursor-pointer">
+              Share feedback
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 px-6 border-t border-gray-700">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div>
+            <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS" class="h-10 w-auto mb-2" />
+            <p class="text-sm text-gray-400">The operating system for modern marketers.</p>
+          </div>
+          <div class="flex gap-8">
+            <a href="/" class="text-gray-300 hover:text-white transition-colors">Home</a>
+            <a href="/performance-marketing-software" class="text-gray-300 hover:text-white transition-colors">Product</a>
+            <a href="/roadmap" class="text-white font-medium">Roadmap</a>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+          <p>&copy; 2026 marketingOS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal" class="fixed inset-0 z-[100] hidden">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeWaitlistModal()"></div>
+
+      <!-- Modal Content -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 relative">
+          <!-- Close Button -->
+          <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Form Content -->
+          <div id="waitlist-form-container">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-dark mb-2">Get on the waitlist</h3>
+              <p class="text-deep-gray">Be the first to know when marketingOS launches. We'll send you early access.</p>
+            </div>
+
+            <form id="waitlist-form" onsubmit="submitWaitlistForm(event)">
+              <div class="mb-4">
+                <label for="waitlist-email" class="block text-sm font-medium text-deep-gray mb-2">Email address</label>
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  name="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="waitlist-submit-btn"
+                class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+              >
+                Join the waitlist
+              </button>
+
+              <p class="text-xs text-gray-500 text-center mt-4">
+                We respect your privacy. No spam, ever.
+              </p>
+            </form>
+          </div>
+
+          <!-- Success State -->
+          <div id="waitlist-success" class="hidden text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">You're on the list!</h3>
+            <p class="text-deep-gray mb-6">We'll be in touch soon with early access.</p>
+            <button onclick="closeWaitlistModal()" class="text-brand-blue hover:underline font-medium">Close</button>
+          </div>
+
+          <!-- Error State -->
+          <div id="waitlist-error" class="hidden text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Something went wrong</h3>
+            <p id="waitlist-error-message" class="text-deep-gray mb-6">Please try again later.</p>
+            <button onclick="resetWaitlistForm()" class="text-brand-blue hover:underline font-medium">Try again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="fixed inset-0 z-[100] hidden">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeFeedbackModal()"></div>
+
+      <!-- Modal Content -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 relative">
+          <!-- Close Button -->
+          <button onclick="closeFeedbackModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Form Content -->
+          <div id="feedback-form-container">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-dark mb-2">Share your feedback</h3>
+              <p class="text-deep-gray">Help us build the right features for you.</p>
+            </div>
+
+            <form id="feedback-form" onsubmit="submitFeedbackForm(event)">
+              <div class="mb-4">
+                <label for="feedback-email" class="block text-sm font-medium text-deep-gray mb-2">Email address</label>
+                <input
+                  type="email"
+                  id="feedback-email"
+                  name="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="feedback-message" class="block text-sm font-medium text-deep-gray mb-2">Your feedback</label>
+                <textarea
+                  id="feedback-message"
+                  name="message"
+                  required
+                  rows="4"
+                  placeholder="What feature would you like to see? What problems are you facing?"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="feedback-submit-btn"
+                class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+              >
+                Send feedback
+              </button>
+            </form>
+          </div>
+
+          <!-- Success State -->
+          <div id="feedback-success" class="hidden text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Thanks for your feedback!</h3>
+            <p class="text-deep-gray mb-6">We really appreciate you taking the time.</p>
+            <button onclick="closeFeedbackModal()" class="text-brand-blue hover:underline font-medium">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Waitlist & Feedback Modal Scripts -->
+    <script>
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzauo6RL_S7FThlRbrfmFi6htch2EktIeeWRUM6DSovy8PUlycOW4mvsxph_C2euzM/exec';
+
+      // Waitlist Modal Functions
+      function openWaitlistModal() {
+        const modal = document.getElementById('waitlist-modal');
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          const emailInput = document.getElementById('waitlist-email');
+          if (emailInput) emailInput.focus();
+        }, 100);
+      }
+
+      function closeWaitlistModal() {
+        const modal = document.getElementById('waitlist-modal');
+        if (!modal) return;
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        setTimeout(() => resetWaitlistForm(), 300);
+      }
+
+      function resetWaitlistForm() {
+        const formContainer = document.getElementById('waitlist-form-container');
+        const successEl = document.getElementById('waitlist-success');
+        const errorEl = document.getElementById('waitlist-error');
+        const form = document.getElementById('waitlist-form');
+        const submitBtn = document.getElementById('waitlist-submit-btn');
+        if (formContainer) formContainer.classList.remove('hidden');
+        if (successEl) successEl.classList.add('hidden');
+        if (errorEl) errorEl.classList.add('hidden');
+        if (form) form.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Join the waitlist';
+        }
+      }
+
+      async function submitWaitlistForm(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('waitlist-email');
+        const submitBtn = document.getElementById('waitlist-submit-btn');
+        if (!emailInput || !submitBtn) return;
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Joining...';
+
+        try {
+          const formData = new FormData();
+          formData.append('email', email);
+          formData.append('source', 'roadmap');
+          await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: formData });
+
+          const formContainer = document.getElementById('waitlist-form-container');
+          const successEl = document.getElementById('waitlist-success');
+          if (formContainer) formContainer.classList.add('hidden');
+          if (successEl) successEl.classList.remove('hidden');
+
+          if (window.dataLayer) {
+            window.dataLayer.push({ event: 'waitlist_signup', email_domain: email.split('@')[1] });
+          }
+        } catch (error) {
+          console.error('Waitlist signup error:', error);
+          const formContainer = document.getElementById('waitlist-form-container');
+          const errorEl = document.getElementById('waitlist-error');
+          if (formContainer) formContainer.classList.add('hidden');
+          if (errorEl) errorEl.classList.remove('hidden');
+        }
+      }
+
+      // Feedback Modal Functions
+      function openFeedbackModal() {
+        const modal = document.getElementById('feedback-modal');
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          const emailInput = document.getElementById('feedback-email');
+          if (emailInput) emailInput.focus();
+        }, 100);
+      }
+
+      function closeFeedbackModal() {
+        const modal = document.getElementById('feedback-modal');
+        if (!modal) return;
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        setTimeout(() => resetFeedbackForm(), 300);
+      }
+
+      function resetFeedbackForm() {
+        const formContainer = document.getElementById('feedback-form-container');
+        const successEl = document.getElementById('feedback-success');
+        const form = document.getElementById('feedback-form');
+        const submitBtn = document.getElementById('feedback-submit-btn');
+        if (formContainer) formContainer.classList.remove('hidden');
+        if (successEl) successEl.classList.add('hidden');
+        if (form) form.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send feedback';
+        }
+      }
+
+      async function submitFeedbackForm(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('feedback-email');
+        const messageInput = document.getElementById('feedback-message');
+        const submitBtn = document.getElementById('feedback-submit-btn');
+        if (!emailInput || !messageInput || !submitBtn) return;
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+        if (!email || !message) return;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        try {
+          const formData = new FormData();
+          formData.append('email', email);
+          formData.append('feedback', message);
+          formData.append('source', 'roadmap-feedback');
+          await fetch(GOOGLE_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: formData });
+
+          const formContainer = document.getElementById('feedback-form-container');
+          const successEl = document.getElementById('feedback-success');
+          if (formContainer) formContainer.classList.add('hidden');
+          if (successEl) successEl.classList.remove('hidden');
+
+          if (window.dataLayer) {
+            window.dataLayer.push({ event: 'roadmap_feedback' });
+          }
+        } catch (error) {
+          console.error('Feedback error:', error);
+          alert('Something went wrong. Please try again.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send feedback';
+        }
+      }
+
+      // Close modals on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const waitlistModal = document.getElementById('waitlist-modal');
+          const feedbackModal = document.getElementById('feedback-modal');
+          if (waitlistModal && !waitlistModal.classList.contains('hidden')) closeWaitlistModal();
+          if (feedbackModal && !feedbackModal.classList.contains('hidden')) closeFeedbackModal();
+        }
+      });
+    </script>
+
+    <!-- Roadmap Rendering Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // ROADMAP_DATA is now inlined in the head, so it's always available
+        // Show content immediately
+        document.documentElement.classList.add('loaded');
+
+        // Initialize state
+        let currentHorizon = 'now';
+        let activeThemes = new Set();
+
+        // Supabase configuration
+        const SUPABASE_URL = 'https://clcbubdimonlwavnabka.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNsY2J1YmRpbW9ubHdhdm5hYmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc0NDU4NTEsImV4cCI6MjA4MzAyMTg1MX0.f3pPGpiKQC_lIgC-935-80DEt9RVt07xVTrkhChjiTY';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Generate a unique browser fingerprint for anonymous voting
+        function generateFingerprint() {
+          const stored = localStorage.getItem('marketingos_fingerprint');
+          if (stored) return stored;
+
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          ctx.textBaseline = 'top';
+          ctx.font = '14px Arial';
+          ctx.fillText('fingerprint', 2, 2);
+          const canvasData = canvas.toDataURL();
+
+          const fingerprint = btoa(
+            navigator.userAgent +
+            navigator.language +
+            screen.width + 'x' + screen.height +
+            new Date().getTimezoneOffset() +
+            canvasData.slice(-50)
+          ).slice(0, 32);
+
+          localStorage.setItem('marketingos_fingerprint', fingerprint);
+          return fingerprint;
+        }
+
+        const userFingerprint = generateFingerprint();
+
+        // Store upvotes locally for quick access (synced with Supabase)
+        let userUpvotes = new Set();
+        let upvoteCounts = {};
+
+        // Load upvotes from Supabase
+        async function loadUpvotes() {
+          try {
+            // Get all upvotes for counting
+            const { data: allUpvotes, error: countError } = await supabase
+              .from('roadmap_upvotes')
+              .select('feature_id');
+
+            if (!countError && allUpvotes) {
+              upvoteCounts = allUpvotes.reduce((acc, row) => {
+                acc[row.feature_id] = (acc[row.feature_id] || 0) + 1;
+                return acc;
+              }, {});
+            }
+
+            // Get this user's upvotes
+            const { data: myUpvotes, error: myError } = await supabase
+              .from('roadmap_upvotes')
+              .select('feature_id')
+              .eq('user_fingerprint', userFingerprint);
+
+            if (!myError && myUpvotes) {
+              userUpvotes = new Set(myUpvotes.map(u => u.feature_id));
+            }
+          } catch (err) {
+            console.error('Error loading upvotes:', err);
+          }
+        }
+
+        function hasUpvoted(itemId) {
+          return userUpvotes.has(itemId);
+        }
+
+        function getUpvoteCount(itemId) {
+          return upvoteCounts[itemId] || 0;
+        }
+
+        async function toggleUpvote(itemId) {
+          const wasUpvoted = hasUpvoted(itemId);
+
+          // Optimistic update
+          if (wasUpvoted) {
+            userUpvotes.delete(itemId);
+            upvoteCounts[itemId] = Math.max(0, (upvoteCounts[itemId] || 1) - 1);
+          } else {
+            userUpvotes.add(itemId);
+            upvoteCounts[itemId] = (upvoteCounts[itemId] || 0) + 1;
+          }
+          renderRoadmap();
+
+          try {
+            if (wasUpvoted) {
+              // Remove upvote
+              await supabase
+                .from('roadmap_upvotes')
+                .delete()
+                .eq('feature_id', itemId)
+                .eq('user_fingerprint', userFingerprint);
+            } else {
+              // Add upvote
+              await supabase
+                .from('roadmap_upvotes')
+                .insert({ feature_id: itemId, user_fingerprint: userFingerprint });
+            }
+
+            // Track upvote in GTM
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: 'roadmap_upvote',
+                item_id: itemId,
+                action: wasUpvoted ? 'remove_upvote' : 'upvote'
+              });
+            }
+          } catch (err) {
+            console.error('Error toggling upvote:', err);
+            // Revert optimistic update on error
+            if (wasUpvoted) {
+              userUpvotes.add(itemId);
+              upvoteCounts[itemId] = (upvoteCounts[itemId] || 0) + 1;
+            } else {
+              userUpvotes.delete(itemId);
+              upvoteCounts[itemId] = Math.max(0, (upvoteCounts[itemId] || 1) - 1);
+            }
+            renderRoadmap();
+          }
+        }
+
+        // Make toggleUpvote available globally
+        window.toggleUpvote = toggleUpvote;
+
+        // Populate meta info IMMEDIATELY (before Supabase loads)
+        document.getElementById('vision-statement').textContent = ROADMAP_DATA.vision.statement;
+        document.getElementById('last-updated').textContent = new Date(ROADMAP_DATA.meta.lastUpdated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        document.getElementById('planning-horizon').textContent = ROADMAP_DATA.meta.planningHorizon;
+
+        // Create theme filter pills
+        const themeFiltersContainer = document.getElementById('theme-filters');
+        ROADMAP_DATA.themes.forEach(theme => {
+          const pill = document.createElement('button');
+          pill.className = 'theme-pill px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1';
+          pill.style.backgroundColor = theme.color + '20';
+          pill.style.color = theme.color;
+          pill.dataset.themeId = theme.id;
+          pill.innerHTML = `<span>${theme.icon}</span> ${theme.name}`;
+          pill.addEventListener('click', () => toggleTheme(theme.id));
+          themeFiltersContainer.appendChild(pill);
+        });
+
+        // Add "All" theme pill
+        const allPill = document.createElement('button');
+        allPill.className = 'theme-pill active px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700';
+        allPill.dataset.themeId = 'all';
+        allPill.textContent = 'All Themes';
+        allPill.addEventListener('click', () => {
+          activeThemes.clear();
+          updateThemePills();
+          renderRoadmap();
+        });
+        themeFiltersContainer.insertBefore(allPill, themeFiltersContainer.firstChild);
+
+        // Horizon tab click handlers
+        document.querySelectorAll('.horizon-tab').forEach(tab => {
+          tab.addEventListener('click', () => {
+            currentHorizon = tab.dataset.horizon;
+            updateHorizonTabs();
+            renderRoadmap();
+          });
+        });
+
+        function toggleTheme(themeId) {
+          if (activeThemes.has(themeId)) {
+            activeThemes.delete(themeId);
+          } else {
+            activeThemes.add(themeId);
+          }
+          updateThemePills();
+          renderRoadmap();
+        }
+
+        function updateHorizonTabs() {
+          document.querySelectorAll('.horizon-tab').forEach(tab => {
+            if (tab.dataset.horizon === currentHorizon) {
+              tab.classList.add('active');
+            } else {
+              tab.classList.remove('active');
+            }
+          });
+
+          // Update horizon descriptions
+          document.querySelectorAll('.horizon-desc').forEach(desc => {
+            if (desc.dataset.horizon === currentHorizon) {
+              desc.classList.remove('hidden');
+            } else {
+              desc.classList.add('hidden');
+            }
+          });
+        }
+
+        function updateThemePills() {
+          document.querySelectorAll('.theme-pill').forEach(pill => {
+            const themeId = pill.dataset.themeId;
+            if (themeId === 'all') {
+              if (activeThemes.size === 0) {
+                pill.classList.add('active');
+              } else {
+                pill.classList.remove('active');
+              }
+            } else {
+              if (activeThemes.has(themeId)) {
+                pill.classList.add('active');
+              } else {
+                pill.classList.remove('active');
+              }
+            }
+          });
+        }
+
+        function getThemeById(themeId) {
+          return ROADMAP_DATA.themes.find(t => t.id === themeId);
+        }
+
+        function getStatusBadgeClass(status) {
+          switch(status) {
+            case 'in-progress': return 'status-in-progress';
+            case 'planned': return 'status-planned';
+            case 'exploring': return 'status-exploring';
+            case 'shipped': return 'status-shipped';
+            default: return 'status-planned';
+          }
+        }
+
+        function getStatusLabel(status) {
+          switch(status) {
+            case 'in-progress': return 'In Progress';
+            case 'planned': return 'Planned';
+            case 'exploring': return 'Exploring';
+            case 'shipped': return 'Shipped';
+            default: return status;
+          }
+        }
+
+        function getConfidenceIcon(confidence) {
+          switch(confidence) {
+            case 'high': return '<span class="confidence-high" title="High confidence">●●●</span>';
+            case 'medium': return '<span class="confidence-medium" title="Medium confidence">●●○</span>';
+            case 'low': return '<span class="confidence-low" title="Low confidence">●○○</span>';
+            default: return '';
+          }
+        }
+
+        function renderRoadmap() {
+          const grid = document.getElementById('roadmap-grid');
+          const emptyState = document.getElementById('empty-state');
+
+          // Filter items
+          let filteredItems = ROADMAP_DATA.items.filter(item => {
+            // Horizon filter
+            if (currentHorizon !== 'all' && item.horizon !== currentHorizon) return false;
+            // Theme filter
+            if (activeThemes.size > 0 && !activeThemes.has(item.theme)) return false;
+            return true;
+          });
+
+          if (filteredItems.length === 0) {
+            grid.classList.add('hidden');
+            emptyState.classList.remove('hidden');
+            return;
+          }
+
+          grid.classList.remove('hidden');
+          emptyState.classList.add('hidden');
+
+          // Render cards
+          grid.innerHTML = filteredItems.map(item => {
+            const theme = getThemeById(item.theme);
+            const upvoted = hasUpvoted(item.id);
+            return `
+              <div class="roadmap-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                <!-- Header -->
+                <div class="flex items-start justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">${theme?.icon || '📦'}</span>
+                    <span class="status-badge ${getStatusBadgeClass(item.status)}">${getStatusLabel(item.status)}</span>
+                  </div>
+                  <div class="text-xs text-gray-500">${item.quarter}</div>
+                </div>
+
+                <!-- Title & Description -->
+                <h3 class="text-lg font-semibold text-brand-dark mb-2">${item.title}</h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3">${item.description}</p>
+
+                <!-- Meta -->
+                <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                  <div class="flex items-center gap-3">
+                    <!-- Confidence -->
+                    <div class="text-xs" title="Confidence level">
+                      ${getConfidenceIcon(item.confidence)}
+                    </div>
+                    <!-- Effort/Impact -->
+                    <div class="flex items-center gap-1">
+                      <span class="size-badge" title="Effort">${item.effort}</span>
+                      <span class="text-gray-300">/</span>
+                      <span class="size-badge" title="Impact" style="background-color: ${theme?.color}20; color: ${theme?.color}">${item.impact}</span>
+                    </div>
+                  </div>
+                  <!-- Upvote Button -->
+                  <button
+                    onclick="toggleUpvote('${item.id}')"
+                    class="upvote-btn flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-all ${upvoted ? 'bg-brand-blue text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}"
+                    title="${upvoted ? 'Click to remove your vote' : 'Click to upvote this feature'}"
+                  >
+                    <svg class="w-4 h-4" fill="${upvoted ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                    </svg>
+                    <span>${getUpvoteCount(item.id)}</span>
+                  </button>
+                </div>
+
+                <!-- Expandable content (features) -->
+                ${item.features && item.features.length > 0 ? `
+                <details class="mt-4">
+                  <summary class="text-sm text-brand-blue cursor-pointer hover:underline">View features</summary>
+                  <ul class="mt-2 pl-4 text-sm text-gray-600 list-disc space-y-1">
+                    ${item.features.map(f => `<li>${f}</li>`).join('')}
+                  </ul>
+                </details>
+                ` : ''}
+              </div>
+            `;
+          }).join('');
+        }
+
+        // Render shipped items
+        function renderShipped() {
+          const container = document.getElementById('shipped-items');
+          container.innerHTML = ROADMAP_DATA.shipped.map(item => {
+            const theme = getThemeById(item.theme);
+            return `
+              <div class="bg-white rounded-lg border border-gray-200 p-4 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-xl" style="background-color: #22C55E;">
+                  ✓
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <h3 class="font-semibold text-brand-dark">${item.title}</h3>
+                    <span class="text-xs text-gray-400">${new Date(item.shippedDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                  </div>
+                  <p class="text-sm text-gray-600">${item.description}</p>
+                  ${item.impact ? `<p class="text-xs text-green-600 mt-1">${item.impact}</p>` : ''}
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        // Render future phases
+        function renderFuturePhases() {
+          const container = document.getElementById('future-phases');
+          container.innerHTML = ROADMAP_DATA.futurePhases.map(phase => `
+            <div class="future-phase-card rounded-xl p-6">
+              <div class="text-xs font-medium text-gray-500 mb-2">${phase.estimatedStart} · ${phase.status}</div>
+              <h3 class="text-lg font-semibold text-brand-dark mb-2">${phase.name}</h3>
+              <p class="text-sm text-gray-600">${phase.description}</p>
+            </div>
+          `).join('');
+        }
+
+        // Initial render IMMEDIATELY (before Supabase loads)
+        renderRoadmap();
+        renderShipped();
+        renderFuturePhases();
+
+        // Load upvotes from Supabase AFTER initial render (async, non-blocking)
+        loadUpvotes().then(() => {
+          // Re-render roadmap with upvote counts once loaded
+          renderRoadmap();
+        });
+      });
+    </script>
+  </body>
+</html>

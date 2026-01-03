@@ -165,12 +165,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navigation -->
-    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-6 px-6" style="background-color: #FFFCF5;">
+    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-4 md:py-6 px-4 md:px-6" style="background-color: #FFFCF5;">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
         <a href="/" class="flex items-center">
-          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-12 w-auto" />
+          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-10 md:h-12 w-auto" />
         </a>
-        <div class="flex items-center gap-8">
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
           <!-- Product Dropdown -->
           <div class="relative group">
             <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200 flex items-center gap-1">
@@ -189,34 +198,132 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="border-t border-gray-100 my-2"></div>
                 <span class="block px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
                 <a href="/features/ad-spend-tracker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
-                  <span class="font-medium">Ad Spend Tracker</span>
-                  <span class="block text-sm text-gray-500">Budget monitoring</span>
+                  <span class="font-medium">Budget Checker</span>
+                  <span class="block text-sm text-gray-500">Ad spend tracker</span>
                 </a>
-                <a href="/features/facebook-ads-manager" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
-                  <span class="font-medium">Facebook Ads Manager</span>
-                  <span class="block text-sm text-gray-500">Meta ads tracking</span>
+                <a href="/features/facebook-ads-management-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Meta Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Facebook & Instagram ads</span>
                 </a>
-                <a href="/features/google-ads-manager" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                <a href="/features/google-ads-management-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
                   <span class="font-medium">Google Ads Manager</span>
                   <span class="block text-sm text-gray-500">Search & Performance Max</span>
                 </a>
                 <a href="/features/marketing-dashboard" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
-                  <span class="font-medium">Marketing Dashboard</span>
-                  <span class="block text-sm text-gray-500">Analytics reporting</span>
+                  <span class="font-medium">Analytics Reporter</span>
+                  <span class="block text-sm text-gray-500">Marketing dashboard</span>
                 </a>
-                <a href="/features/utm-tracker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
-                  <span class="font-medium">UTM Tracker</span>
+                <a href="/features/utm-tracking-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">UTM Organizer</span>
                   <span class="block text-sm text-gray-500">Campaign URL builder</span>
                 </a>
               </div>
             </div>
           </div>
+          <a href="/roadmap" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200">
+            Roadmap
+          </a>
           <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
             Get on the waitlist
           </button>
         </div>
       </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden" style="top: 0;">
+        <!-- Mobile Menu Panel -->
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300" style="background-color: #FFFFFF;">
+          <!-- Close Button -->
+          <div class="flex justify-between items-center p-4 border-b border-gray-200">
+            <span class="font-semibold text-brand-dark">Menu</span>
+            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+              <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Menu Links -->
+          <div class="p-4 space-y-2">
+            <!-- Product Section -->
+            <div class="border-b border-gray-200 pb-4">
+              <a href="/performance-marketing-software" class="block py-3 text-brand-dark font-semibold text-lg">
+                Product Overview
+              </a>
+              <div class="pl-4 space-y-1">
+                <a href="/features/ad-spend-tracker" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Budget Checker
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Meta Ads Manager
+                </a>
+                <a href="/features/google-ads-management-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Google Ads Manager
+                </a>
+                <a href="/features/marketing-dashboard" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  Analytics Reporter
+                </a>
+                <a href="/features/utm-tracking-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                  UTM Organizer
+                </a>
+              </div>
+            </div>
+
+            <!-- Roadmap -->
+            <a href="/roadmap" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
+              Roadmap
+            </a>
+
+            <!-- CTA Button -->
+            <div class="pt-4">
+              <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+                Get on the waitlist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuPanel = mobileMenu.querySelector('div');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        mobileMenuPanel.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+
+        // Animate hamburger to X
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        mobileMenuPanel.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+
+        // Animate X back to hamburger
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+    </script>
 
     <!-- Main Content -->
     <main>
@@ -856,25 +963,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <!-- Waitlist Modal -->
-    <div id="waitlist-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-      <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
-        <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        <h3 class="text-2xl font-bold text-brand-dark mb-2">Join the Waitlist</h3>
-        <p class="text-deep-gray mb-6">Be the first to know when Analytics Reporter launches.</p>
-        <form id="waitlistForm" class="space-y-4">
-          <div>
-            <label for="email" class="block text-sm font-medium text-brand-dark mb-1">Email address</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-colors" placeholder="you@company.com" />
-          </div>
-          <button type="submit" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
-            Join Waitlist
+    <div id="waitlist-modal" class="fixed inset-0 z-[100] hidden">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeWaitlistModal()"></div>
+      <!-- Modal Content -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 relative">
+          <!-- Close Button -->
+          <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </button>
-        </form>
-        <p class="text-xs text-gray-500 mt-4 text-center">No spam, ever. Unsubscribe anytime.</p>
+
+          <!-- Form Content -->
+          <div id="waitlist-form-container">
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Join the Waitlist</h3>
+            <p class="text-deep-gray mb-6">Be the first to know when Analytics Reporter launches.</p>
+            <form id="waitlist-form" class="space-y-4" onsubmit="submitWaitlistForm(event)">
+              <div>
+                <label for="waitlist-email" class="block text-sm font-medium text-brand-dark mb-1">Email address</label>
+                <input type="email" id="waitlist-email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-colors" placeholder="you@company.com" />
+              </div>
+              <button type="submit" id="waitlist-submit-btn" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
+                Join the waitlist
+              </button>
+            </form>
+            <p class="text-xs text-gray-500 mt-4 text-center">No spam, ever. Unsubscribe anytime.</p>
+          </div>
+
+          <!-- Success Message (hidden by default) -->
+          <div id="waitlist-success" class="hidden text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">You're on the list!</h3>
+            <p class="text-deep-gray">We'll notify you as soon as marketingOS launches. Get ready to transform your marketing workflow.</p>
+          </div>
+
+          <!-- Error Message (hidden by default) -->
+          <div id="waitlist-error" class="hidden text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Oops!</h3>
+            <p id="waitlist-error-message" class="text-deep-gray">Something went wrong. Please try again later.</p>
+          </div>
+        </div>
       </div>
     </div>
 
