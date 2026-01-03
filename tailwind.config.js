@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./performance-marketing-software.html",
     "./features/**/*.html",
+    "./blog/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

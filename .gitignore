@@ -28,3 +28,5 @@ analytics-setup/
 
 # Keyword Research Output (sensitive data, keep local)
 keyword-research-output/
+.vercel
+.env*.local
