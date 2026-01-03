@@ -139,3 +139,36 @@ When renaming URLs:
 2. Update `vite.config.js` rollupOptions.input
 3. Update internal links across all pages
 4. Sitemap auto-updates on build
+
+### CRITICAL: vite.config.js Must Include All Pages
+
+**Problem:** New HTML files won't be included in the production build unless explicitly added to `vite.config.js`.
+
+**Symptoms:**
+- New pages return 404 after deployment
+- Build output shows fewer files than expected
+- Sitemap lists the page but it's not accessible
+
+**Solution:** Every new `.html` file MUST be added to `vite.config.js`:
+
+```javascript
+// vite.config.js
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        // ADD EVERY NEW PAGE HERE:
+        'blog-new-post': resolve(__dirname, 'blog/new-post.html'),
+      },
+    },
+  },
+})
+```
+
+**Checklist for Adding New Pages:**
+1. ✅ Create the HTML file
+2. ✅ Add entry to `vite.config.js` rollupOptions.input
+3. ✅ Update blog/index.html if it's a blog post (add card)
+4. ✅ Run `npm run build` to verify it's included in dist/
+5. ✅ Commit and deploy
