@@ -229,10 +229,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Mobile Menu Overlay -->
-      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden" style="top: 0;">
+    </nav>
+
+
+
+      <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
         <!-- Mobile Menu Panel -->
-        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300" style="background-color: #FFFFFF;">
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300 bg-white">
           <!-- Close Button -->
           <div class="flex justify-between items-center p-4 border-b border-gray-200">
             <span class="font-semibold text-brand-dark">Menu</span>
@@ -283,7 +287,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-    </nav>
 
     <!-- Mobile Menu Script -->
     <script>

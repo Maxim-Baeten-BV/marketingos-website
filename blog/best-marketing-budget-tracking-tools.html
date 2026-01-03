@@ -298,18 +298,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 border-b border-gray-200 shadow-lg" style="background-color: #FFFCF5;">
-        <div class="px-4 py-4 space-y-3">
-          <a href="/#apps" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Apps</a>
-          <a href="/blog" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Blog</a>
-          <a href="/#pricing" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Pricing</a>
-          <a href="/#faq" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">FAQ</a>
-          <a href="https://app.marketingos.nl" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Login</a>
-          <a href="/#cta" class="block bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center mt-4">Get Early Access</a>
-        </div>
-      </div>
     </nav>
+
+    <!-- Mobile Menu - MUST be outside nav to avoid backdrop-filter containing block issue -->
+    <div id="mobile-menu" class="md:hidden hidden fixed top-[73px] left-0 right-0 border-b border-gray-200 shadow-lg z-40 bg-soft-gray">
+      <div class="px-4 py-4 space-y-3">
+        <a href="/#apps" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Apps</a>
+        <a href="/blog" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Blog</a>
+        <a href="/#pricing" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Pricing</a>
+        <a href="/#faq" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">FAQ</a>
+        <a href="https://app.marketingos.nl" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Login</a>
+        <a href="/#cta" class="block bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center mt-4">Get Early Access</a>
+      </div>
+    </div>
 
     <main class="max-w-4xl mx-auto px-4 md:px-6 py-8">
       <!-- Breadcrumb -->

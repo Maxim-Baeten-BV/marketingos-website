@@ -185,62 +185,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
         </div>
       </div>
+    </nav>
 
-      <!-- Mobile Menu Overlay -->
-      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden" style="top: 0;">
-        <!-- Mobile Menu Panel -->
-        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300" style="background-color: #FFFFFF;">
-          <!-- Close Button -->
-          <div class="flex justify-between items-center p-4 border-b border-gray-200">
-            <span class="font-semibold text-brand-dark">Menu</span>
-            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
-              <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
+    <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
+      <!-- Mobile Menu Panel -->
+      <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300 bg-white">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+          <span class="font-semibold text-brand-dark">Menu</span>
+          <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+            <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div class="p-4 space-y-2">
+          <!-- Product Section -->
+          <div class="border-b border-gray-200 pb-4">
+            <a href="/performance-marketing-software" class="block py-3 text-brand-dark font-semibold text-lg">
+              Product Overview
+            </a>
+            <div class="pl-4 space-y-1">
+              <a href="/features/ad-spend-tracker" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Budget Checker
+              </a>
+              <a href="/features/facebook-ads-management-software" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Meta Ads Manager
+              </a>
+              <a href="/features/google-ads-management-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Google Ads Manager
+              </a>
+              <a href="/features/marketing-dashboard" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Analytics Reporter
+              </a>
+              <a href="/features/utm-tracking-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                UTM Organizer
+              </a>
+            </div>
           </div>
 
-          <!-- Mobile Menu Links -->
-          <div class="p-4 space-y-2">
-            <!-- Product Section -->
-            <div class="border-b border-gray-200 pb-4">
-              <a href="/performance-marketing-software" class="block py-3 text-brand-dark font-semibold text-lg">
-                Product Overview
-              </a>
-              <div class="pl-4 space-y-1">
-                <a href="/features/ad-spend-tracker" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
-                  Budget Checker
-                </a>
-                <a href="/features/facebook-ads-management-software" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
-                  Meta Ads Manager
-                </a>
-                <a href="/features/google-ads-management-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
-                  Google Ads Manager
-                </a>
-                <a href="/features/marketing-dashboard" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
-                  Analytics Reporter
-                </a>
-                <a href="/features/utm-tracking-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
-                  UTM Organizer
-                </a>
-              </div>
-            </div>
+          <!-- Roadmap -->
+          <a href="/roadmap" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
+            Roadmap
+          </a>
 
-            <!-- Roadmap -->
-            <a href="/roadmap" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
-              Roadmap
-            </a>
-
-            <!-- CTA Button -->
-            <div class="pt-4">
-              <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
-                Get on the waitlist
-              </button>
-            </div>
+          <!-- CTA Button -->
+          <div class="pt-4">
+            <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+              Get on the waitlist
+            </button>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
 
     <!-- Mobile Menu Script -->
     <script>

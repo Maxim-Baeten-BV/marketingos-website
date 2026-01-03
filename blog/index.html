@@ -156,9 +156,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
 
-      <!-- Mobile Menu Overlay -->
-      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden" style="top: 0;">
-        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300" style="background-color: #FFFFFF;">
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">
+      <div class="max-w-5xl mx-auto text-center">
+        <a href="/" class="font-semibold text-brand-dark text-lg mb-2 inline-block hover:text-brand-blue transition-colors">marketingOS</a>
+        <p class="text-deep-gray text-sm mb-4">The operating system for modern marketers</p>
+        <nav class="flex justify-center gap-6 text-sm text-deep-gray mb-4">
+          <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+          <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+        </nav>
+
+
+
+      <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300 bg-white">
           <!-- Mobile Menu Header -->
           <div class="flex items-center justify-between p-4 border-b border-gray-200">
             <span class="font-semibold text-brand-dark">Menu</span>
@@ -639,16 +652,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">
-      <div class="max-w-5xl mx-auto text-center">
-        <a href="/" class="font-semibold text-brand-dark text-lg mb-2 inline-block hover:text-brand-blue transition-colors">marketingOS</a>
-        <p class="text-deep-gray text-sm mb-4">The operating system for modern marketers</p>
-        <nav class="flex justify-center gap-6 text-sm text-deep-gray mb-4">
-          <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
-          <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
-        </nav>
         <p class="text-deep-gray text-sm">&copy; <span id="current-year"></span> marketingOS. All rights reserved.</p>
       </div>
     </footer>
