@@ -12,6 +12,7 @@ export default defineConfig({
         'features-google-ads-manager': resolve(__dirname, 'features/google-ads-manager.html'),
         'features-analytics-reporter': resolve(__dirname, 'features/analytics-reporter.html'),
         'features-utm-organizer': resolve(__dirname, 'features/utm-organizer.html'),
+        'blog-best-ppc-management-software': resolve(__dirname, 'blog/best-ppc-management-software.html'),
       },
     },
   },
