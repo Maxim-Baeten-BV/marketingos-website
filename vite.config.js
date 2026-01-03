@@ -13,6 +13,7 @@ export default defineConfig({
         'features-analytics-reporter': resolve(__dirname, 'features/analytics-reporter.html'),
         'features-utm-organizer': resolve(__dirname, 'features/utm-organizer.html'),
         'blog-best-ppc-management-software': resolve(__dirname, 'blog/best-ppc-management-software.html'),
+        'blog-index': resolve(__dirname, 'blog/index.html'),
       },
     },
   },
