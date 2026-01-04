@@ -53,6 +53,9 @@ The sitemap is **automatically generated** during the build process.
 ├── index.html                 # Homepage
 ├── features/                  # Feature pages
 ├── blog/                      # Blog posts
+├── _templates/                # Page templates (DO NOT DEPLOY)
+│   ├── page-template.html    # Feature/general page template
+│   └── blog-post-template.html # Blog post template
 ├── public/
 │   ├── sitemap.xml           # Auto-generated sitemap
 │   └── robots.txt            # Robots file
@@ -63,6 +66,93 @@ The sitemap is **automatically generated** during the build process.
 │   └── style.css             # Global styles
 └── dist/                     # Production build output
 ```
+
+---
+
+## Page Templates
+
+Templates are stored in `_templates/` and ensure consistent navigation, modals, and layout across all pages.
+
+### Available Templates
+
+| Template | Use For | Location |
+|----------|---------|----------|
+| `page-template.html` | Feature pages, landing pages, general pages | `_templates/page-template.html` |
+| `blog-post-template.html` | Blog articles, guides, tutorials | `_templates/blog-post-template.html` |
+
+### How to Use Templates
+
+#### Creating a New Feature/General Page:
+1. Copy `_templates/page-template.html` to the target location (e.g., `features/new-feature.html`)
+2. Search for `CUSTOMIZE:` comments and replace placeholder values
+3. Add entry to `vite.config.js` rollupOptions.input
+4. Run `npm run build` to verify
+
+#### Creating a New Blog Post:
+1. Copy `_templates/blog-post-template.html` to `blog/your-post-slug.html`
+2. Search for `CUSTOMIZE:` comments and replace ALL placeholder values:
+   - `BLOG_TITLE` → Your article title
+   - `BLOG_URL_SLUG` → URL-friendly slug (e.g., `google-ads-tips`)
+   - `META_DESCRIPTION` → 150-160 character description
+   - `BREADCRUMB_NAME` → Short title for breadcrumb
+   - `ARTICLE_TYPE` → e.g., "Ultimate Guide", "Tutorial", "Tips"
+   - `PRIMARY_KEYWORD` → Main SEO keyword
+   - `READ_TIME` → Estimated read time in minutes
+   - `WORD_COUNT` → Approximate word count
+   - Section headings, content, FAQ items, etc.
+3. Add entry to `vite.config.js` rollupOptions.input
+4. Add blog card to `blog/index.html`
+5. Run `npm run build` to verify
+
+### Template Sections
+
+Each template has clearly marked sections:
+
+| Marker | Meaning |
+|--------|---------|
+| `<!-- CUSTOMIZE: ... -->` | Edit this section for each new page |
+| `<!-- DO NOT MODIFY ... -->` | Keep exactly as-is for consistency |
+
+**DO NOT MODIFY sections include:**
+- Navigation (desktop and mobile)
+- Waitlist modal
+- Footer
+- Mobile menu script
+
+### Optional Schema.org Markup (Blog Template)
+
+The blog template includes optional structured data that can be enabled:
+
+- **FAQPage Schema** - Uncomment if your article has an FAQ section
+- **HowTo Schema** - Uncomment if your article is a step-by-step guide
+
+### Content Patterns (Blog Template)
+
+The blog template includes example patterns you can copy/reuse:
+
+- **Callout boxes** - Tips, warnings, important notes
+- **Comparison cards** - Side-by-side feature comparisons
+- **Data tables** - Structured data presentation
+- **Step-by-step sections** - Numbered instructions
+- **FAQ accordion** - Expandable Q&A section
+
+### Bulk Page Creation Workflow
+
+When creating multiple pages at once:
+
+1. **Prepare a spreadsheet** with all placeholder values for each page
+2. **Copy template** for each new page
+3. **Find/replace placeholders** using your spreadsheet data
+4. **Add all entries** to `vite.config.js` at once
+5. **Run single build** to verify all pages
+6. **Commit and deploy**
+
+This ensures all pages have:
+- ✅ Identical Pattern A navigation (desktop + mobile)
+- ✅ Consistent footer
+- ✅ Working waitlist modal
+- ✅ Proper schema.org markup
+- ✅ Correct meta tags structure
 
 ## Waitlist Modal
 
@@ -139,6 +229,43 @@ When renaming URLs:
 2. Update `vite.config.js` rollupOptions.input
 3. Update internal links across all pages
 4. Sitemap auto-updates on build
+
+### CRITICAL: Navigation Pattern A is the Standard
+
+**All pages MUST use Pattern A navigation.** This is the only approved navigation pattern for the site.
+
+**Pattern A Navigation includes:**
+- **Desktop:** Product dropdown (with feature submenu) → Blog → Roadmap → "Get on the waitlist" CTA button
+- **Mobile:** Full-screen slide-in overlay menu with Product Overview, Features section, Blog, Roadmap links, and CTA button
+
+**Reference file:** Use `blog/google-ads-quality-score-guide.html` as the template for navigation structure.
+
+**Navigation Structure:**
+```html
+<nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-4 md:py-6 px-4 md:px-6" style="background-color: #FFFCF5;">
+  <!-- Logo + Hamburger button + Desktop nav with Product dropdown -->
+</nav>
+
+<!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible...">
+  <!-- Slide-in panel with all feature links -->
+</div>
+
+<!-- Mobile Menu Script -->
+<script>
+  // openMobileMenu(), closeMobileMenu() functions
+</script>
+
+<main>
+```
+
+**Critical Notes:**
+1. Mobile menu overlay MUST be placed OUTSIDE the `<nav>` element
+2. Script for mobile menu goes BEFORE `<main>`
+3. CTA button uses `onclick="openWaitlistModal()"` (not href links)
+4. Product dropdown shows feature links on hover
+
+**Do NOT use Pattern B (flat nav with Apps, Blog, Pricing, FAQ, Login).** It has been deprecated.
 
 ### CRITICAL: vite.config.js Must Include All Pages
 

@@ -273,7 +273,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Navigation -->
     <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-4 md:py-6 px-4 md:px-6" style="background-color: #FFFCF5;">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
         <a href="/" class="flex items-center">
@@ -283,34 +282,154 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Mobile Hamburger Button -->
         <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
           <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300"></span>
-          <span class="hamburger-line w-6 h-0.5 bg-brand-dark mt-1.5 transition-all duration-300"></span>
-          <span class="hamburger-line w-6 h-0.5 bg-brand-dark mt-1.5 transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
         </button>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-6 lg:gap-8">
-          <a href="/#apps" class="text-brand-dark hover:text-brand-blue transition-colors text-sm lg:text-base">Apps</a>
-          <a href="/blog" class="text-brand-dark hover:text-brand-blue transition-colors text-sm lg:text-base">Blog</a>
-          <a href="/#pricing" class="text-brand-dark hover:text-brand-blue transition-colors text-sm lg:text-base">Pricing</a>
-          <a href="/#faq" class="text-brand-dark hover:text-brand-blue transition-colors text-sm lg:text-base">FAQ</a>
-          <a href="https://app.marketingos.nl" class="text-brand-dark hover:text-brand-blue transition-colors text-sm lg:text-base">Login</a>
-          <a href="/#cta" class="bg-brand-blue text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg text-sm lg:text-base font-medium hover:bg-blue-700 transition-colors">Get Early Access</a>
+        <div class="hidden md:flex items-center gap-8">
+          <!-- Product Dropdown -->
+          <div class="relative group">
+            <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200 flex items-center gap-1">
+              Product
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px]">
+                <a href="/performance-marketing-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Overview</span>
+                  <span class="block text-sm text-gray-500">All features & apps</span>
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/ad-spend-tracker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Ad Spend Tracker</span>
+                  <span class="block text-sm text-gray-500">Budget monitoring</span>
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Facebook Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Meta ads tracking</span>
+                </a>
+                <a href="/features/google-ads-management-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Google Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Search & Performance Max</span>
+                </a>
+                <a href="/features/marketing-dashboard" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Marketing Dashboard</span>
+                  <span class="block text-sm text-gray-500">Analytics reporting</span>
+                </a>
+                <a href="/features/utm-tracking-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">UTM Tracker</span>
+                  <span class="block text-sm text-gray-500">Campaign URL builder</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/blog" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200">
+            Blog
+          </a>
+          <a href="/roadmap" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200">
+            Roadmap
+          </a>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
+            Get on the waitlist
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+      <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+          <div class="flex flex-col h-full">
+            <!-- Mobile Menu Header -->
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+              <a href="/" class="flex items-center">
+                <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo" class="h-8 w-auto" />
+              </a>
+              <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+                <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Mobile Menu Links -->
+            <div class="flex-1 overflow-y-auto py-4">
+              <div class="px-4 space-y-1">
+                <a href="/performance-marketing-software" class="block py-3 px-4 text-brand-dark font-medium hover:bg-soft-gray rounded-lg transition-colors">
+                  Product Overview
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/ad-spend-tracker" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Ad Spend Tracker
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Facebook Ads Manager
+                </a>
+                <a href="/features/google-ads-management-tool" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Google Ads Manager
+                </a>
+                <a href="/features/marketing-dashboard" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Marketing Dashboard
+                </a>
+                <a href="/features/utm-tracking-tool" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  UTM Tracker
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <a href="/blog" class="block py-3 px-4 text-brand-dark font-medium hover:bg-soft-gray rounded-lg transition-colors">
+                  Blog
+                </a>
+                <a href="/roadmap" class="block py-3 px-4 text-brand-dark font-medium hover:bg-soft-gray rounded-lg transition-colors">
+                  Roadmap
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Menu CTA -->
+            <div class="p-4 border-t border-gray-200">
+              <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
+                Get on the waitlist
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-    </nav>
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuPanel = mobileMenu.querySelector('div');
 
-    <!-- Mobile Menu - MUST be outside nav to avoid backdrop-filter containing block issue -->
-    <div id="mobile-menu" class="md:hidden hidden fixed top-[73px] left-0 right-0 border-b border-gray-200 shadow-lg z-40 bg-soft-gray">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/#apps" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Apps</a>
-        <a href="/blog" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Blog</a>
-        <a href="/#pricing" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Pricing</a>
-        <a href="/#faq" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">FAQ</a>
-        <a href="https://app.marketingos.nl" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">Login</a>
-        <a href="/#cta" class="block bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center mt-4">Get Early Access</a>
-      </div>
-    </div>
+      function openMobileMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        mobileMenuPanel.classList.remove('translate-x-full');
+        mobileMenuPanel.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        mobileMenuPanel.classList.add('translate-x-full');
+        mobileMenuPanel.classList.remove('translate-x-0');
+        document.body.style.overflow = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+    </script>
 
     <main class="max-w-4xl mx-auto px-4 md:px-6 py-8">
       <!-- Breadcrumb -->
@@ -1067,23 +1186,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-200 py-12 px-4 md:px-6 mt-20" style="background-color: #FFFCF5;">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div class="flex items-center gap-2">
-            <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS" class="h-8 w-auto" />
-          </div>
-          <div class="flex flex-wrap justify-center gap-6 text-sm text-deep-gray">
-            <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
-            <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
-            <a href="/blog/best-marketing-budget-tracking-tools" class="hover:text-brand-blue transition-colors">Budget Tracking Tools</a>
-            <a href="/#pricing" class="hover:text-brand-blue transition-colors">Pricing</a>
-            <a href="/#cta" class="hover:text-brand-blue transition-colors">Get Access</a>
-          </div>
+    <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">
+      <div class="max-w-5xl mx-auto text-center">
+        <a href="/" class="font-semibold text-brand-dark text-lg mb-2 inline-block hover:text-brand-blue transition-colors">marketingOS</a>
+        <p class="text-deep-gray text-sm mb-4">The operating system for modern marketers</p>
+        <nav class="flex justify-center gap-6 text-sm text-deep-gray mb-4">
+          <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+          <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+        </nav>
+        <div class="flex justify-center gap-4 mb-4">
+          <a href="https://x.com/marketingOS_com" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on X">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.reddit.com/user/marketingOS/" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on Reddit">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+            </svg>
+          </a>
         </div>
-        <div class="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-deep-gray">
-          <p>&copy; 2026 marketingOS. All rights reserved.</p>
-        </div>
+        <p class="text-deep-gray text-sm">&copy; <span id="current-year"></span> marketingOS. All rights reserved.</p>
       </div>
     </footer>
 

@@ -329,6 +329,735 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
 
+    </nav>
+
+    <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
+      <!-- Mobile Menu Panel -->
+      <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300 bg-white">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+          <span class="font-semibold text-brand-dark">Menu</span>
+          <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+            <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div class="p-4 space-y-2">
+          <!-- Product Section -->
+          <div class="border-b border-gray-200 pb-4">
+            <a href="/performance-marketing-software" class="block py-3 text-brand-dark font-semibold text-lg">
+              Product Overview
+            </a>
+            <div class="pl-4 space-y-1">
+              <a href="/features/ad-spend-tracker" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Budget Checker
+              </a>
+              <a href="/features/facebook-ads-management-software" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Meta Ads Manager
+              </a>
+              <a href="/features/google-ads-management-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Google Ads Manager
+              </a>
+              <a href="/features/marketing-dashboard" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Analytics Reporter
+              </a>
+              <a href="/features/utm-tracking-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                UTM Organizer
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Link -->
+          <a href="/blog" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
+            Blog
+          </a>
+
+          <!-- Roadmap -->
+          <a href="/roadmap" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
+            Roadmap
+          </a>
+
+          <!-- CTA Button -->
+          <div class="pt-4">
+            <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+              Get on the waitlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuPanel = mobileMenu.querySelector('div');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        mobileMenuPanel.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+
+        // Animate hamburger to X
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        mobileMenuPanel.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+
+        // Animate X back to hamburger
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+    </script>
+
+    <main>
+      <!-- Breadcrumb -->
+      <div class="bg-soft-gray py-3 px-6">
+        <div class="max-w-6xl mx-auto">
+          <nav class="flex items-center text-sm text-deep-gray" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="text-brand-dark font-medium">Best PPC Software 2026</span>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Article Header -->
+      <article class="py-12 md:py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <header class="mb-12 text-center">
+            <span class="inline-block bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-1 rounded-full mb-6">
+              Tool Comparison
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
+              Best PPC Management Software 2026: Top 8 Tools Compared
+            </h1>
+            <p class="text-xl text-deep-gray mb-8 max-w-3xl mx-auto">
+              A comprehensive comparison of the best PPC software to help you find the right tool for your budget, team size, and advertising goals.
+            </p>
+            <div class="flex items-center justify-center gap-4 text-sm text-deep-gray">
+              <div class="flex items-center gap-2">
+                <img src="/founder%20picture.png" alt="Maxim Baeten" class="w-10 h-10 rounded-full object-cover" />
+                <div class="text-left">
+                  <a href="https://www.linkedin.com/in/maximbaeten/" target="_blank" rel="noopener" class="font-semibold text-brand-dark hover:text-brand-blue transition-colors">
+                    Maxim Baeten
+                  </a>
+                  <p class="text-xs text-deep-gray">Performance Marketing Expert</p>
+                </div>
+              </div>
+              <span class="text-gray-300">|</span>
+              <time datetime="2026-01-02">January 2, 2026</time>
+              <span class="text-gray-300">|</span>
+              <span>15 min read</span>
+            </div>
+          </header>
+
+          <!-- Article Content -->
+          <div class="prose prose-lg max-w-none">
+            <p class="lead text-xl text-deep-gray">
+              Managing PPC campaigns across Google, Meta, and LinkedIn has become increasingly complex. The right PPC management software can save you hours each week while improving campaign performance. But with dozens of tools on the market, how do you choose?
+            </p>
+
+            <p>
+              After testing over 20 PPC tools and interviewing performance marketers managing $10K to $10M+ in monthly ad spend, I've compiled this comprehensive comparison of the 8 best PPC management software options for 2026.
+            </p>
+
+            <!-- Quick Comparison Table -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">Quick Comparison: Best PPC Software at a Glance</h2>
+
+            <div class="overflow-x-auto mb-12">
+              <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden text-sm">
+                <thead>
+                  <tr class="bg-brand-dark text-white">
+                    <th class="px-4 py-3 text-left font-semibold">Tool</th>
+                    <th class="px-4 py-3 text-left font-semibold">Best For</th>
+                    <th class="px-4 py-3 text-left font-semibold">Starting Price</th>
+                    <th class="px-4 py-3 text-left font-semibold">Platforms</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-4 py-3 font-medium">Optmyzr</td>
+                    <td class="px-4 py-3">Enterprise teams, agencies</td>
+                    <td class="px-4 py-3">$249/mo</td>
+                    <td class="px-4 py-3">Google, Microsoft</td>
+                  </tr>
+                  <tr class="bg-brand-blue/5">
+                    <td class="px-4 py-3 font-medium text-brand-blue">marketingOS</td>
+                    <td class="px-4 py-3">Cross-channel management</td>
+                    <td class="px-4 py-3">Free tier</td>
+                    <td class="px-4 py-3">Google, Meta, LinkedIn</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium">Adalysis</td>
+                    <td class="px-4 py-3">Google Ads optimization</td>
+                    <td class="px-4 py-3">$149/mo</td>
+                    <td class="px-4 py-3">Google only</td>
+                  </tr>
+                  <tr class="bg-soft-gray/30">
+                    <td class="px-4 py-3 font-medium">WordStream</td>
+                    <td class="px-4 py-3">SMBs, beginners</td>
+                    <td class="px-4 py-3">$49/mo</td>
+                    <td class="px-4 py-3">Google, Meta</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium">Adzooma</td>
+                    <td class="px-4 py-3">Budget-conscious teams</td>
+                    <td class="px-4 py-3">Free</td>
+                    <td class="px-4 py-3">Google, Meta, Microsoft</td>
+                  </tr>
+                  <tr class="bg-soft-gray/30">
+                    <td class="px-4 py-3 font-medium">SpyFu</td>
+                    <td class="px-4 py-3">Competitive research</td>
+                    <td class="px-4 py-3">$39/mo</td>
+                    <td class="px-4 py-3">Google (research)</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3 font-medium">Skai (Kenshoo)</td>
+                    <td class="px-4 py-3">Enterprise omnichannel</td>
+                    <td class="px-4 py-3">Custom</td>
+                    <td class="px-4 py-3">All major platforms</td>
+                  </tr>
+                  <tr class="bg-soft-gray/30">
+                    <td class="px-4 py-3 font-medium">Marin Software</td>
+                    <td class="px-4 py-3">Large advertisers</td>
+                    <td class="px-4 py-3">Custom</td>
+                    <td class="px-4 py-3">Google, Meta, Amazon</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Tool 1: Optmyzr -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">1. Optmyzr</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Enterprise teams and agencies with heavy Google Ads focus</p>
+
+            <p>
+              Founded by former Google Ads engineers, Optmyzr has become the gold standard for advanced PPC automation. Its rule-based automation engine and custom scripts give experienced advertisers granular control over campaign optimization.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Rule Engine with 50+ pre-built optimization templates
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Enhanced Scripts for complex automation workflows
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Shopping campaign optimization with product-level insights
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  PPC Investigator for anomaly detection
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Starts at $249/month for the Essentials plan. Pro and Elite tiers add more features and scale with ad spend.
+            </p>
+            <p>
+              <strong>Limitations:</strong> Focused primarily on Google and Microsoft Ads. No native Meta or LinkedIn support. Can have a steep learning curve for beginners.
+            </p>
+
+            <!-- Tool 2: marketingOS -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">2. marketingOS</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Teams managing campaigns across Google, Meta, and LinkedIn</p>
+
+            <p>
+              While many PPC tools focus on a single platform, marketingOS takes a different approach. It's designed as an "operating system" for performance marketers who need to manage budgets and campaigns across multiple advertising platforms from a single dashboard.
+            </p>
+
+            <div class="bg-brand-blue/5 border border-brand-blue/20 rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Unified budget tracking across Google, Meta, and LinkedIn
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Real-time spend alerts and budget pacing
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Cross-channel performance dashboards
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  UTM tracking and campaign URL builder
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Flat pricing that doesn't scale with ad spend
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Free tier available. Paid plans offer expanded features without ad-spend-based pricing.
+            </p>
+            <p>
+              <strong>Best feature:</strong> The unified budget view lets you see total ad spend across all platforms in one place, with real-time alerts if you're pacing ahead or behind budget.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-8 text-center">
+              <p class="text-lg font-semibold text-brand-dark mb-4">Ready to simplify cross-channel PPC management?</p>
+              <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200">
+                Try marketingOS Free
+              </button>
+            </div>
+
+            <!-- Tool 3: Adalysis -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">3. Adalysis</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Google Ads specialists focused on optimization and testing</p>
+
+            <p>
+              Adalysis has built a strong reputation for Google Ads optimization, particularly around ad testing and Quality Score improvement. If Google Ads is your primary platform and you want data-driven recommendations, Adalysis delivers.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Automated ad testing with statistical significance
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Quality Score tracking and improvement suggestions
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Account audit tools with prioritized recommendations
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  N-gram analysis for search term optimization
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Starts at $149/month, with pricing based on ad spend tiers. Higher spend = higher cost.
+            </p>
+            <p>
+              <strong>Limitations:</strong> Google Ads only. No support for Meta, LinkedIn, or other platforms. Audit-focused rather than daily workflow tool. <a href="/blog/adalysis-alternative" class="text-brand-blue hover:underline">Learn more about Adalysis alternatives</a>.
+            </p>
+
+            <!-- Tool 4: WordStream -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">4. WordStream</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: SMBs and PPC beginners who want guided optimization</p>
+
+            <p>
+              WordStream (now part of LocaliQ) made its name with the "20-Minute Work Week" approach, designed to help small businesses manage PPC without becoming full-time advertisers. It's particularly well-suited for businesses new to paid advertising.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  20-Minute Work Week with prioritized tasks
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Free Google Ads Performance Grader
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Keyword research and suggestions
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Beginner-friendly interface
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Plans start around $49/month for basic features.
+            </p>
+            <p>
+              <strong>Limitations:</strong> May feel limiting for experienced PPC managers. Less advanced automation than enterprise tools.
+            </p>
+
+            <!-- Tool 5: Adzooma -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">5. Adzooma</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Budget-conscious teams wanting AI-powered recommendations</p>
+
+            <p>
+              Adzooma offers something rare in the PPC software market: a genuinely useful free tier. Its AI-powered "Opportunities" surface quick wins and optimizations across Google, Meta, and Microsoft Ads accounts.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Free tier with multi-platform support
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  AI-powered optimization opportunities
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  One-click automation rules
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Performance reports and dashboards
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Free tier available. Pro plans start at $99/month for additional features and automation.
+            </p>
+            <p>
+              <strong>Limitations:</strong> Free tier has limitations on automation and advanced features. Not as deep on any single platform as specialized tools.
+            </p>
+
+            <!-- Tool 6: SpyFu -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">6. SpyFu</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Competitive research and keyword intelligence</p>
+
+            <p>
+              SpyFu is less of a campaign management tool and more of a competitive intelligence platform. It's invaluable for understanding what keywords your competitors bid on, their estimated ad spend, and their ad copy strategies.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Competitor PPC keyword analysis
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Historical ad copy database
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Estimated competitor ad spend
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Keyword grouping and suggestions
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Starts at $39/month for Basic. Professional plans at $79/month add more features.
+            </p>
+            <p>
+              <strong>Limitations:</strong> Research tool, not a campaign manager. You'll still need separate tools to actually manage your campaigns.
+            </p>
+
+            <!-- Tool 7: Skai -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">7. Skai (formerly Kenshoo)</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Enterprise brands with large omnichannel budgets</p>
+
+            <p>
+              Skai is an enterprise-grade platform for brands spending millions on advertising. It covers search, social, ecommerce (Amazon, Walmart), and retail media in a single platform with sophisticated attribution and automation.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Omnichannel campaign management
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Advanced attribution modeling
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Retail media integration (Amazon, Walmart, Instacart)
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  AI-powered budget allocation
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Custom enterprise pricing. Typically requires significant minimum ad spend and annual contracts.
+            </p>
+            <p>
+              <strong>Limitations:</strong> Not suitable for SMBs. Complex implementation. Requires dedicated resources to manage.
+            </p>
+
+            <!-- Tool 8: Marin Software -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">8. Marin Software</h2>
+            <p class="text-lg text-deep-gray mb-4 italic">Best for: Large advertisers needing cross-channel bid optimization</p>
+
+            <p>
+              Marin Software has been in the PPC management space since 2006, evolving alongside the industry. It offers robust cross-channel management with a focus on automated bidding and budget allocation.
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-3">Key Features:</h4>
+              <ul class="space-y-2 text-deep-gray">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Cross-channel bid management
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  MarinOne unified platform
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Amazon advertising support
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  Budget forecasting and pacing
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              <strong>Pricing:</strong> Custom pricing based on ad spend and features required.
+            </p>
+            <p>
+              <strong>Limitations:</strong> Enterprise focus means it's overkill for smaller advertisers. Significant investment in onboarding and training.
+            </p>
+
+            <!-- How to Choose Section -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">How to Choose the Right PPC Software</h2>
+
+            <p>
+              With so many options, selecting the right tool comes down to a few key questions:
+            </p>
+
+            <div class="bg-soft-gray rounded-xl p-6 my-6">
+              <h4 class="font-semibold text-brand-dark mb-4">Ask yourself:</h4>
+              <ol class="space-y-4 text-deep-gray">
+                <li class="flex gap-3">
+                  <span class="font-bold text-brand-blue">1.</span>
+                  <div>
+                    <strong>Which platforms do you advertise on?</strong>
+                    <p class="text-sm mt-1">Google-only? Cross-channel including Meta and LinkedIn? This immediately narrows your options.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-bold text-brand-blue">2.</span>
+                  <div>
+                    <strong>What's your monthly ad spend?</strong>
+                    <p class="text-sm mt-1">Some tools scale pricing with spend. At higher budgets, flat-fee tools become more cost-effective.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-bold text-brand-blue">3.</span>
+                  <div>
+                    <strong>What's your biggest pain point?</strong>
+                    <p class="text-sm mt-1">Budget tracking? Ad testing? Reporting? Automation? Different tools excel at different things.</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-bold text-brand-blue">4.</span>
+                  <div>
+                    <strong>What's your team's experience level?</strong>
+                    <p class="text-sm mt-1">Some tools assume deep PPC knowledge. Others guide you through optimization step by step.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <!-- FAQ Section -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
+
+            <div class="space-y-6">
+              <div class="bg-soft-gray rounded-xl p-6">
+                <h3 class="font-semibold text-brand-dark mb-2">What is PPC management software?</h3>
+                <p class="text-deep-gray">
+                  PPC management software helps advertisers manage, optimize, and report on paid search and social campaigns. These tools automate repetitive tasks, provide performance insights, and help you make better decisions about budget allocation across platforms like Google Ads, Meta Ads, and Microsoft Advertising.
+                </p>
+              </div>
+
+              <div class="bg-soft-gray rounded-xl p-6">
+                <h3 class="font-semibold text-brand-dark mb-2">How much does PPC software cost?</h3>
+                <p class="text-deep-gray">
+                  PPC software pricing varies widely based on features and ad spend. Entry-level tools start around $39-49/month (SpyFu, WordStream), mid-tier solutions range from $100-250/month (Adalysis, Optmyzr Essentials), and enterprise platforms can cost $500-2000+/month. Some tools like Adzooma and marketingOS offer free tiers with limited features.
+                </p>
+              </div>
+
+              <div class="bg-soft-gray rounded-xl p-6">
+                <h3 class="font-semibold text-brand-dark mb-2">Do I need PPC software or can I just use Google Ads?</h3>
+                <p class="text-deep-gray">
+                  Google Ads native interface is sufficient for simple campaigns, but PPC software becomes valuable when you manage multiple campaigns, need cross-platform reporting, want automation for repetitive tasks, or need to scale your PPC operations. Most performance marketers find that the time savings alone justify the investment.
+                </p>
+              </div>
+
+              <div class="bg-soft-gray rounded-xl p-6">
+                <h3 class="font-semibold text-brand-dark mb-2">What features should I look for in PPC management software?</h3>
+                <p class="text-deep-gray">
+                  Key features to evaluate include: automated bid management, cross-channel reporting, budget tracking and alerts, ad copy testing, keyword management, competitor analysis, and integration with your existing marketing stack. Prioritize features based on your biggest pain points and time wasters.
+                </p>
+              </div>
+
+              <div class="bg-soft-gray rounded-xl p-6">
+                <h3 class="font-semibold text-brand-dark mb-2">Which PPC software is best for agencies?</h3>
+                <p class="text-deep-gray">
+                  For agencies, look for tools with white-label reporting, multi-account management, and client collaboration features. Optmyzr and marketingOS offer strong agency features, while Adalysis and WordStream provide good value for smaller agencies. Consider per-account vs. flat pricing based on your client volume.
+                </p>
+              </div>
+            </div>
+
+            <!-- Conclusion -->
+            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">The Bottom Line</h2>
+
+            <p>
+              There's no single "best" PPC software. The right choice depends on your platforms, budget, team size, and specific needs. For Google Ads specialists, Optmyzr and Adalysis deliver deep optimization capabilities. For cross-channel marketers managing Google, Meta, and LinkedIn, marketingOS provides unified budget tracking and management. For those just starting out, WordStream and Adzooma offer accessible entry points.
+            </p>
+
+            <p>
+              Most tools offer free trials or demos. Take advantage of these to test the interface, see how well it integrates with your workflow, and evaluate whether the features match your actual needs.
+            </p>
+
+            <!-- Final CTA -->
+            <div class="bg-brand-blue text-white rounded-xl p-8 my-12 text-center">
+              <h3 class="text-2xl font-bold mb-4">Ready to simplify your PPC management?</h3>
+              <p class="mb-6 text-white/90">
+                marketingOS brings your Google, Meta, and LinkedIn campaigns together with unified budget tracking, real-time alerts, and cross-channel insights.
+              </p>
+              <button onclick="openWaitlistModal()" class="bg-white text-brand-blue hover:bg-opacity-90 font-semibold px-8 py-3 rounded-lg transition-all duration-200">
+                Get Started Free
+              </button>
+            </div>
+
+            <!-- Related Resources -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+              <h3 class="text-xl font-semibold text-brand-dark mb-4">Related Resources</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/blog/adalysis-alternative" class="text-brand-blue hover:underline">Adalysis Alternative: Why marketingOS for Cross-Channel PPC</a>
+                </li>
+                <li>
+                  <a href="/blog/google-ads-quality-score-guide" class="text-brand-blue hover:underline">Google Ads Quality Score Guide: How to Improve Your QS</a>
+                </li>
+                <li>
+                  <a href="/features/ad-spend-tracker" class="text-brand-blue hover:underline">Ad Spend Tracker: Real-Time Budget Monitoring</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal" class="fixed inset-0 bg-black/60 z-50 opacity-0 invisible transition-opacity duration-300 flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform scale-95 transition-transform duration-300">
+        <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h3 class="text-2xl font-bold text-brand-dark mb-2">Join the Waitlist</h3>
+        <p class="text-deep-gray mb-6">Be the first to know when marketingOS launches. Get early access and exclusive updates.</p>
+        <form id="waitlist-form" class="space-y-4">
+          <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all" />
+          <button type="submit" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 rounded-lg transition-all duration-200">
+            Get Early Access
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openWaitlistModal() {
+        const modal = document.getElementById('waitlist-modal');
+        modal.classList.remove('opacity-0', 'invisible');
+        modal.classList.add('opacity-100', 'visible');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeWaitlistModal() {
+        const modal = document.getElementById('waitlist-modal');
+        modal.classList.add('opacity-0', 'invisible');
+        modal.classList.remove('opacity-100', 'visible');
+        modal.querySelector('div').classList.add('scale-95');
+        modal.querySelector('div').classList.remove('scale-100');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('waitlist-modal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) closeWaitlistModal();
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">
+      <div class="max-w-5xl mx-auto text-center">
+        <a href="/" class="font-semibold text-brand-dark text-lg mb-2 inline-block hover:text-brand-blue transition-colors">marketingOS</a>
+        <p class="text-deep-gray text-sm mb-4">The operating system for modern marketers</p>
+        <nav class="flex justify-center gap-6 text-sm text-deep-gray mb-4">
+          <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+          <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+        </nav>
+        <div class="flex justify-center gap-4 mb-4">
+          <a href="https://x.com/marketingOS_com" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on X">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.reddit.com/user/marketingOS/" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on Reddit">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+            </svg>
+          </a>
+        </div>
+        <p class="text-deep-gray text-sm">&copy; <span id="current-year"></span> marketingOS. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

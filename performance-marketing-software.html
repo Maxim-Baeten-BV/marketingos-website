@@ -229,21 +229,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
         </div>
       </div>
+    </nav>
 
-              </div>
+    <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
+      <!-- Mobile Menu Panel -->
+      <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300 bg-white">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+          <span class="font-semibold text-brand-dark">Menu</span>
+          <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+            <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
 
-              <!-- Floating Alert Badge -->
-              <div class="absolute -top-3 -right-3 bg-white rounded-xl shadow-xl px-4 py-2 border border-gray-200">
-                <div class="flex items-center gap-2">
-                  <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                  <span class="text-sm font-medium text-brand-dark">1 alert</span>
-                </div>
-              </div>
+        <!-- Mobile Menu Links -->
+        <div class="p-4 space-y-2">
+          <!-- Product Section -->
+          <div class="border-b border-gray-200 pb-4">
+            <a href="/performance-marketing-software" class="block py-3 text-brand-dark font-semibold text-lg">
+              Product Overview
+            </a>
+            <div class="pl-4 space-y-1">
+              <a href="/features/ad-spend-tracker" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Budget Checker
+              </a>
+              <a href="/features/facebook-ads-management-software" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Meta Ads Manager
+              </a>
+              <a href="/features/google-ads-management-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Google Ads Manager
+              </a>
+              <a href="/features/marketing-dashboard" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                Analytics Reporter
+              </a>
+              <a href="/features/utm-tracking-tool" class="block py-2 text-brand-dark hover:text-brand-blue transition-colors">
+                UTM Organizer
+              </a>
             </div>
           </div>
-        </div>
-      </header>
 
+          <!-- Blog -->
+          <a href="/blog" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
+            Blog
+          </a>
+
+          <!-- Roadmap -->
+          <a href="/roadmap" class="block py-3 text-brand-dark font-semibold text-lg border-b border-gray-200">
+            Roadmap
+          </a>
+
+          <!-- CTA Button -->
+          <div class="pt-4">
+            <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+              Get on the waitlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuPanel = mobileMenu.querySelector('div');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        mobileMenuPanel.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+
+        // Animate hamburger to X
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        mobileMenuPanel.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+
+        // Animate X back to hamburger
+        const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+    </script>
+
+    <!-- Main Content -->
+    <main>
       <!-- Problem Section -->
       <section class="py-20 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
@@ -659,210 +748,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
           <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
         </nav>
-
-
-
-      <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
-      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
-        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] shadow-xl transform translate-x-full transition-transform duration-300 bg-white">
-          <!-- Mobile Menu Header -->
-          <div class="flex items-center justify-between p-4 border-b border-gray-200">
-            <span class="font-semibold text-brand-dark">Menu</span>
-            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
-              <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-
-          <!-- Mobile Menu Content -->
-          <div class="p-4 overflow-y-auto" style="max-height: calc(100vh - 70px);">
-            <!-- Product Section -->
-            <div class="mb-6">
-              <a href="/performance-marketing-software" class="block text-lg font-semibold text-brand-blue mb-3">Product</a>
-              <div class="space-y-2 pl-4">
-                <a href="/performance-marketing-software" class="block py-2 text-deep-gray hover:text-brand-blue transition-colors">Overview</a>
-                <a href="/features/ad-spend-tracker" class="block py-2 text-deep-gray hover:text-brand-blue transition-colors">Ad Spend Tracker</a>
-                <a href="/features/facebook-ads-management-software" class="block py-2 text-deep-gray hover:text-brand-blue transition-colors">Facebook Ads Manager</a>
-                <a href="/features/google-ads-management-tool" class="block py-2 text-deep-gray hover:text-brand-blue transition-colors">Google Ads Manager</a>
-                <a href="/features/marketing-dashboard" class="block py-2 text-deep-gray hover:text-brand-blue transition-colors">Marketing Dashboard</a>
-                <a href="/features/utm-tracking-tool" class="block py-2 text-deep-gray hover:text-brand-blue transition-colors">UTM Tracker</a>
-              </div>
-            </div>
-
-            <!-- Other Links -->
-            <div class="space-y-4 mb-6">
-              <a href="/blog" class="block text-lg font-semibold text-brand-dark hover:text-brand-blue transition-colors">Blog</a>
-              <a href="/roadmap" class="block text-lg font-semibold text-brand-dark hover:text-brand-blue transition-colors">Roadmap</a>
-            </div>
-
-            <!-- CTA Button -->
-            <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
-              Get on the waitlist
-            </button>
-          </div>
+        <div class="flex justify-center gap-4 mb-4">
+          <a href="https://x.com/marketingOS_com" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on X">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.reddit.com/user/marketingOS/" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on Reddit">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+            </svg>
+          </a>
         </div>
-      </div>
-    </nav>
-
-    <!-- Mobile Menu Script -->
-    <script>
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuClose = document.getElementById('mobile-menu-close');
-      const mobileMenuPanel = mobileMenu.querySelector('div');
-
-      function openMobileMenu() {
-        mobileMenu.classList.remove('opacity-0', 'invisible');
-        mobileMenu.classList.add('opacity-100', 'visible');
-        mobileMenuPanel.classList.remove('translate-x-full');
-        mobileMenuPanel.classList.add('translate-x-0');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeMobileMenu() {
-        mobileMenu.classList.add('opacity-0', 'invisible');
-        mobileMenu.classList.remove('opacity-100', 'visible');
-        mobileMenuPanel.classList.add('translate-x-full');
-        mobileMenuPanel.classList.remove('translate-x-0');
-        document.body.style.overflow = '';
-      }
-
-      mobileMenuBtn.addEventListener('click', openMobileMenu);
-      mobileMenuClose.addEventListener('click', closeMobileMenu);
-      mobileMenu.addEventListener('click', (e) => {
-        if (e.target === mobileMenu) closeMobileMenu();
-      });
-    </script>
-
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <header class="relative bg-brand-dark text-white py-24 px-6">
-        <div class="max-w-6xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <!-- Text Content -->
-            <div>
-              <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Performance marketing software built for daily use
-              </h1>
-              <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                Small, focused apps that each solve one problem well. Track budgets across channels. Monitor campaign performance in real-time. Catch issues before they escalate.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4">
-                <button onclick="openWaitlistModal()" class="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg cursor-pointer">
-                  Get on the waitlist
-                </button>
-                <a href="#apps" class="inline-block border border-gray-500 hover:border-white text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg text-center">
-                  See the apps
-                </a>
-              </div>
-            </div>
-
-            <!-- Product Mockup - Budget Overview -->
-            <div class="relative w-full max-w-lg mx-auto md:mx-0">
-              <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <!-- Header -->
-                <div class="bg-gradient-to-r from-gray-50 to-white border-b border-gray-200 px-5 py-4">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <div class="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                      </div>
-                      <span class="font-semibold text-brand-dark">Budget Overview</span>
-                    </div>
-                    <span class="text-sm text-gray-500">January 2026</span>
-                  </div>
-                </div>
-
-                <!-- Budget Cards -->
-                <div class="p-5 space-y-3">
-                  <!-- Google Ads - On Track -->
-                  <div class="bg-gray-50 rounded-xl p-4 border-l-4 border-green-500">
-                    <div class="flex items-center justify-between mb-2">
-                      <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-brand-blue">G</span>
-                        <span class="font-medium text-brand-dark">Google Ads</span>
-                      </div>
-                      <span class="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">On track</span>
-                    </div>
-                    <div class="flex items-end justify-between">
-                      <div>
-                        <p class="text-xs text-gray-500">Spent</p>
-                        <p class="text-lg font-semibold text-brand-dark">$4,230</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-xs text-gray-500">Budget</p>
-                        <p class="text-lg font-semibold text-brand-dark">$8,000</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-xs text-gray-500">Pacing</p>
-                        <p class="text-lg font-semibold text-green-600">52%</p>
-                      </div>
-                    </div>
-                    <div class="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div class="h-full bg-green-500 rounded-full" style="width: 52%"></div>
-                    </div>
-                  </div>
-
-                  <!-- Meta Ads - Warning -->
-                  <div class="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-500">
-                    <div class="flex items-center justify-between mb-2">
-                      <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-blue-600">M</span>
-                        <span class="font-medium text-brand-dark">Meta Ads</span>
-                      </div>
-                      <span class="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full">Pacing high</span>
-                    </div>
-                    <div class="flex items-end justify-between">
-                      <div>
-                        <p class="text-xs text-gray-500">Spent</p>
-                        <p class="text-lg font-semibold text-brand-dark">$3,890</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-xs text-gray-500">Budget</p>
-                        <p class="text-lg font-semibold text-brand-dark">$5,000</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-xs text-gray-500">Pacing</p>
-                        <p class="text-lg font-semibold text-yellow-600">78%</p>
-                      </div>
-                    </div>
-                    <div class="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div class="h-full bg-yellow-500 rounded-full" style="width: 78%"></div>
-                    </div>
-                  </div>
-
-                  <!-- LinkedIn Ads - Critical -->
-                  <div class="bg-red-50 rounded-xl p-4 border-l-4 border-red-500">
-                    <div class="flex items-center justify-between mb-2">
-                      <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-blue-700">in</span>
-                        <span class="font-medium text-brand-dark">LinkedIn Ads</span>
-                      </div>
-                      <span class="text-xs font-medium text-red-700 bg-red-100 px-2 py-1 rounded-full">Over budget</span>
-                    </div>
-                    <div class="flex items-end justify-between">
-                      <div>
-                        <p class="text-xs text-gray-500">Spent</p>
-                        <p class="text-lg font-semibold text-brand-dark">$2,780</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-xs text-gray-500">Budget</p>
-                        <p class="text-lg font-semibold text-brand-dark">$2,000</p>
-                      </div>
-                      <div class="text-right">
-                        <p class="text-xs text-gray-500">Pacing</p>
-                        <p class="text-lg font-semibold text-red-600">139%</p>
-                      </div>
-                    </div>
-                    <div class="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div class="h-full bg-red-500 rounded-full" style="width: 100%"></div>
-                    </div>
-                  </div>
-                </div>
         <p class="text-deep-gray text-sm">&copy; <span id="current-year"></span> marketingOS. All rights reserved.</p>
       </div>
     </footer>

@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon_wit.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NT2NFZ7L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      html { visibility: hidden; opacity: 0; }
+    </style>
+
+    <!-- ============================================
+         CUSTOMIZE: Primary Meta Tags
+         ============================================ -->
+    <title>BLOG_TITLE | marketingOS</title>
+    <meta name="title" content="BLOG_TITLE | marketingOS" />
+    <meta name="description" content="META_DESCRIPTION" />
+
+    <!-- CUSTOMIZE: Canonical Tag -->
+    <link rel="canonical" href="https://www.flywithmarketingos.com/blog/BLOG_URL_SLUG" />
+
+    <!-- CUSTOMIZE: Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.flywithmarketingos.com/blog/BLOG_URL_SLUG" />
+    <meta property="og:title" content="BLOG_TITLE" />
+    <meta property="og:description" content="OG_DESCRIPTION" />
+    <meta property="og:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- CUSTOMIZE: Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.flywithmarketingos.com/blog/BLOG_URL_SLUG" />
+    <meta property="twitter:title" content="BLOG_TITLE" />
+    <meta property="twitter:description" content="TWITTER_DESCRIPTION" />
+    <meta property="twitter:image" content="https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png" />
+
+    <!-- ============================================
+         CUSTOMIZE: Schema.org JSON-LD - Article
+         ============================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "BLOG_TITLE",
+      "description": "META_DESCRIPTION",
+      "image": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png",
+      "author": {
+        "@type": "Person",
+        "name": "Maxim Baeten",
+        "url": "https://www.linkedin.com/in/maximbaeten/",
+        "image": "https://www.flywithmarketingos.com/founder%20picture.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/maximbaeten/"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "marketingOS",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.flywithmarketingos.com/logo-fly-with-marketingos-rectangle-transparant-bg.png"
+        }
+      },
+      "datePublished": "YYYY-MM-DD",
+      "dateModified": "YYYY-MM-DD",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.flywithmarketingos.com/blog/BLOG_URL_SLUG"
+      }
+    }
+    </script>
+
+    <!-- CUSTOMIZE: Schema.org JSON-LD - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.flywithmarketingos.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.flywithmarketingos.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BREADCRUMB_NAME",
+          "item": "https://www.flywithmarketingos.com/blog/BLOG_URL_SLUG"
+        }
+      ]
+    }
+    </script>
+
+    <!-- ============================================
+         OPTIONAL: Schema.org JSON-LD - FAQPage
+         Add this if your blog post has an FAQ section
+         ============================================ -->
+    <!--
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "FAQ_QUESTION_1",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FAQ_ANSWER_1"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "FAQ_QUESTION_2",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FAQ_ANSWER_2"
+          }
+        }
+      ]
+    }
+    </script>
+    -->
+
+    <!-- ============================================
+         OPTIONAL: Schema.org JSON-LD - HowTo
+         Add this if your blog post is a how-to guide
+         ============================================ -->
+    <!--
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "HOWTO_TITLE",
+      "description": "HOWTO_DESCRIPTION",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "STEP_1_NAME",
+          "text": "STEP_1_TEXT"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "STEP_2_NAME",
+          "text": "STEP_2_TEXT"
+        }
+      ]
+    }
+    </script>
+    -->
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="antialiased bg-white text-brand-dark">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT2NFZ7L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ============================================
+         NAVIGATION - Pattern A (DO NOT MODIFY)
+         ============================================ -->
+    <nav class="sticky top-0 left-0 right-0 backdrop-blur-sm border-b border-gray-200 z-50 py-4 md:py-6 px-4 md:px-6" style="background-color: #FFFCF5;">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo - fly with marketingOS" width="300" height="75" class="h-10 md:h-12 w-auto" />
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+          <span class="hamburger-line w-6 h-0.5 bg-brand-dark transition-all duration-300 mt-1.5"></span>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
+          <!-- Product Dropdown -->
+          <div class="relative group">
+            <a href="/performance-marketing-software" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200 flex items-center gap-1">
+              Product
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[220px]">
+                <a href="/performance-marketing-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Overview</span>
+                  <span class="block text-sm text-gray-500">All features & apps</span>
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/ad-spend-tracker" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Ad Spend Tracker</span>
+                  <span class="block text-sm text-gray-500">Budget monitoring</span>
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Facebook Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Meta ads tracking</span>
+                </a>
+                <a href="/features/google-ads-management-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Google Ads Manager</span>
+                  <span class="block text-sm text-gray-500">Search & Performance Max</span>
+                </a>
+                <a href="/features/marketing-dashboard" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">Marketing Dashboard</span>
+                  <span class="block text-sm text-gray-500">Analytics reporting</span>
+                </a>
+                <a href="/features/utm-tracking-tool" class="block px-4 py-2 text-brand-dark hover:bg-soft-gray hover:text-brand-blue transition-colors">
+                  <span class="font-medium">UTM Tracker</span>
+                  <span class="block text-sm text-gray-500">Campaign URL builder</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/blog" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200">
+            Blog
+          </a>
+          <a href="/roadmap" class="text-brand-dark hover:text-brand-blue font-medium transition-colors duration-200">
+            Roadmap
+          </a>
+          <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 cursor-pointer">
+            Get on the waitlist
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+      <!-- Mobile Menu Overlay - MUST be outside nav to avoid backdrop-filter containing block issue -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden">
+        <div class="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+          <div class="flex flex-col h-full">
+            <!-- Mobile Menu Header -->
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+              <a href="/" class="flex items-center">
+                <img src="/logo-fly-with-marketingos-rectangle-transparant-bg.png" alt="marketingOS logo" class="h-8 w-auto" />
+              </a>
+              <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors" aria-label="Close menu">
+                <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Mobile Menu Links -->
+            <div class="flex-1 overflow-y-auto py-4">
+              <div class="px-4 space-y-1">
+                <a href="/performance-marketing-software" class="block py-3 px-4 text-brand-dark font-medium hover:bg-soft-gray rounded-lg transition-colors">
+                  Product Overview
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <span class="block px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wide">Features</span>
+                <a href="/features/ad-spend-tracker" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Ad Spend Tracker
+                </a>
+                <a href="/features/facebook-ads-management-software" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Facebook Ads Manager
+                </a>
+                <a href="/features/google-ads-management-tool" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Google Ads Manager
+                </a>
+                <a href="/features/marketing-dashboard" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  Marketing Dashboard
+                </a>
+                <a href="/features/utm-tracking-tool" class="block py-2 px-4 text-brand-dark hover:bg-soft-gray rounded-lg transition-colors">
+                  UTM Tracker
+                </a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <a href="/blog" class="block py-3 px-4 text-brand-dark font-medium hover:bg-soft-gray rounded-lg transition-colors">
+                  Blog
+                </a>
+                <a href="/roadmap" class="block py-3 px-4 text-brand-dark font-medium hover:bg-soft-gray rounded-lg transition-colors">
+                  Roadmap
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Menu CTA -->
+            <div class="p-4 border-t border-gray-200">
+              <button onclick="openWaitlistModal(); closeMobileMenu();" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200">
+                Get on the waitlist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuPanel = mobileMenu.querySelector('div');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        mobileMenuPanel.classList.remove('translate-x-full');
+        mobileMenuPanel.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        mobileMenuPanel.classList.add('translate-x-full');
+        mobileMenuPanel.classList.remove('translate-x-0');
+        document.body.style.overflow = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMobileMenu();
+      });
+    </script>
+
+    <!-- Main Content -->
+    <main>
+      <!-- ============================================
+           CUSTOMIZE: Breadcrumb
+           ============================================ -->
+      <div class="bg-soft-gray py-3 px-6">
+        <div class="max-w-6xl mx-auto">
+          <nav class="flex items-center text-sm text-deep-gray" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="text-brand-dark font-medium">BREADCRUMB_NAME</span>
+          </nav>
+        </div>
+      </div>
+
+      <!-- ============================================
+           CUSTOMIZE: Article Header
+           ============================================ -->
+      <header class="bg-soft-gray py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-center gap-3 mb-6">
+            <!-- CUSTOMIZE: Article Type Badge (Guide, Tutorial, Comparison, etc.) -->
+            <span class="inline-block bg-brand-blue/10 text-brand-blue text-sm font-semibold px-4 py-1 rounded-full">
+              ARTICLE_TYPE
+            </span>
+            <!-- CUSTOMIZE: Read Time -->
+            <span class="text-deep-gray text-sm">XX min read</span>
+          </div>
+          <!-- CUSTOMIZE: H1 Title -->
+          <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
+            BLOG_TITLE
+          </h1>
+          <!-- CUSTOMIZE: Intro Paragraph -->
+          <p class="text-xl text-deep-gray leading-relaxed mb-8">
+            INTRO_PARAGRAPH
+          </p>
+          <!-- Author Info (usually keep as-is) -->
+          <div class="flex items-center gap-4">
+            <img src="/founder%20picture.png" alt="Maxim Baeten" class="w-12 h-12 rounded-full object-cover" />
+            <div>
+              <p class="font-semibold text-brand-dark">Maxim Baeten</p>
+              <!-- CUSTOMIZE: Publish Date -->
+              <p class="text-sm text-deep-gray">MONTH DD, YYYY</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <article class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+
+            <!-- ============================================
+                 CUSTOMIZE: Sidebar / Table of Contents
+                 ============================================ -->
+            <aside class="hidden lg:block lg:col-span-3">
+              <div class="sticky top-28">
+                <h3 class="text-sm font-semibold text-brand-dark uppercase tracking-wide mb-4">In This Article</h3>
+                <nav class="space-y-2">
+                  <!-- CUSTOMIZE: Add anchor links matching your sections -->
+                  <a href="#section-1" class="block text-deep-gray hover:text-brand-blue transition-colors text-sm py-1">Section 1 Title</a>
+                  <a href="#section-2" class="block text-deep-gray hover:text-brand-blue transition-colors text-sm py-1">Section 2 Title</a>
+                  <a href="#section-3" class="block text-deep-gray hover:text-brand-blue transition-colors text-sm py-1">Section 3 Title</a>
+                  <!-- Add subsections with pl-4 for indentation -->
+                  <a href="#subsection" class="block text-deep-gray hover:text-brand-blue transition-colors text-sm py-1 pl-4">Subsection Title</a>
+                  <a href="#faq" class="block text-deep-gray hover:text-brand-blue transition-colors text-sm py-1">FAQ</a>
+                </nav>
+              </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-9">
+              <div class="prose prose-lg max-w-none">
+
+                <!-- ============================================
+                     CUSTOMIZE: Article Sections
+                     Copy and modify these section patterns as needed
+                     ============================================ -->
+
+                <!-- Introduction Paragraph -->
+                <p class="text-xl text-deep-gray leading-relaxed mb-8">
+                  INTRODUCTION_TEXT
+                </p>
+
+                <!-- Section Template -->
+                <section id="section-1" class="mb-16">
+                  <h2 class="text-3xl font-bold text-brand-dark mb-6">SECTION_HEADING</h2>
+
+                  <p class="text-deep-gray mb-6">
+                    SECTION_PARAGRAPH
+                  </p>
+
+                  <!-- Key Point Callout Box -->
+                  <div class="bg-brand-blue/5 border border-brand-blue/20 rounded-xl p-6 mb-6">
+                    <h4 class="font-semibold text-brand-dark mb-2">Key Point</h4>
+                    <p class="text-deep-gray">
+                      KEY_POINT_TEXT
+                    </p>
+                  </div>
+
+                  <p class="text-deep-gray mb-6">
+                    ADDITIONAL_PARAGRAPH
+                  </p>
+                </section>
+
+                <!-- Section with Subsections -->
+                <section id="section-2" class="mb-16">
+                  <h2 class="text-3xl font-bold text-brand-dark mb-6">SECTION_2_HEADING</h2>
+
+                  <p class="text-deep-gray mb-6">
+                    SECTION_2_INTRO
+                  </p>
+
+                  <!-- Subsection -->
+                  <div id="subsection" class="mb-12">
+                    <h3 class="text-2xl font-semibold text-brand-dark mb-4">SUBSECTION_HEADING</h3>
+
+                    <p class="text-deep-gray mb-6">
+                      SUBSECTION_TEXT
+                    </p>
+
+                    <!-- Bullet List -->
+                    <ul class="list-disc list-inside text-deep-gray mb-6 space-y-2">
+                      <li>LIST_ITEM_1</li>
+                      <li>LIST_ITEM_2</li>
+                      <li>LIST_ITEM_3</li>
+                    </ul>
+
+                    <!-- Two-Column Comparison Cards -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                      <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+                        <h5 class="font-semibold text-green-800 mb-2">DO_HEADING</h5>
+                        <ul class="text-green-700 space-y-1 text-sm">
+                          <li>DO_ITEM_1</li>
+                          <li>DO_ITEM_2</li>
+                          <li>DO_ITEM_3</li>
+                        </ul>
+                      </div>
+                      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+                        <h5 class="font-semibold text-gray-700 mb-2">DONT_HEADING</h5>
+                        <ul class="text-gray-600 space-y-1 text-sm">
+                          <li>DONT_ITEM_1</li>
+                          <li>DONT_ITEM_2</li>
+                          <li>DONT_ITEM_3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Section with Table -->
+                <section id="section-3" class="mb-16">
+                  <h2 class="text-3xl font-bold text-brand-dark mb-6">SECTION_3_HEADING</h2>
+
+                  <p class="text-deep-gray mb-6">
+                    SECTION_3_INTRO
+                  </p>
+
+                  <!-- Data Table -->
+                  <div class="overflow-x-auto mb-8">
+                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                      <thead>
+                        <tr class="bg-brand-dark text-white">
+                          <th class="px-6 py-4 text-left font-semibold">COLUMN_1</th>
+                          <th class="px-6 py-4 text-center font-semibold">COLUMN_2</th>
+                          <th class="px-6 py-4 text-center font-semibold">COLUMN_3</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-b border-gray-100">
+                          <td class="px-6 py-4 font-medium">ROW_1_COL_1</td>
+                          <td class="px-6 py-4 text-center">ROW_1_COL_2</td>
+                          <td class="px-6 py-4 text-center">ROW_1_COL_3</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 bg-gray-50">
+                          <td class="px-6 py-4 font-medium">ROW_2_COL_1</td>
+                          <td class="px-6 py-4 text-center">ROW_2_COL_2</td>
+                          <td class="px-6 py-4 text-center">ROW_2_COL_3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Important Note Callout -->
+                  <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6">
+                    <h4 class="font-semibold text-amber-800 mb-2">Important Note</h4>
+                    <p class="text-amber-700">
+                      IMPORTANT_NOTE_TEXT
+                    </p>
+                  </div>
+                </section>
+
+                <!-- Step-by-Step Section (Optional) -->
+                <!--
+                <section id="how-to" class="mb-16">
+                  <h2 class="text-3xl font-bold text-brand-dark mb-6">How to TASK_NAME</h2>
+
+                  <p class="text-deep-gray mb-6">
+                    INTRO_TEXT
+                  </p>
+
+                  <div class="mb-8">
+                    <div class="flex items-start gap-4">
+                      <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">1</span>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold text-brand-dark mb-3">STEP_1_TITLE</h3>
+                        <p class="text-deep-gray mb-4">
+                          STEP_1_DESCRIPTION
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-8">
+                    <div class="flex items-start gap-4">
+                      <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-bold">2</span>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold text-brand-dark mb-3">STEP_2_TITLE</h3>
+                        <p class="text-deep-gray mb-4">
+                          STEP_2_DESCRIPTION
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                -->
+
+                <!-- ============================================
+                     CUSTOMIZE: FAQ Section
+                     ============================================ -->
+                <section id="faq" class="mb-16">
+                  <h2 class="text-3xl font-bold text-brand-dark mb-6">Frequently Asked Questions</h2>
+
+                  <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                      <button class="faq-toggle w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-brand-dark pr-4">FAQ_QUESTION_1</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                      </button>
+                      <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-deep-gray">
+                          FAQ_ANSWER_1
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                      <button class="faq-toggle w-full flex items-center justify-between p-6 text-left bg-white hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-brand-dark pr-4">FAQ_QUESTION_2</span>
+                        <svg class="w-5 h-5 text-gray-500 flex-shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                      </button>
+                      <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-deep-gray">
+                          FAQ_ANSWER_2
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Add more FAQ items as needed -->
+                  </div>
+                </section>
+
+                <!-- ============================================
+                     CUSTOMIZE: Related Resources
+                     ============================================ -->
+                <section class="mb-16">
+                  <h2 class="text-2xl font-bold text-brand-dark mb-6">Related Resources</h2>
+
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <a href="/features/FEATURE_SLUG" class="block bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-brand-blue/30 transition-all">
+                      <span class="text-brand-blue text-sm font-semibold">Feature</span>
+                      <h3 class="text-lg font-semibold text-brand-dark mt-2 mb-2">RELATED_FEATURE_TITLE</h3>
+                      <p class="text-deep-gray text-sm">RELATED_FEATURE_DESCRIPTION</p>
+                    </a>
+                    <a href="/blog/BLOG_SLUG" class="block bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-brand-blue/30 transition-all">
+                      <span class="text-brand-blue text-sm font-semibold">Article</span>
+                      <h3 class="text-lg font-semibold text-brand-dark mt-2 mb-2">RELATED_ARTICLE_TITLE</h3>
+                      <p class="text-deep-gray text-sm">RELATED_ARTICLE_DESCRIPTION</p>
+                    </a>
+                  </div>
+                </section>
+
+                <!-- ============================================
+                     CTA Section (usually keep as-is)
+                     ============================================ -->
+                <section class="bg-brand-dark text-white rounded-2xl p-8 md:p-12 text-center">
+                  <h2 class="text-2xl md:text-3xl font-bold mb-4">
+                    CTA_HEADLINE
+                  </h2>
+                  <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                    CTA_DESCRIPTION
+                  </p>
+                  <button onclick="openWaitlistModal()" class="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg cursor-pointer">
+                    Get on the waitlist
+                  </button>
+                </section>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+      function toggleFaq(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      }
+    </script>
+
+    <!-- ============================================
+         WAITLIST MODAL (DO NOT MODIFY)
+         ============================================ -->
+    <div id="waitlist-modal" class="fixed inset-0 z-[100] hidden">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeWaitlistModal()"></div>
+
+      <!-- Modal Content -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 relative">
+          <!-- Close Button -->
+          <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Form Content -->
+          <div id="waitlist-form-container">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-dark mb-2">Get on the waitlist</h3>
+              <p class="text-deep-gray">Be the first to know when marketingOS launches. We'll send you early access.</p>
+            </div>
+
+            <form id="waitlist-form" onsubmit="submitWaitlistForm(event)">
+              <div class="mb-4">
+                <label for="waitlist-email" class="block text-sm font-medium text-deep-gray mb-2">Email address</label>
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  name="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="waitlist-submit-btn"
+                class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+              >
+                Join the waitlist
+              </button>
+
+              <p class="text-xs text-gray-500 text-center mt-4">
+                We respect your privacy. No spam, ever.
+              </p>
+            </form>
+          </div>
+
+          <!-- Success Message (hidden by default) -->
+          <div id="waitlist-success" class="hidden text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">You're on the list!</h3>
+            <p class="text-deep-gray mb-6">Thanks for signing up. We'll be in touch soon with early access.</p>
+            <button
+              onclick="closeWaitlistModal()"
+              class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Got it
+            </button>
+          </div>
+
+          <!-- Error Message (hidden by default) -->
+          <div id="waitlist-error" class="hidden text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Oops, something went wrong</h3>
+            <p class="text-deep-gray mb-6" id="waitlist-error-message">Please try again later.</p>
+            <button
+              onclick="resetWaitlistForm()"
+              class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER (DO NOT MODIFY)
+         ============================================ -->
+    <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">
+      <div class="max-w-5xl mx-auto text-center">
+        <a href="/" class="font-semibold text-brand-dark text-lg mb-2 inline-block hover:text-brand-blue transition-colors">marketingOS</a>
+        <p class="text-deep-gray text-sm mb-4">The operating system for modern marketers</p>
+        <nav class="flex justify-center gap-6 text-sm text-deep-gray mb-4">
+          <a href="/performance-marketing-software" class="hover:text-brand-blue transition-colors">Product</a>
+          <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+        </nav>
+        <div class="flex justify-center gap-4 mb-4">
+          <a href="https://x.com/marketingOS_com" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on X">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.reddit.com/user/marketingOS/" target="_blank" rel="noopener" class="text-deep-gray hover:text-brand-blue transition-colors" aria-label="Follow us on Reddit">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+            </svg>
+          </a>
+        </div>
+        <p class="text-deep-gray text-sm">&copy; <span id="current-year"></span> marketingOS. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
