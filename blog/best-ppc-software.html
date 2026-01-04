@@ -449,36 +449,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Article Header -->
+      <!-- Header -->
+      <header class="py-16 px-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto lg:pr-[296px]">
+          <span class="inline-block text-brand-blue text-sm font-semibold uppercase tracking-wide mb-6">Tool Comparison</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-8 leading-tight">
+            Best PPC Management Software 2026: Top 8 Tools Compared
+          </h1>
+          <p class="text-xl text-deep-gray mb-8 leading-relaxed max-w-3xl">
+            A comprehensive comparison of the best PPC software to help you find the right tool for your budget, team size, and advertising goals.
+          </p>
+          <div class="flex flex-wrap items-center gap-6 text-sm text-deep-gray mb-10">
+            <div class="flex items-center gap-2">
+              <img src="/founder picture.png" alt="Maxim Baeten" class="w-10 h-10 rounded-full object-cover" />
+              <a href="https://www.linkedin.com/in/maximbaeten/" target="_blank" rel="noopener" class="font-medium text-brand-dark hover:text-brand-blue transition-colors">Maxim Baeten</a>
+            </div>
+            <span class="text-gray-400">|</span>
+            <span>January 2026</span>
+            <span class="text-gray-400">|</span>
+            <span>15 min read</span>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">Try marketingOS free</button>
+            <a href="#quick-comparison" class="border border-gray-300 hover:border-brand-blue text-brand-dark hover:text-brand-blue font-semibold px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2">
+              Start reading
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Content -->
       <article class="py-12 md:py-16 px-6">
         <div class="max-w-4xl mx-auto">
-          <header class="mb-12 text-center">
-            <span class="inline-block bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-1 rounded-full mb-6">
-              Tool Comparison
-            </span>
-            <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
-              Best PPC Management Software 2026: Top 8 Tools Compared
-            </h1>
-            <p class="text-xl text-deep-gray mb-8 max-w-3xl mx-auto">
-              A comprehensive comparison of the best PPC software to help you find the right tool for your budget, team size, and advertising goals.
-            </p>
-            <div class="flex items-center justify-center gap-4 text-sm text-deep-gray">
-              <div class="flex items-center gap-2">
-                <img src="/founder%20picture.png" alt="Maxim Baeten" class="w-10 h-10 rounded-full object-cover" />
-                <div class="text-left">
-                  <a href="https://www.linkedin.com/in/maximbaeten/" target="_blank" rel="noopener" class="font-semibold text-brand-dark hover:text-brand-blue transition-colors">
-                    Maxim Baeten
-                  </a>
-                  <p class="text-xs text-deep-gray">Performance Marketing Expert</p>
-                </div>
-              </div>
-              <span class="text-gray-300">|</span>
-              <time datetime="2026-01-02">January 2, 2026</time>
-              <span class="text-gray-300">|</span>
-              <span>15 min read</span>
-            </div>
-          </header>
-
           <!-- Article Content -->
           <div class="prose prose-lg max-w-none">
             <p class="lead text-xl text-deep-gray">
@@ -490,7 +495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </p>
 
             <!-- Quick Comparison Table -->
-            <h2 class="text-3xl font-bold text-brand-dark mt-12 mb-6">Quick Comparison: Best PPC Software at a Glance</h2>
+            <h2 id="quick-comparison" class="text-3xl font-bold text-brand-dark mt-12 mb-6">Quick Comparison: Best PPC Software at a Glance</h2>
 
             <div class="overflow-x-auto mb-12">
               <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden text-sm">
@@ -987,47 +992,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </main>
 
     <!-- Waitlist Modal -->
-    <div id="waitlist-modal" class="fixed inset-0 bg-black/60 z-50 opacity-0 invisible transition-opacity duration-300 flex items-center justify-center p-4">
-      <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform scale-95 transition-transform duration-300">
-        <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        <h3 class="text-2xl font-bold text-brand-dark mb-2">Join the Waitlist</h3>
-        <p class="text-deep-gray mb-6">Be the first to know when marketingOS launches. Get early access and exclusive updates.</p>
-        <form id="waitlist-form" class="space-y-4">
-          <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all" />
-          <button type="submit" class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 rounded-lg transition-all duration-200">
-            Get Early Access
+    <div id="waitlist-modal" class="fixed inset-0 z-[100] hidden">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeWaitlistModal()"></div>
+
+      <!-- Modal Content -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 relative">
+          <!-- Close Button -->
+          <button onclick="closeWaitlistModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </button>
-        </form>
+
+          <!-- Form Content -->
+          <div id="waitlist-form-container">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-dark mb-2">Get on the waitlist</h3>
+              <p class="text-deep-gray">Be the first to know when marketingOS launches. We'll send you early access.</p>
+            </div>
+
+            <form id="waitlist-form" onsubmit="submitWaitlistForm(event)">
+              <div class="mb-4">
+                <label for="waitlist-email" class="block text-sm font-medium text-deep-gray mb-2">Email address</label>
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  name="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="waitlist-submit-btn"
+                class="w-full bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+              >
+                Join the waitlist
+              </button>
+
+              <p class="text-xs text-gray-500 text-center mt-4">
+                We respect your privacy. No spam, ever.
+              </p>
+            </form>
+          </div>
+
+          <!-- Success Message (hidden by default) -->
+          <div id="waitlist-success" class="hidden text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">You're on the list!</h3>
+            <p class="text-deep-gray mb-6">Thanks for signing up. We'll be in touch soon with early access.</p>
+            <button
+              onclick="closeWaitlistModal()"
+              class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Got it
+            </button>
+          </div>
+
+          <!-- Error Message (hidden by default) -->
+          <div id="waitlist-error" class="hidden text-center">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-dark mb-2">Oops, something went wrong</h3>
+            <p class="text-deep-gray mb-6" id="waitlist-error-message">Please try again later.</p>
+            <button
+              onclick="resetWaitlistForm()"
+              class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-
-    <script>
-      function openWaitlistModal() {
-        const modal = document.getElementById('waitlist-modal');
-        modal.classList.remove('opacity-0', 'invisible');
-        modal.classList.add('opacity-100', 'visible');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeWaitlistModal() {
-        const modal = document.getElementById('waitlist-modal');
-        modal.classList.add('opacity-0', 'invisible');
-        modal.classList.remove('opacity-100', 'visible');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        document.body.style.overflow = '';
-      }
-
-      document.getElementById('waitlist-modal').addEventListener('click', (e) => {
-        if (e.target === e.currentTarget) closeWaitlistModal();
-      });
-    </script>
 
     <!-- Footer -->
     <footer class="py-12 px-6 bg-soft-gray border-t border-gray-200">

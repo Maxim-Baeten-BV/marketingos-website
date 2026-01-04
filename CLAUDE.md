@@ -212,11 +212,42 @@ if (currentYearEl) {
 
 **Prevention:** Always use null checks when accessing DOM elements that may not exist on all pages.
 
+### Bug: Waitlist Modal Not Working (Session 2026-01-04)
+
+**Symptoms:** Clicking "Try marketingOS free" CTA button on `best-ppc-software.html` did nothing.
+
+**Root Cause:** The page had an old inline waitlist modal with incorrect HTML structure that didn't match what `main.js` expects.
+
+**Broken modal structure:**
+```html
+<!-- BROKEN - missing required IDs and attributes -->
+<div id="waitlist-modal" class="hidden ...">
+  <form>  <!-- Missing id="waitlist-form" and onsubmit -->
+    <input type="email" />  <!-- Missing id="waitlist-email" -->
+    <button>Join</button>  <!-- Missing id="waitlist-submit-btn" -->
+  </form>
+  <!-- Missing #waitlist-success and #waitlist-error divs -->
+</div>
+```
+
+**Fix:** Replaced with the standard modal structure from the template.
+
+**Prevention:**
+1. **ALWAYS copy modal from `_templates/blog-post-template.html`** - Never write modal HTML manually
+2. **Required element IDs for modal to work:**
+   - `id="waitlist-modal"` on the container
+   - `id="waitlist-form"` with `onsubmit="submitWaitlistForm(event)"`
+   - `id="waitlist-email"` on the email input
+   - `id="waitlist-submit-btn"` on the submit button
+   - `id="waitlist-success"` for success state
+   - `id="waitlist-error"` and `id="waitlist-error-message"` for error state
+
 ### Debugging Tips
 
 1. **Check browser console first** - JavaScript errors stop script execution
 2. **Verify element IDs match** - Compare HTML `id` attributes with what JS expects
 3. **Test on all page types** - Homepage, feature pages, and blog pages may have different HTML structures
+4. **For modal issues** - Verify the modal HTML structure matches the template exactly
 
 ### URL Structure Best Practice
 
@@ -238,7 +269,7 @@ When renaming URLs:
 - **Desktop:** Product dropdown (with feature submenu) → Blog → Roadmap → "Get on the waitlist" CTA button
 - **Mobile:** Full-screen slide-in overlay menu with Product Overview, Features section, Blog, Roadmap links, and CTA button
 
-**Reference file:** Use `blog/google-ads-quality-score-guide.html` as the template for navigation structure.
+**Reference file:** Use `blog/ppc-reporting-best-practices.html` as the template for navigation and header structure.
 
 **Navigation Structure:**
 ```html
@@ -266,6 +297,69 @@ When renaming URLs:
 4. Product dropdown shows feature links on hover
 
 **Do NOT use Pattern B (flat nav with Apps, Blog, Pricing, FAQ, Login).** It has been deprecated.
+
+### CRITICAL: Standardized Blog Header Format
+
+**All blog posts MUST use this exact header format.** This prevents visual inconsistencies across blog posts.
+
+**Reference file:** `blog/ppc-reporting-best-practices.html`
+
+**Required Header Structure:**
+```html
+<header class="py-16 px-6 border-b border-gray-200">
+  <div class="max-w-6xl mx-auto lg:pr-[296px]">
+    <!-- Badge: uppercase, tracking-wide (NOT rounded pill) -->
+    <span class="inline-block text-brand-blue text-sm font-semibold uppercase tracking-wide mb-6">ARTICLE TYPE</span>
+
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-8 leading-tight">
+      Article Title Here
+    </h1>
+
+    <p class="text-xl text-deep-gray mb-8 leading-relaxed max-w-3xl">
+      Article description/subtitle here.
+    </p>
+
+    <!-- Author info with | separators -->
+    <div class="flex flex-wrap items-center gap-6 text-sm text-deep-gray mb-10">
+      <div class="flex items-center gap-2">
+        <img src="/founder picture.png" alt="Maxim Baeten" class="w-10 h-10 rounded-full object-cover" />
+        <a href="https://www.linkedin.com/in/maximbaeten/" target="_blank" rel="noopener" class="font-medium text-brand-dark hover:text-brand-blue transition-colors">Maxim Baeten</a>
+      </div>
+      <span class="text-gray-400">|</span>
+      <span>January 2026</span>
+      <span class="text-gray-400">|</span>
+      <span>X min read</span>
+    </div>
+
+    <!-- Two CTAs: primary button + secondary link -->
+    <div class="flex flex-wrap gap-4">
+      <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">Try marketingOS free</button>
+      <a href="#first-section-id" class="border border-gray-300 hover:border-brand-blue text-brand-dark hover:text-brand-blue font-semibold px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2">
+        Start reading
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+```
+
+**Critical Requirements:**
+1. ✅ **White background** - NO gray (`bg-soft-gray`) or beige backgrounds
+2. ✅ **Left-aligned content** - Use `lg:pr-[296px]` for sidebar space, NOT centered
+3. ✅ **Uppercase badge** - Use `uppercase tracking-wide`, NOT rounded pill with `rounded-full px-4 py-1`
+4. ✅ **Author photo** - 10x10 rounded circle with LinkedIn link
+5. ✅ **Pipe separators** - Use `<span class="text-gray-400">|</span>` between author/date/read time
+6. ✅ **Two CTAs** - Primary blue button + secondary "Start reading" link with down arrow
+7. ✅ **Anchor target** - Add `id="first-section-id"` to the first h2 section for "Start reading" link
+
+**Common Mistakes to Avoid:**
+- ❌ Using `bg-soft-gray` or inline `style="background-color: #..."` on header
+- ❌ Centering the header content with `text-center`
+- ❌ Using rounded pill badges: `rounded-full bg-brand-blue/10 px-4 py-1`
+- ❌ Missing the "Start reading" secondary CTA
+- ❌ Missing the anchor ID on the first content section
 
 ### CRITICAL: vite.config.js Must Include All Pages
 

@@ -356,33 +356,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- ============================================
            CUSTOMIZE: Article Header
+           IMPORTANT: This is the STANDARDIZED header format.
+           - White background (NOT gray/beige)
+           - Left-aligned with lg:pr-[296px] for sidebar space
+           - Uppercase tracking-wide badge (NOT rounded pill)
+           - Author info with photo, LinkedIn, date, read time separated by |
+           - Two CTAs: primary button + secondary link with down arrow
            ============================================ -->
-      <header class="bg-soft-gray py-16 px-6">
-        <div class="max-w-4xl mx-auto">
-          <div class="flex items-center gap-3 mb-6">
-            <!-- CUSTOMIZE: Article Type Badge (Guide, Tutorial, Comparison, etc.) -->
-            <span class="inline-block bg-brand-blue/10 text-brand-blue text-sm font-semibold px-4 py-1 rounded-full">
-              ARTICLE_TYPE
-            </span>
-            <!-- CUSTOMIZE: Read Time -->
-            <span class="text-deep-gray text-sm">XX min read</span>
-          </div>
+      <header class="py-16 px-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto lg:pr-[296px]">
+          <!-- CUSTOMIZE: Article Type Badge (Guide, Tutorial, Comparison, etc.) -->
+          <span class="inline-block text-brand-blue text-sm font-semibold uppercase tracking-wide mb-6">ARTICLE_TYPE</span>
           <!-- CUSTOMIZE: H1 Title -->
-          <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-6 leading-tight">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-8 leading-tight">
             BLOG_TITLE
           </h1>
           <!-- CUSTOMIZE: Intro Paragraph -->
-          <p class="text-xl text-deep-gray leading-relaxed mb-8">
+          <p class="text-xl text-deep-gray mb-8 leading-relaxed max-w-3xl">
             INTRO_PARAGRAPH
           </p>
-          <!-- Author Info (usually keep as-is) -->
-          <div class="flex items-center gap-4">
-            <img src="/founder%20picture.png" alt="Maxim Baeten" class="w-12 h-12 rounded-full object-cover" />
-            <div>
-              <p class="font-semibold text-brand-dark">Maxim Baeten</p>
-              <!-- CUSTOMIZE: Publish Date -->
-              <p class="text-sm text-deep-gray">MONTH DD, YYYY</p>
+          <!-- Author Info - CUSTOMIZE: Date and Read Time -->
+          <div class="flex flex-wrap items-center gap-6 text-sm text-deep-gray mb-10">
+            <div class="flex items-center gap-2">
+              <img src="/founder picture.png" alt="Maxim Baeten" class="w-10 h-10 rounded-full object-cover" />
+              <a href="https://www.linkedin.com/in/maximbaeten/" target="_blank" rel="noopener" class="font-medium text-brand-dark hover:text-brand-blue transition-colors">Maxim Baeten</a>
             </div>
+            <span class="text-gray-400">|</span>
+            <!-- CUSTOMIZE: Month Year -->
+            <span>MONTH YYYY</span>
+            <span class="text-gray-400">|</span>
+            <!-- CUSTOMIZE: Read Time -->
+            <span>XX min read</span>
+          </div>
+          <!-- CTAs - CUSTOMIZE: Second CTA href to first section anchor -->
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">Try marketingOS free</button>
+            <a href="#FIRST_SECTION_ID" class="border border-gray-300 hover:border-brand-blue text-brand-dark hover:text-brand-blue font-semibold px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2">
+              Start reading
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </header>

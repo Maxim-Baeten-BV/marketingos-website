@@ -23,6 +23,7 @@ const EXCLUDE = [
   'analytics-setup',
   'keyword-research-output',
   '.git',
+  '_templates',
 ];
 
 // Priority mapping based on path depth and type
@@ -76,12 +77,15 @@ function generateSitemap() {
   const urls = [...htmlFiles].map(file => {
     let urlPath = '/' + relative(rootDir, file);
 
-    // Convert index.html to /
+    // Convert index.html to directory path
     if (urlPath === '/index.html') {
       urlPath = '/';
+    } else if (urlPath.endsWith('/index.html')) {
+      // /blog/index.html → /blog/
+      urlPath = urlPath.replace('/index.html', '/');
     } else {
-      // Remove .html extension for cleaner URLs (optional)
-      // urlPath = urlPath.replace('.html', '');
+      // Remove .html extension for clean URLs
+      urlPath = urlPath.replace('.html', '');
     }
 
     return urlPath;

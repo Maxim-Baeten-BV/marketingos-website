@@ -164,7 +164,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         theme: {
           extend: {
             colors: {
-              'brand-blue': '#2563EB',
+              'brand-blue': '#3E7BBE',
               'brand-dark': '#1E293B',
               'soft-gray': '#F1F5F9',
               'deep-gray': '#475569',
@@ -182,7 +182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
-  <body class="font-sans text-brand-dark antialiased" style="background-color: #FFFCF5;">
+  <body class="bg-white font-sans text-brand-dark antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT2NFZ7L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -366,28 +366,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Hero Section -->
-      <section class="py-16 md:py-24 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-          <span class="inline-block bg-orange-100 text-orange-700 text-sm font-semibold px-4 py-1 rounded-full mb-6">
-            Adalysis Alternative
-          </span>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6 leading-tight">
-            Looking for an <span class="text-brand-blue">Adalysis Alternative</span>?
+      <!-- Header -->
+      <header class="py-16 px-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto lg:pr-[296px]">
+          <span class="inline-block text-brand-blue text-sm font-semibold uppercase tracking-wide mb-6">Adalysis Alternative</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-8 leading-tight">
+            Looking for an Adalysis Alternative?
           </h1>
-          <p class="text-xl text-deep-gray mb-8 max-w-3xl mx-auto">
+          <p class="text-xl text-deep-gray mb-8 leading-relaxed max-w-3xl">
             marketingOS gives you cross-channel ad management for Google, Meta, and LinkedIn with unified budget tracking. Move beyond Google Ads-only tools to manage all your paid campaigns in one place.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg">
-              Try marketingOS Free
+          <div class="flex flex-wrap items-center gap-6 text-sm text-deep-gray mb-10">
+            <div class="flex items-center gap-2">
+              <img src="/founder picture.png" alt="Maxim Baeten" class="w-10 h-10 rounded-full object-cover" />
+              <a href="https://www.linkedin.com/in/maximbaeten/" target="_blank" rel="noopener" class="font-medium text-brand-dark hover:text-brand-blue transition-colors">Maxim Baeten</a>
+            </div>
+            <span class="text-gray-400">|</span>
+            <span>January 2026</span>
+            <span class="text-gray-400">|</span>
+            <span>6 min read</span>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openWaitlistModal()" class="bg-brand-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+              Try marketingOS free
             </button>
-            <a href="#comparison" class="border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 text-lg">
-              See Feature Comparison
+            <a href="#comparison" class="border border-gray-300 hover:border-brand-blue text-brand-dark hover:text-brand-blue font-semibold px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2">
+              See feature comparison
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </a>
           </div>
         </div>
-      </section>
+      </header>
 
       <!-- Why Switch Section -->
       <section class="py-16 px-6 bg-white">
